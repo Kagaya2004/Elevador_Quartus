@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Quartus (Project Test)/Valor_Serial_Paralelo/Valor_Serial_Paralelo.bdf
+source_file = 1, C:/Quartus (Project Test)/Valor_Serial_Paralelo/Waveform.vwf
+source_file = 1, C:/Quartus (Project Test)/Valor_Serial_Paralelo/db/Valor_Serial_Paralelo.cbx.xml
+design_name = Valor_Serial_Paralelo
+instance = comp, \VP[2]~output , VP[2]~output, Valor_Serial_Paralelo, 1
+instance = comp, \VP[1]~output , VP[1]~output, Valor_Serial_Paralelo, 1
+instance = comp, \VP[0]~output , VP[0]~output, Valor_Serial_Paralelo, 1
+instance = comp, \VS[2]~input , VS[2]~input, Valor_Serial_Paralelo, 1
+instance = comp, \VS[1]~input , VS[1]~input, Valor_Serial_Paralelo, 1
+instance = comp, \VS[0]~input , VS[0]~input, Valor_Serial_Paralelo, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

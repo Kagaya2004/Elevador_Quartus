@@ -1,0 +1,17 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Q_1Hz",
+					"strict" : false
+				},
+				{
+					"name" : "Clock_50MHz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

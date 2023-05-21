@@ -1,0 +1,22 @@
+|Andares_Elevador_S2
+S2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+B4 => ins5.IN0
+B4 => inst7.IN0
+B4 => inst6.IN0
+B4 => inst8.IN0
+B4 => inst13.IN0
+B3 => inst11.IN1
+B3 => inst.IN0
+B3 => inst8.IN1
+B3 => inst9.IN1
+B3 => inst13.IN1
+B2 => inst11.IN2
+B2 => inst3.IN0
+B2 => inst13.IN2
+B1 => inst11.IN3
+B1 => inst2.IN0
+B0 => inst1.IN0
+B0 => inst9.IN3
+B0 => inst13.IN3
+
+

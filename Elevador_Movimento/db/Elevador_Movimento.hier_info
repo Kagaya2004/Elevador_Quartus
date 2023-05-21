@@ -1,0 +1,26 @@
+|Elevador_Movimento
+SAP[0] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
+SAP[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
+SAP[2] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+CLK => Mov_Elevador:inst.clock
+EN => Mov_Elevador:inst.EN
+ACT => Mov_Elevador:inst.ACT
+SAS[0] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
+SAS[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
+SAS[2] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador_Movimento|Mov_Elevador:inst
+clock => fstate~1.DATAIN
+reset => fstate~3.DATAIN
+EN => process_1.IN0
+EN => process_1.IN0
+EN => reg_fstate.OUTPUTSELECT
+EN => reg_fstate.OUTPUTSELECT
+ACT => process_1.IN1
+ACT => process_1.IN1
+SA0 <= SA0.DB_MAX_OUTPUT_PORT_TYPE
+SA1 <= SA1.DB_MAX_OUTPUT_PORT_TYPE
+SA2 <= SA2.DB_MAX_OUTPUT_PORT_TYPE
+
+

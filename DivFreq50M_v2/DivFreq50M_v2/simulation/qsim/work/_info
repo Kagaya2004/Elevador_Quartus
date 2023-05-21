@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ifsp/Documentos/Alexandre/Quartus/DivFreq50M_v2/simulation/qsim
+vDIV_50MHz_to_1Hz
+Z1 !s110 1676576050
+!i10b 1
+!s100 mjf:VLXaKP@R=W^;7Uz;_1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I>bI9m7JEJM@cH;bY3iPzo3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1676576049
+Z5 8DIV_50MHz_to_1Hz.vo
+Z6 FDIV_50MHz_to_1Hz.vo
+!i122 8
+L0 32 1769
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1676576050.000000
+Z9 !s107 DIV_50MHz_to_1Hz.vo|
+Z10 !s90 -work|work|DIV_50MHz_to_1Hz.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@d@i@v_50@m@hz_to_1@hz
+vDIV_50MHz_to_1Hz_vlg_vec_tst
+R1
+!i10b 1
+!s100 c55:<7g@]>kekKN9GIG4E3
+R2
+I8T48NEX2>2JdMS4f0HPlY1
+R3
+R0
+w1676576047
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 9
+L0 30 32
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@d@i@v_50@m@hz_to_1@hz_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 ;WX<JYQAmR`c[DGhaUT3<1
+R2
+IdIn>iU2=K2ifZ>m>=>6Un2
+R3
+R0
+R4
+R5
+R6
+!i122 8
+L0 1802 34
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12

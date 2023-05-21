@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus (Project Test)/Circuito Combinacional (Elevador)/simulation/qsim
+vCircuito_Combinacional_5_3bit
+Z1 !s110 1682265920
+!i10b 1
+!s100 6g4@NDoQj_T;cfUaBRWah0
+IlzJo>m@nLzVU1QL:NIYE?0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1682265919
+Z4 8Circuito_Combinacional_5_3bit.vo
+Z5 FCircuito_Combinacional_5_3bit.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1682265920.000000
+Z8 !s107 Circuito_Combinacional_5_3bit.vo|
+Z9 !s90 -work|work|Circuito_Combinacional_5_3bit.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@circuito_@combinacional_5_3bit
+vCircuito_Combinacional_5_3bit_vlg_vec_tst
+R1
+!i10b 1
+!s100 mz=SRT<>6JQ@dXLS<[KRR2
+ID[8hWhlFfMml1Pmfo]kf40
+R2
+R0
+w1682265918
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@circuito_@combinacional_5_3bit_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 nn`dFad84iibZ;1=71ZSe2
+IC5R5gU>oo53]bNVV5OTX;1
+R2
+R0
+R3
+R4
+R5
+L0 291
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

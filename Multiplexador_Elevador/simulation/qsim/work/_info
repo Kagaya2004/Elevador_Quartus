@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus (Project Test)/Multiplexador_Elevador/simulation/qsim
+vhard_block
+Z1 !s110 1682559404
+!i10b 1
+!s100 WAmXJz`8^ICi;`0W=XPUh1
+IG=9WBi@;iI2^Lh[6nF:Kb1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1682559402
+Z4 8Multiplexador_Elevador.vo
+Z5 FMultiplexador_Elevador.vo
+L0 253
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1682559404.000000
+Z8 !s107 Multiplexador_Elevador.vo|
+Z9 !s90 -work|work|Multiplexador_Elevador.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vMultiplexador_Elevador
+R1
+!i10b 1
+!s100 WWacAgj=81=^TFac[>X[i1
+I3N<af>hOd8IEgeP8fCB<T3
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@multiplexador_@elevador
+vMultiplexador_Elevador_vlg_vec_tst
+R1
+!i10b 1
+!s100 XDTOibj;fdlo:<EIn=e1O2
+I1`GXacK;]a@0?XeJBI1aj0
+R2
+R0
+w1682559400
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@multiplexador_@elevador_vlg_vec_tst

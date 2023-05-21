@@ -1,0 +1,7 @@
+|Preferencia_Elevador
+SP <> inst
+BP1 => inst.IN0
+BP2 => inst.IN1
+BP0 => inst.IN2
+
+

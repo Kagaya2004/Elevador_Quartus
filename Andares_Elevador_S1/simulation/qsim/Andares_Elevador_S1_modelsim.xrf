@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Quartus (Project Test)/Andares_Elevador_S1/Andares_Elevador_S1.bdf
+source_file = 1, C:/Quartus (Project Test)/Andares_Elevador_S1/Waveform.vwf
+source_file = 1, C:/Quartus (Project Test)/Andares_Elevador_S1/db/Andares_Elevador_S1.cbx.xml
+design_name = Andares_Elevador_S1
+instance = comp, \S1~output , S1~output, Andares_Elevador_S1, 1
+instance = comp, \B1~input , B1~input, Andares_Elevador_S1, 1
+instance = comp, \B0~input , B0~input, Andares_Elevador_S1, 1
+instance = comp, \B4~input , B4~input, Andares_Elevador_S1, 1
+instance = comp, \B3~input , B3~input, Andares_Elevador_S1, 1
+instance = comp, \B2~input , B2~input, Andares_Elevador_S1, 1
+instance = comp, \inst15~0 , inst15~0, Andares_Elevador_S1, 1
+instance = comp, \inst15~1 , inst15~1, Andares_Elevador_S1, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

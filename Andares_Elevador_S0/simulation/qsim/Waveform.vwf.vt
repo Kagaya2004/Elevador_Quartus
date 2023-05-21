@@ -1,0 +1,107 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "03/27/2023 21:45:36"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Andares_Elevador_S0
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Andares_Elevador_S0_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg B0;
+reg B1;
+reg B2;
+reg B3;
+reg B4;
+// wires                                               
+wire S0;
+
+// assign statements (if any)                          
+Andares_Elevador_S0 i1 (
+// port map - connection between master ports and signals/registers   
+	.B0(B0),
+	.B1(B1),
+	.B2(B2),
+	.B3(B3),
+	.B4(B4),
+	.S0(S0)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// B4
+initial
+begin
+	repeat(3)
+	begin
+		B4 = 1'b0;
+		B4 = #160000 1'b1;
+		# 160000;
+	end
+	B4 = 1'b0;
+end 
+
+// B3
+initial
+begin
+	repeat(6)
+	begin
+		B3 = 1'b0;
+		B3 = #80000 1'b1;
+		# 80000;
+	end
+	B3 = 1'b0;
+end 
+
+// B2
+initial
+begin
+	repeat(12)
+	begin
+		B2 = 1'b0;
+		B2 = #40000 1'b1;
+		# 40000;
+	end
+	B2 = 1'b0;
+end 
+
+// B1
+always
+begin
+	B1 = 1'b0;
+	B1 = #20000 1'b1;
+	#20000;
+end 
+
+// B0
+always
+begin
+	B0 = 1'b0;
+	B0 = #10000 1'b1;
+	#10000;
+end 
+endmodule
+

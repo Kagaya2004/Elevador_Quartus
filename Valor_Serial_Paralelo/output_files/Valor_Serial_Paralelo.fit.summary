@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Apr 26 19:45:12 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Valor_Serial_Paralelo
+Top-level Entity Name : Valor_Serial_Paralelo
+Family : Cyclone IV E
+Device : EP4CE6E22C6
+Timing Models : Final
+Total logic elements : 0 / 6,272 ( 0 % )
+    Total combinational functions : 0 / 6,272 ( 0 % )
+    Dedicated logic registers : 0 / 6,272 ( 0 % )
+Total registers : 0
+Total pins : 6 / 92 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

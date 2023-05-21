@@ -1,0 +1,504 @@
+$comment
+	File created using the following command:
+		vcd file ElevadorBetaV3.msim.vcd -direction
+$end
+$date
+	Sat May 20 12:13:32 2023
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module ElevadorBetaV3_vlg_vec_tst $end
+$var reg 5 ! BC [4:0] $end
+$var reg 5 " BE [4:0] $end
+$var reg 1 # CLK $end
+$var wire 1 $ Enable $end
+$var wire 1 % FIFO [2] $end
+$var wire 1 & FIFO [1] $end
+$var wire 1 ' FIFO [0] $end
+$var wire 1 ( Igual $end
+$var wire 1 ) Maior $end
+$var wire 1 * Menor $end
+$var wire 1 + OA $end
+$var wire 1 , OB $end
+$var wire 1 - OC $end
+$var wire 1 . OD $end
+$var wire 1 / OE $end
+$var wire 1 0 OF $end
+$var wire 1 1 OG $end
+$var wire 1 2 Rd $end
+$var wire 1 3 SAP [2] $end
+$var wire 1 4 SAP [1] $end
+$var wire 1 5 SAP [0] $end
+$var wire 1 6 WR $end
+
+$scope module i1 $end
+$var wire 1 7 gnd $end
+$var wire 1 8 vcc $end
+$var wire 1 9 unknown $end
+$var tri1 1 : devclrn $end
+$var tri1 1 ; devpor $end
+$var tri1 1 < devoe $end
+$var wire 1 = BE[2]~input_o $end
+$var wire 1 > BE[0]~input_o $end
+$var wire 1 ? Menor~output_o $end
+$var wire 1 @ Igual~output_o $end
+$var wire 1 A Maior~output_o $end
+$var wire 1 B OA~output_o $end
+$var wire 1 C OB~output_o $end
+$var wire 1 D OC~output_o $end
+$var wire 1 E OD~output_o $end
+$var wire 1 F OE~output_o $end
+$var wire 1 G OF~output_o $end
+$var wire 1 H OG~output_o $end
+$var wire 1 I Enable~output_o $end
+$var wire 1 J Rd~output_o $end
+$var wire 1 K WR~output_o $end
+$var wire 1 L FIFO[2]~output_o $end
+$var wire 1 M FIFO[1]~output_o $end
+$var wire 1 N FIFO[0]~output_o $end
+$var wire 1 O SAP[2]~output_o $end
+$var wire 1 P SAP[1]~output_o $end
+$var wire 1 Q SAP[0]~output_o $end
+$var wire 1 R CLK~input_o $end
+$var wire 1 S CLK~inputclkctrl_outclk $end
+$var wire 1 T inst|fstate.T~feeder_combout $end
+$var wire 1 U inst|fstate.T~q $end
+$var wire 1 V inst2|sub|84~combout $end
+$var wire 1 W inst2|sub|85~combout $end
+$var wire 1 X BE[4]~input_o $end
+$var wire 1 Y inst1|inst5|inst7~combout $end
+$var wire 1 Z inst1|inst5|inst~q $end
+$var wire 1 [ inst1|inst5|inst8~0_combout $end
+$var wire 1 \ inst1|inst5|inst1~q $end
+$var wire 1 ] BE[3]~input_o $end
+$var wire 1 ^ inst1|inst6|inst7~combout $end
+$var wire 1 _ inst1|inst6|inst~q $end
+$var wire 1 ` inst1|inst6|inst8~0_combout $end
+$var wire 1 a inst1|inst6|inst1~q $end
+$var wire 1 b BC[3]~input_o $end
+$var wire 1 c inst1|inst3|inst7~combout $end
+$var wire 1 d inst1|inst3|inst~q $end
+$var wire 1 e inst1|inst3|inst8~0_combout $end
+$var wire 1 f inst1|inst3|inst1~q $end
+$var wire 1 g BC[1]~input_o $end
+$var wire 1 h inst1|inst1|inst7~combout $end
+$var wire 1 i inst1|inst1|inst~q $end
+$var wire 1 j inst1|inst1|inst8~0_combout $end
+$var wire 1 k inst1|inst1|inst1~q $end
+$var wire 1 l BC[2]~input_o $end
+$var wire 1 m inst1|inst2|inst7~combout $end
+$var wire 1 n inst1|inst2|inst~q $end
+$var wire 1 o inst1|inst2|inst8~0_combout $end
+$var wire 1 p inst1|inst2|inst1~q $end
+$var wire 1 q BC[0]~input_o $end
+$var wire 1 r inst1|inst|inst7~combout $end
+$var wire 1 s inst1|inst|inst~q $end
+$var wire 1 t inst1|inst|inst8~0_combout $end
+$var wire 1 u inst1|inst|inst1~q $end
+$var wire 1 v inst6|inst6|inst|$00000|auto_generated|result_node[2]~29_combout $end
+$var wire 1 w BC[4]~input_o $end
+$var wire 1 x inst1|inst4|inst7~combout $end
+$var wire 1 y inst1|inst4|inst~q $end
+$var wire 1 z inst1|inst4|inst8~0_combout $end
+$var wire 1 { inst1|inst4|inst1~q $end
+$var wire 1 | inst6|inst6|inst|$00000|auto_generated|result_node[2]~30_combout $end
+$var wire 1 } BE[1]~input_o $end
+$var wire 1 ~ inst1|inst8|inst7~combout $end
+$var wire 1 !! inst1|inst8|inst~q $end
+$var wire 1 "! inst1|inst8|inst8~0_combout $end
+$var wire 1 #! inst1|inst8|inst1~q $end
+$var wire 1 $! inst6|inst6|inst|$00000|auto_generated|result_node[2]~23_combout $end
+$var wire 1 %! inst6|inst6|inst|$00000|auto_generated|result_node[1]~25_combout $end
+$var wire 1 &! inst6|inst6|inst|$00000|auto_generated|result_node[1]~26_combout $end
+$var wire 1 '! inst6|inst6|inst|$00000|auto_generated|result_node[1]~24_combout $end
+$var wire 1 (! inst6|inst6|inst|$00000|auto_generated|result_node[0]~27_combout $end
+$var wire 1 )! inst6|inst6|inst|$00000|auto_generated|result_node[0]~28_combout $end
+$var wire 1 *! inst6|inst6|inst|$00000|auto_generated|result_node[0]~22_combout $end
+$var wire 1 +! inst6|inst2~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+0#
+1$
+0'
+0&
+0%
+0(
+1)
+0*
+0+
+0,
+0-
+1.
+1/
+10
+11
+02
+05
+04
+03
+06
+07
+18
+x9
+1:
+1;
+1<
+0=
+0>
+0?
+0@
+1A
+0B
+0C
+0D
+1E
+1F
+1G
+1H
+1I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+1T
+0U
+1V
+1W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+1v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+$end
+#20000
+1#
+1R
+1S
+1U
+0I
+0G
+0F
+0E
+1@
+1J
+1Q
+15
+12
+1(
+0.
+0/
+00
+0$
+0V
+0A
+0)
+#40000
+0#
+0R
+0S
+#60000
+1#
+1R
+1S
+#80000
+b100 !
+b10000 "
+0#
+1X
+1l
+0R
+0S
+1[
+1o
+#100000
+b0 !
+b0 "
+1#
+0X
+0l
+1R
+1S
+0[
+0o
+1p
+1\
+1)!
+1%!
+0v
+1m
+1*!
+1$!
+1Y
+1L
+1N
+1&!
+1'
+1%
+1+!
+1K
+16
+#120000
+0#
+0R
+0S
+#140000
+1#
+1R
+1S
+0p
+1n
+0\
+1Z
+0)!
+0%!
+1v
+0m
+1'!
+0$!
+0Y
+0L
+1M
+0&!
+1&
+0%
+0*!
+0N
+0'
+0'!
+0M
+0&
+0+!
+0K
+06
+#160000
+0#
+0R
+0S
+#180000
+1#
+1R
+1S
+0n
+0Z
+#200000
+0#
+0R
+0S
+#220000
+1#
+1R
+1S
+#240000
+0#
+0R
+0S
+#260000
+1#
+1R
+1S
+#280000
+0#
+0R
+0S
+#300000
+1#
+1R
+1S
+#320000
+0#
+0R
+0S
+#340000
+1#
+1R
+1S
+#360000
+0#
+0R
+0S
+#380000
+1#
+1R
+1S
+#400000
+0#
+0R
+0S
+#420000
+1#
+1R
+1S
+#440000
+0#
+0R
+0S
+#460000
+1#
+1R
+1S
+#480000
+0#
+0R
+0S
+#500000
+1#
+1R
+1S
+#520000
+0#
+0R
+0S
+#540000
+1#
+1R
+1S
+#560000
+0#
+0R
+0S
+#580000
+1#
+1R
+1S
+#600000
+0#
+0R
+0S
+#620000
+1#
+1R
+1S
+#640000
+0#
+0R
+0S
+#660000
+1#
+1R
+1S
+#680000
+0#
+0R
+0S
+#700000
+1#
+1R
+1S
+#720000
+0#
+0R
+0S
+#740000
+1#
+1R
+1S
+#760000
+0#
+0R
+0S
+#780000
+1#
+1R
+1S
+#800000
+0#
+0R
+0S
+#820000
+1#
+1R
+1S
+#840000
+0#
+0R
+0S
+#860000
+1#
+1R
+1S
+#880000
+0#
+0R
+0S
+#900000
+1#
+1R
+1S
+#920000
+0#
+0R
+0S
+#940000
+1#
+1R
+1S
+#960000
+0#
+0R
+0S
+#980000
+1#
+1R
+1S
+#1000000

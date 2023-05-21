@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 17 18:03:44 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Elevador_BetaV2
+Top-level Entity Name : Elevador_BetaV2
+Family : Cyclone IV E
+Total logic elements : 71
+    Total combinational functions : 71
+    Dedicated logic registers : 35
+Total registers : 35
+Total pins : 27
+Total virtual pins : 0
+Total memory bits : 48
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

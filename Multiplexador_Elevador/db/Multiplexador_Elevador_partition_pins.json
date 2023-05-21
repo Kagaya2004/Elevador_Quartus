@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MUX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MUX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MUX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "INP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Prioridade",
+					"strict" : false
+				},
+				{
+					"name" : "IP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "INP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "INP[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

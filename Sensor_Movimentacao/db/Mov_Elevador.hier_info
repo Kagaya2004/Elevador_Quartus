@@ -1,0 +1,14 @@
+|Mov_Elevador
+clock => fstate~1.DATAIN
+reset => fstate~3.DATAIN
+EN => always1.IN0
+EN => always1.IN0
+EN => reg_fstate.OUTPUTSELECT
+EN => reg_fstate.OUTPUTSELECT
+ACT => always1.IN1
+ACT => always1.IN1
+SA0 <= SA0.DB_MAX_OUTPUT_PORT_TYPE
+SA1 <= SA1.DB_MAX_OUTPUT_PORT_TYPE
+SA2 <= SA2.DB_MAX_OUTPUT_PORT_TYPE
+
+

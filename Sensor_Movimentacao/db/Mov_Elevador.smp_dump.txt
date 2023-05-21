@@ -1,0 +1,8 @@
+
+State Machine - |Mov_Elevador|fstate
+Name fstate.A3 fstate.A2 fstate.A1 fstate.T fstate.A4 
+fstate.T 0 0 0 0 0 
+fstate.A1 0 0 1 1 0 
+fstate.A2 0 1 0 1 0 
+fstate.A3 1 0 0 1 0 
+fstate.A4 0 0 0 1 1 

@@ -1,0 +1,18 @@
+|Registrador
+SP[0] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+SP[1] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+SP[2] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+MR => inst8.ACLR
+MR => inst13.ACLR
+MR => inst14.ACLR
+CP => inst8.CLK
+CP => inst13.CLK
+CP => inst14.CLK
+D2 => inst8.DATAIN
+D1 => inst13.DATAIN
+D0 => inst14.DATAIN
+SS[0] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+SS[1] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+SS[2] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+

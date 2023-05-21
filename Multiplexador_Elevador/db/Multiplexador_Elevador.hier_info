@@ -1,0 +1,60 @@
+|Multiplexador_Elevador
+MUX[0] <= BUSMUX:inst.result[0]
+MUX[1] <= BUSMUX:inst.result[1]
+MUX[2] <= BUSMUX:inst.result[2]
+Prioridade => BUSMUX:inst.sel
+INP[0] => BUSMUX:inst.dataa[0]
+INP[1] => BUSMUX:inst.dataa[1]
+INP[2] => BUSMUX:inst.dataa[2]
+IP[0] => BUSMUX:inst.datab[0]
+IP[1] => BUSMUX:inst.datab[1]
+IP[2] => BUSMUX:inst.datab[2]
+
+
+|Multiplexador_Elevador|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+
+
+|Multiplexador_Elevador|BUSMUX:inst|lpm_mux:$00000
+data[0][0] => mux_9rc:auto_generated.data[0]
+data[0][1] => mux_9rc:auto_generated.data[1]
+data[0][2] => mux_9rc:auto_generated.data[2]
+data[1][0] => mux_9rc:auto_generated.data[3]
+data[1][1] => mux_9rc:auto_generated.data[4]
+data[1][2] => mux_9rc:auto_generated.data[5]
+sel[0] => mux_9rc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_9rc:auto_generated.result[0]
+result[1] <= mux_9rc:auto_generated.result[1]
+result[2] <= mux_9rc:auto_generated.result[2]
+
+
+|Multiplexador_Elevador|BUSMUX:inst|lpm_mux:$00000|mux_9rc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[1].IN1
+data[2] => result_node[2].IN1
+data[3] => result_node[0].IN1
+data[4] => result_node[1].IN1
+data[5] => result_node[2].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[2].IN0
+sel[0] => _.IN0
+sel[0] => result_node[1].IN0
+sel[0] => _.IN0
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+

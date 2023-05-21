@@ -1,0 +1,139 @@
+// Copyright (C) 2022  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "05/11/2023 16:48:31"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Elevador_BetaV2
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Elevador_BetaV2_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [4:0] BC;
+reg [4:0] BE;
+reg CLK;
+// wires                                               
+wire Enable;
+wire [2:0] FIFO;
+wire Igual;
+wire Maior;
+wire Menor;
+wire OA;
+wire OB;
+wire OC;
+wire OD;
+wire OE;
+wire OF;
+wire OG;
+wire Rd;
+wire WR;
+
+// assign statements (if any)                          
+Elevador_BetaV2 i1 (
+// port map - connection between master ports and signals/registers   
+	.BC(BC),
+	.BE(BE),
+	.CLK(CLK),
+	.Enable(Enable),
+	.FIFO(FIFO),
+	.Igual(Igual),
+	.Maior(Maior),
+	.Menor(Menor),
+	.OA(OA),
+	.OB(OB),
+	.OC(OC),
+	.OD(OD),
+	.OE(OE),
+	.OF(OF),
+	.OG(OG),
+	.Rd(Rd),
+	.WR(WR)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #20000 1'b1;
+	#20000;
+end 
+// BC[ 4 ]
+initial
+begin
+	BC[4] = 1'b0;
+	BC[4] = #40000 1'b1;
+	BC[4] = #20000 1'b0;
+end 
+// BC[ 3 ]
+initial
+begin
+	BC[3] = 1'b0;
+end 
+// BC[ 2 ]
+initial
+begin
+	BC[2] = 1'b0;
+end 
+// BC[ 1 ]
+initial
+begin
+	BC[1] = 1'b0;
+end 
+// BC[ 0 ]
+initial
+begin
+	BC[0] = 1'b1;
+	BC[0] = #20000 1'b0;
+end 
+// BE[ 4 ]
+initial
+begin
+	BE[4] = 1'b0;
+end 
+// BE[ 3 ]
+initial
+begin
+	BE[3] = 1'b0;
+end 
+// BE[ 2 ]
+initial
+begin
+	BE[2] = 1'b0;
+end 
+// BE[ 1 ]
+initial
+begin
+	BE[1] = 1'b0;
+end 
+// BE[ 0 ]
+initial
+begin
+	BE[0] = 1'b0;
+end 
+endmodule
+

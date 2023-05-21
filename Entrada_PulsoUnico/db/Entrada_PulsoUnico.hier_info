@@ -1,0 +1,111 @@
+|Entrada_PulsoUnico
+SBC[0] <= mod_PU:inst.PU
+SBC[1] <= mod_PU:inst1.PU
+SBC[2] <= mod_PU:inst2.PU
+SBC[3] <= mod_PU:inst3.PU
+SBC[4] <= mod_PU:inst4.PU
+BC[0] => mod_PU:inst.P
+BC[1] => mod_PU:inst1.P
+BC[2] => mod_PU:inst2.P
+BC[3] => mod_PU:inst3.P
+BC[4] => mod_PU:inst4.P
+CLK => mod_PU:inst.CLK
+CLK => mod_PU:inst1.CLK
+CLK => mod_PU:inst2.CLK
+CLK => mod_PU:inst3.CLK
+CLK => mod_PU:inst4.CLK
+CLK => mod_PU:inst8.CLK
+CLK => mod_PU:inst6.CLK
+CLK => mod_PU:inst5.CLK
+SBE[0] <= mod_PU:inst9.PU
+SBE[1] <= mod_PU:inst8.PU
+SBE[2] <= mod_PU:inst7.PU
+SBE[3] <= mod_PU:inst6.PU
+SBE[4] <= mod_PU:inst5.PU
+BE[0] => mod_PU:inst9.P
+BE[1] => mod_PU:inst8.P
+BE[2] => mod_PU:inst7.P
+BE[3] => mod_PU:inst6.P
+BE[4] => mod_PU:inst5.P
+
+
+|Entrada_PulsoUnico|mod_PU:inst
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+
+|Entrada_PulsoUnico|mod_PU:inst1
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+
+|Entrada_PulsoUnico|mod_PU:inst2
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+
+|Entrada_PulsoUnico|mod_PU:inst3
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+
+|Entrada_PulsoUnico|mod_PU:inst4
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+
+|Entrada_PulsoUnico|mod_PU:inst9
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+
+|Entrada_PulsoUnico|mod_PU:inst8
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+
+|Entrada_PulsoUnico|mod_PU:inst7
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+
+|Entrada_PulsoUnico|mod_PU:inst6
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+
+|Entrada_PulsoUnico|mod_PU:inst5
+PU <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst1.CLK
+CLK => inst.CLK
+P => inst8.IN0
+P => inst6.IN0
+
+

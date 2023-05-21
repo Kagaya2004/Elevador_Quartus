@@ -1,0 +1,531 @@
+$comment
+	File created using the following command:
+		vcd file Elevador_Movimento.msim.vcd -direction
+$end
+$date
+	Sun Apr 30 22:43:17 2023
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module elevador_movimento_vhd_vec_tst $end
+$var wire 1 ! ACT $end
+$var wire 1 " CLK $end
+$var wire 1 # EN $end
+$var wire 1 $ SAP [2] $end
+$var wire 1 % SAP [1] $end
+$var wire 1 & SAP [0] $end
+$var wire 1 ' SAS [2] $end
+$var wire 1 ( SAS [1] $end
+$var wire 1 ) SAS [0] $end
+
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var wire 1 - devoe $end
+$var wire 1 . devclrn $end
+$var wire 1 / devpor $end
+$var wire 1 0 ww_devoe $end
+$var wire 1 1 ww_devclrn $end
+$var wire 1 2 ww_devpor $end
+$var wire 1 3 ww_SAP [2] $end
+$var wire 1 4 ww_SAP [1] $end
+$var wire 1 5 ww_SAP [0] $end
+$var wire 1 6 ww_CLK $end
+$var wire 1 7 ww_EN $end
+$var wire 1 8 ww_ACT $end
+$var wire 1 9 ww_SAS [2] $end
+$var wire 1 : ww_SAS [1] $end
+$var wire 1 ; ww_SAS [0] $end
+$var wire 1 < \CLK~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 = \CLK~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 > \CLK~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 ? \CLK~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 @ \SAP[2]~output_o\ $end
+$var wire 1 A \SAP[1]~output_o\ $end
+$var wire 1 B \SAP[0]~output_o\ $end
+$var wire 1 C \SAS[2]~output_o\ $end
+$var wire 1 D \SAS[1]~output_o\ $end
+$var wire 1 E \SAS[0]~output_o\ $end
+$var wire 1 F \CLK~input_o\ $end
+$var wire 1 G \CLK~inputclkctrl_outclk\ $end
+$var wire 1 H \EN~input_o\ $end
+$var wire 1 I \ACT~input_o\ $end
+$var wire 1 J \inst|Selector0~0_combout\ $end
+$var wire 1 K \inst|fstate.T~q\ $end
+$var wire 1 L \inst|Selector1~0_combout\ $end
+$var wire 1 M \inst|Selector1~1_combout\ $end
+$var wire 1 N \inst|fstate.A1~q\ $end
+$var wire 1 O \inst|Selector2~0_combout\ $end
+$var wire 1 P \inst|Selector2~1_combout\ $end
+$var wire 1 Q \inst|fstate.A2~q\ $end
+$var wire 1 R \inst|Selector3~0_combout\ $end
+$var wire 1 S \inst|Selector3~1_combout\ $end
+$var wire 1 T \inst|fstate.A3~q\ $end
+$var wire 1 U \inst|Selector4~0_combout\ $end
+$var wire 1 V \inst|fstate.A4~q\ $end
+$var wire 1 W \inst|SA2~combout\ $end
+$var wire 1 X \inst|SA1~combout\ $end
+$var wire 1 Y \inst|SA0~0_combout\ $end
+$var wire 1 Z \inst|ALT_INV_SA0~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+0#
+0*
+1+
+x,
+1-
+1.
+1/
+10
+11
+12
+06
+07
+18
+0@
+0A
+1B
+0C
+0D
+1E
+0F
+0G
+0H
+1I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+1Z
+03
+04
+15
+09
+0:
+1;
+1<
+1=
+1>
+0?
+0$
+0%
+1&
+0'
+0(
+1)
+$end
+#20000
+1"
+1#
+16
+17
+1H
+1F
+1?
+1J
+1L
+1M
+1G
+1K
+1N
+1O
+1X
+1Y
+0L
+0Z
+0M
+1P
+1A
+1D
+0B
+0E
+14
+1:
+05
+0;
+1%
+1(
+0&
+0)
+#40000
+0"
+0#
+06
+07
+0H
+0F
+0?
+1M
+0O
+0P
+0G
+#60000
+1"
+1#
+16
+17
+1H
+1F
+1?
+0M
+1O
+1P
+1G
+0N
+1Q
+1R
+0O
+0Y
+1Z
+0P
+1S
+1B
+1E
+15
+1;
+1&
+1)
+#80000
+0"
+0#
+06
+07
+0H
+0F
+0?
+1P
+0R
+0S
+0G
+#100000
+1"
+1#
+16
+17
+1H
+1F
+1?
+0P
+1R
+1S
+1G
+0Q
+1T
+1U
+1W
+1Y
+0R
+0X
+0Z
+0S
+0A
+0D
+1@
+1C
+0B
+0E
+04
+0:
+13
+19
+05
+0;
+0%
+1$
+0(
+1'
+0&
+0)
+#120000
+0"
+0#
+06
+07
+0H
+0F
+0?
+1S
+0U
+0G
+#140000
+1"
+16
+1F
+1?
+1G
+#160000
+0"
+06
+0F
+0?
+0G
+#180000
+1"
+16
+1F
+1?
+1G
+#200000
+0"
+06
+0F
+0?
+0G
+#220000
+1"
+16
+1F
+1?
+1G
+#240000
+0"
+06
+0F
+0?
+0G
+#260000
+1"
+16
+1F
+1?
+1G
+#280000
+0"
+06
+0F
+0?
+0G
+#300000
+1"
+16
+1F
+1?
+1G
+#320000
+0"
+06
+0F
+0?
+0G
+#340000
+1"
+16
+1F
+1?
+1G
+#360000
+0"
+06
+0F
+0?
+0G
+#380000
+1"
+16
+1F
+1?
+1G
+#400000
+0"
+06
+0F
+0?
+0G
+#420000
+1"
+16
+1F
+1?
+1G
+#440000
+0"
+06
+0F
+0?
+0G
+#460000
+1"
+16
+1F
+1?
+1G
+#480000
+0"
+06
+0F
+0?
+0G
+#500000
+1"
+16
+1F
+1?
+1G
+#520000
+0"
+06
+0F
+0?
+0G
+#540000
+1"
+16
+1F
+1?
+1G
+#560000
+0"
+06
+0F
+0?
+0G
+#580000
+1"
+16
+1F
+1?
+1G
+#600000
+0"
+06
+0F
+0?
+0G
+#620000
+1"
+16
+1F
+1?
+1G
+#640000
+0"
+06
+0F
+0?
+0G
+#660000
+1"
+16
+1F
+1?
+1G
+#680000
+0"
+06
+0F
+0?
+0G
+#700000
+1"
+16
+1F
+1?
+1G
+#720000
+0"
+06
+0F
+0?
+0G
+#740000
+1"
+16
+1F
+1?
+1G
+#760000
+0"
+06
+0F
+0?
+0G
+#780000
+1"
+16
+1F
+1?
+1G
+#800000
+0"
+06
+0F
+0?
+0G
+#820000
+1"
+16
+1F
+1?
+1G
+#840000
+0"
+06
+0F
+0?
+0G
+#860000
+1"
+16
+1F
+1?
+1G
+#880000
+0"
+06
+0F
+0?
+0G
+#900000
+1"
+16
+1F
+1?
+1G
+#920000
+0"
+06
+0F
+0?
+0G
+#940000
+1"
+16
+1F
+1?
+1G
+#960000
+0"
+06
+0F
+0?
+0G
+#980000
+1"
+16
+1F
+1?
+1G
+#1000000

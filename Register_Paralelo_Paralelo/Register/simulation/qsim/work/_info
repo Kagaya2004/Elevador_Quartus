@@ -1,0 +1,76 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/ifsp/Documentos/Kayky - ENG221/Register/simulation/qsim
+vhard_block
+Z0 !s110 1682944311
+!i10b 1
+!s100 Y=9W@0f_BFdd@]VHKV?d[0
+I7Nn0en<Qm2fmg3QCVPZ=W2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Quartus (Project Test V2)/Register_Paralelo_Paralelo/Register/simulation/qsim
+Z3 w1682944311
+Z4 8Registrador.vo
+Z5 FRegistrador.vo
+L0 374
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1682944311.000000
+Z8 !s107 Registrador.vo|
+Z9 !s90 -work|work|Registrador.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vRegistrador
+R0
+!i10b 1
+!s100 0hmKg:CBaF1K<]oaoR0S13
+IzJaCoSiAi0dT?2=[@@R0i3
+R1
+R2
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@registrador
+vRegistrador_vlg_vec_tst
+!s110 1682944312
+!i10b 1
+!s100 8hFMGm3PzfTNAE]?nWD?T2
+IJ_1h<O`]FhIm>0R27_Wz42
+R1
+R2
+w1682944310
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+n@registrador_vlg_vec_tst
