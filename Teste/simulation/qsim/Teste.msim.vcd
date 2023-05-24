@@ -3,7 +3,7 @@ $comment
 		vcd file Teste.msim.vcd -direction
 $end
 $date
-	Tue May 23 20:55:31 2023
+	Wed May 24 19:04:13 2023
 $end
 $version
 	ModelSim Version 10.5b
@@ -16,43 +16,56 @@ $scope module Teste_vlg_vec_tst $end
 $var reg 1 ! ACT $end
 $var reg 1 " CLK $end
 $var reg 1 # EN $end
-$var wire 1 $ SA [2] $end
-$var wire 1 % SA [1] $end
-$var wire 1 & SA [0] $end
+$var wire 1 $ NUM [2] $end
+$var wire 1 % NUM [1] $end
+$var wire 1 & NUM [0] $end
+$var wire 1 ' SA [2] $end
+$var wire 1 ( SA [1] $end
+$var wire 1 ) SA [0] $end
 
 $scope module i1 $end
-$var wire 1 ' gnd $end
-$var wire 1 ( vcc $end
-$var wire 1 ) unknown $end
-$var tri1 1 * devclrn $end
-$var tri1 1 + devpor $end
-$var tri1 1 , devoe $end
-$var wire 1 - SA[2]~output_o $end
-$var wire 1 . SA[1]~output_o $end
-$var wire 1 / SA[0]~output_o $end
-$var wire 1 0 CLK~input_o $end
-$var wire 1 1 CLK~inputclkctrl_outclk $end
-$var wire 1 2 EN~input_o $end
-$var wire 1 3 ACT~input_o $end
-$var wire 1 4 inst|Selector4~0_combout $end
-$var wire 1 5 inst|fstate.A4~q $end
-$var wire 1 6 inst|fstate.B~feeder_combout $end
-$var wire 1 7 inst|fstate.B~q $end
-$var wire 1 8 inst|Selector0~0_combout $end
-$var wire 1 9 inst|Selector0~1_combout $end
-$var wire 1 : inst|fstate.T~q $end
-$var wire 1 ; inst|Selector1~0_combout $end
-$var wire 1 < inst|Selector1~1_combout $end
-$var wire 1 = inst|fstate.A1~q $end
-$var wire 1 > inst|Selector2~0_combout $end
-$var wire 1 ? inst|Selector2~1_combout $end
-$var wire 1 @ inst|fstate.A2~q $end
-$var wire 1 A inst|Selector3~0_combout $end
-$var wire 1 B inst|Selector3~1_combout $end
-$var wire 1 C inst|fstate.A3~q $end
-$var wire 1 D inst|SA2~0_combout $end
-$var wire 1 E inst|SA1~0_combout $end
-$var wire 1 F inst|WideOr5~0_combout $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var tri1 1 - devclrn $end
+$var tri1 1 . devpor $end
+$var tri1 1 / devoe $end
+$var wire 1 0 NUM[2]~output_o $end
+$var wire 1 1 NUM[1]~output_o $end
+$var wire 1 2 NUM[0]~output_o $end
+$var wire 1 3 SA[2]~output_o $end
+$var wire 1 4 SA[1]~output_o $end
+$var wire 1 5 SA[0]~output_o $end
+$var wire 1 6 CLK~input_o $end
+$var wire 1 7 CLK~inputclkctrl_outclk $end
+$var wire 1 8 EN~input_o $end
+$var wire 1 9 ACT~input_o $end
+$var wire 1 : inst|Selector4~0_combout $end
+$var wire 1 ; inst|fstate.A4~q $end
+$var wire 1 < inst|Selector3~0_combout $end
+$var wire 1 = inst|Selector3~1_combout $end
+$var wire 1 > inst|fstate.A3~q $end
+$var wire 1 ? inst|Selector2~0_combout $end
+$var wire 1 @ inst|Selector2~1_combout $end
+$var wire 1 A inst|fstate.A2~q $end
+$var wire 1 B inst|fstate.B~feeder_combout $end
+$var wire 1 C inst|fstate.B~q $end
+$var wire 1 D inst|Selector0~0_combout $end
+$var wire 1 E inst|Selector0~1_combout $end
+$var wire 1 F inst|fstate.T~q $end
+$var wire 1 G inst|Selector1~0_combout $end
+$var wire 1 H inst|Selector1~1_combout $end
+$var wire 1 I inst|fstate.A1~q $end
+$var wire 1 J inst|WideOr5~0_combout $end
+$var wire 1 K inst|SA2~0_combout $end
+$var wire 1 L inst1|auto_generated|op_1~5_combout $end
+$var wire 1 M inst6~0_combout $end
+$var wire 1 N inst6~combout $end
+$var wire 1 O inst1|auto_generated|op_1~4_combout $end
+$var wire 1 P inst|SA1~0_combout $end
+$var wire 1 Q inst1|auto_generated|pipeline_dffe [2] $end
+$var wire 1 R inst1|auto_generated|pipeline_dffe [1] $end
+$var wire 1 S inst1|auto_generated|pipeline_dffe [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -64,25 +77,25 @@ $dumpvars
 0&
 0%
 0$
+0)
+0(
 0'
-1(
-x)
-1*
+0*
 1+
-1,
-0-
-0.
-0/
+x,
+1-
+1.
+1/
 00
 01
-12
+02
 03
 04
 05
-16
+06
 07
-08
-19
+18
+09
 0:
 0;
 0<
@@ -91,302 +104,231 @@ x)
 0?
 0@
 0A
-0B
+1B
 0C
 0D
-0E
-1F
+1E
+0F
+0G
+0H
+0I
+1J
+0K
+1L
+0M
+0N
+1O
+0P
+0S
+0R
+0Q
 $end
 #20000
 1"
-10
-11
-1:
+16
 17
-18
-0F
-09
-1/
-1&
-19
-#40000
-1!
-0"
-13
-00
-01
-1;
-08
-1<
-09
-#60000
-0!
-1"
-03
-10
-11
-0;
-18
-0<
-19
-1=
-0:
 1F
+1C
+1D
+1M
+0O
+0J
+0E
+15
+1N
+1)
 1E
-1.
-0/
-0&
-1%
-#80000
-1!
+0L
+#40000
 0"
-13
-00
-01
-1>
-08
-1?
-09
-#100000
-0!
+06
+07
+#60000
 1"
-03
-10
-11
-0>
-18
-0?
-19
-1@
-0=
-1;
-0F
-08
-1/
-1&
-1<
-09
+16
+17
+#80000
+0"
+06
+07
+#100000
+1"
+16
+17
 #120000
 0"
-00
-01
+06
+07
 #140000
 1"
-10
-11
-0@
-1=
-0;
-1F
-18
-0/
-0&
-0<
-19
+16
+17
 #160000
-1!
 0"
-13
-00
-01
-1>
-08
-1?
-09
+06
+07
 #180000
-0!
 1"
-03
-10
-11
-0>
-18
-0?
-19
-1@
-0=
-1;
-0F
-08
-1/
-1&
-1<
-09
+16
+17
 #200000
 0"
-00
-01
+06
+07
 #220000
 1"
-10
-11
-0@
-1=
-0;
-1F
-18
-0/
-0&
-0<
-19
+16
+17
 #240000
 0"
-00
-01
+06
+07
 #260000
 1"
-10
-11
-0=
-1:
-0F
-0E
-0.
-1/
-1&
-0%
+16
+17
 #280000
 0"
-00
-01
+06
+07
 #300000
 1"
-10
-11
+16
+17
 #320000
 0"
-00
-01
+06
+07
 #340000
 1"
-10
-11
+16
+17
 #360000
 0"
-00
-01
+06
+07
 #380000
 1"
-10
-11
+16
+17
 #400000
 0"
-00
-01
+06
+07
 #420000
 1"
-10
-11
+16
+17
 #440000
 0"
-00
-01
+06
+07
 #460000
 1"
-10
-11
+16
+17
 #480000
 0"
-00
-01
+06
+07
 #500000
 1"
-10
-11
+16
+17
 #520000
 0"
-00
-01
+06
+07
 #540000
 1"
-10
-11
+16
+17
 #560000
 0"
-00
-01
+06
+07
 #580000
 1"
-10
-11
+16
+17
 #600000
 0"
-00
-01
+06
+07
 #620000
 1"
-10
-11
+16
+17
 #640000
 0"
-00
-01
+06
+07
 #660000
 1"
-10
-11
+16
+17
 #680000
 0"
-00
-01
+06
+07
 #700000
 1"
-10
-11
+16
+17
 #720000
 0"
-00
-01
+06
+07
 #740000
 1"
-10
-11
+16
+17
 #760000
 0"
-00
-01
+06
+07
 #780000
 1"
-10
-11
+16
+17
 #800000
 0"
-00
-01
+06
+07
 #820000
 1"
-10
-11
+16
+17
 #840000
 0"
-00
-01
+06
+07
 #860000
 1"
-10
-11
+16
+17
 #880000
 0"
-00
-01
+06
+07
 #900000
 1"
-10
-11
+16
+17
 #920000
 0"
-00
-01
+06
+07
 #940000
 1"
-10
-11
+16
+17
 #960000
 0"
-00
-01
+06
+07
 #980000
 1"
-10
-11
+16
+17
 #1000000

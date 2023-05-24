@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue May 23 21:39:49 2023
+Analysis & Synthesis Status : Successful - Wed May 24 19:09:51 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Elevador_MovimentoV2
 Top-level Entity Name : Elevador_MovimentoV2
 Family : Cyclone IV E
-Total logic elements : 13
-    Total combinational functions : 12
-    Dedicated logic registers : 6
-Total registers : 6
+Total logic elements : 17
+    Total combinational functions : 16
+    Dedicated logic registers : 9
+Total registers : 9
 Total pins : 9
 Total virtual pins : 0
 Total memory bits : 0

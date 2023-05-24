@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue May 23 23:46:53 2023
+Fitter Status : Successful - Wed May 24 19:45:16 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Elevador_BetaV4
 Top-level Entity Name : Elevador_BetaV4
 Family : Cyclone IV E
-Device : EP4CE6E22C6
+Device : EP4CE115F23C7
 Timing Models : Final
-Total logic elements : 87 / 6,272 ( 1 % )
-    Total combinational functions : 87 / 6,272 ( 1 % )
-    Dedicated logic registers : 40 / 6,272 ( < 1 % )
-Total registers : 40
-Total pins : 21 / 92 ( 23 % )
+Total logic elements : 126 / 114,480 ( < 1 % )
+    Total combinational functions : 124 / 114,480 ( < 1 % )
+    Dedicated logic registers : 69 / 114,480 ( < 1 % )
+Total registers : 69
+Total pins : 21 / 281 ( 7 % )
 Total virtual pins : 0
-Total memory bits : 48 / 276,480 ( < 1 % )
-Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
-Total PLLs : 0 / 2 ( 0 % )
+Total memory bits : 48 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

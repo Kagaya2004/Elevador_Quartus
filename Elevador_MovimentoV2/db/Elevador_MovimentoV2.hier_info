@@ -1,13 +1,14 @@
 |Elevador_MovimentoV2
-SA[0] <= Sensor_MovimentoV2:inst1.SA0
-SA[1] <= Sensor_MovimentoV2:inst1.SA1
-SA[2] <= Sensor_MovimentoV2:inst1.SA2
 SAS[0] <= Sensor_MovimentoV2:inst1.SA0
 SAS[1] <= Sensor_MovimentoV2:inst1.SA1
 SAS[2] <= Sensor_MovimentoV2:inst1.SA2
 CLK => Sensor_MovimentoV2:inst1.clock
+CLK => LPM_ADD_SUB:inst2.clock
 ACT => Sensor_MovimentoV2:inst1.ACT
 EN => Sensor_MovimentoV2:inst1.EN
+SD[0] <= LPM_ADD_SUB:inst2.result[0]
+SD[1] <= LPM_ADD_SUB:inst2.result[1]
+SD[2] <= LPM_ADD_SUB:inst2.result[2]
 
 
 |Elevador_MovimentoV2|Sensor_MovimentoV2:inst1
@@ -30,5 +31,51 @@ EN => reg_fstate.DATAB
 SA0 <= SA0.DB_MAX_OUTPUT_PORT_TYPE
 SA1 <= SA1.DB_MAX_OUTPUT_PORT_TYPE
 SA2 <= SA2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador_MovimentoV2|LPM_ADD_SUB:inst2
+dataa[0] => add_sub_t9l:auto_generated.dataa[0]
+dataa[1] => add_sub_t9l:auto_generated.dataa[1]
+dataa[2] => add_sub_t9l:auto_generated.dataa[2]
+datab[0] => add_sub_t9l:auto_generated.datab[0]
+datab[1] => add_sub_t9l:auto_generated.datab[1]
+datab[2] => add_sub_t9l:auto_generated.datab[2]
+cin => ~NO_FANOUT~
+add_sub => add_sub_t9l:auto_generated.add_sub
+clock => add_sub_t9l:auto_generated.clock
+aclr => ~NO_FANOUT~
+clken => add_sub_t9l:auto_generated.clken
+result[0] <= add_sub_t9l:auto_generated.result[0]
+result[1] <= add_sub_t9l:auto_generated.result[1]
+result[2] <= add_sub_t9l:auto_generated.result[2]
+cout <= <GND>
+overflow <= <GND>
+
+
+|Elevador_MovimentoV2|LPM_ADD_SUB:inst2|add_sub_t9l:auto_generated
+add_sub => _.IN0
+add_sub => _.IN0
+add_sub => _.IN0
+clken => pipeline_dffe[2].ENA
+clken => pipeline_dffe[1].ENA
+clken => pipeline_dffe[0].ENA
+clock => pipeline_dffe[2].CLK
+clock => pipeline_dffe[1].CLK
+clock => pipeline_dffe[0].CLK
+dataa[0] => op_1.IN4
+dataa[1] => op_1.IN2
+dataa[2] => op_1.IN0
+datab[0] => _.IN1
+datab[1] => _.IN1
+datab[2] => _.IN1
+result[0] <= pipeline_dffe[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= pipeline_dffe[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= pipeline_dffe[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador_MovimentoV2|LPM_CONSTANT:inst5
+result[0] <= <VCC>
+result[1] <= <GND>
+result[2] <= <GND>
 
 

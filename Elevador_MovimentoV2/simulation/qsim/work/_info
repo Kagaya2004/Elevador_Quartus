@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Quartus (Project Test V2)/Elevador_MovimentoV2/simulation/qsim
 vElevador_MovimentoV2
-Z1 !s110 1684889922
+Z1 !s110 1684966294
 !i10b 1
-!s100 LQzZlUhm>HIJ6U3zbHCYn1
-I6O9mCaKo]J@6FId97X1c?1
+!s100 BNle^_1OW0Ua_adkGM58b2
+IBbcXC7_E_7dl_H6dM:k<d1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1684889920
+Z3 w1684966293
 Z4 8Elevador_MovimentoV2.vo
 Z5 FElevador_MovimentoV2.vo
 L0 31
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1684889922.000000
+Z7 !s108 1684966294.000000
 Z8 !s107 Elevador_MovimentoV2.vo|
 Z9 !s90 -work|work|Elevador_MovimentoV2.vo|
 !i113 1
@@ -33,11 +33,11 @@ n@elevador_@movimento@v2
 vElevador_MovimentoV2_vlg_vec_tst
 R1
 !i10b 1
-!s100 MHe7:^]<?Pn1El>>f7fBP3
-I1]TDaG>L5Kah456]mE<V;1
+!s100 Ib>lFO=acV0^`959mD;J43
+IGioh?3ZUR7OSB2I09EI`j0
 R2
 R0
-w1684889919
+w1684966292
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29
@@ -55,14 +55,14 @@ n@elevador_@movimento@v2_vlg_vec_tst
 vhard_block
 R1
 !i10b 1
-!s100 Y5jSCLbo82ZEWF4LA2Yoj3
-I`<mMJ90Hc08bG8bK0]AXZ3
+!s100 38dOAAigRUII?E8EVd_3a3
+ILKLiBdIZeW7C?i0>C8fLz1
 R2
 R0
 R3
 R4
 R5
-L0 572
+L0 702
 R6
 r1
 !s85 0

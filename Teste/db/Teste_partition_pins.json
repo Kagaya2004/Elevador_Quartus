@@ -4,6 +4,18 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "NUM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "NUM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "NUM[0]",
+					"strict" : false
+				},
+				{
 					"name" : "SA[2]",
 					"strict" : false
 				},
@@ -16,15 +28,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
 					"name" : "EN",
 					"strict" : false
 				},
 				{
 					"name" : "ACT",
-					"strict" : false
-				},
-				{
-					"name" : "CLK",
 					"strict" : false
 				}
 			]

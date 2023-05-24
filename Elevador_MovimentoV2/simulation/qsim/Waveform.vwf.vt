@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/23/2023 21:58:39"
+// Generated on "05/24/2023 19:11:32"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          Elevador_MovimentoV2
 // 
@@ -33,8 +33,8 @@ reg ACT;
 reg CLK;
 reg EN;
 // wires                                               
-wire [2:0] SA;
 wire [2:0] SAS;
+wire [2:0] SD;
 
 // assign statements (if any)                          
 Elevador_MovimentoV2 i1 (
@@ -42,8 +42,8 @@ Elevador_MovimentoV2 i1 (
 	.ACT(ACT),
 	.CLK(CLK),
 	.EN(EN),
-	.SA(SA),
-	.SAS(SAS)
+	.SAS(SAS),
+	.SD(SD)
 );
 initial 
 begin 
@@ -63,6 +63,8 @@ initial
 begin
 	ACT = 1'b0;
 	ACT = #40000 1'b1;
+	ACT = #20000 1'b0;
+	ACT = #20000 1'b1;
 	ACT = #20000 1'b0;
 	ACT = #20000 1'b1;
 	ACT = #20000 1'b0;

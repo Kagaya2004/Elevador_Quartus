@@ -20,9 +20,9 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 152 144)
+	(rect 16 16 152 112)
 	(text "Elevador_MovimentoV2" (rect 5 0 146 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
+	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -47,32 +47,18 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 136 32)
 		(output)
-		(text "SA[0]" (rect 0 0 34 19)(font "Intel Clear" (font_size 8)))
-		(text "SA[0]" (rect 81 27 115 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 32)(pt 120 32))
+		(text "SAS[2..0]" (rect 0 0 55 19)(font "Intel Clear" (font_size 8)))
+		(text "SAS[2..0]" (rect 60 27 115 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 32)(pt 120 32)(line_width 3))
 	)
 	(port
 		(pt 136 48)
 		(output)
-		(text "SA[1]" (rect 0 0 34 19)(font "Intel Clear" (font_size 8)))
-		(text "SA[1]" (rect 81 43 115 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 48)(pt 120 48))
-	)
-	(port
-		(pt 136 64)
-		(output)
-		(text "SA[2]" (rect 0 0 34 19)(font "Intel Clear" (font_size 8)))
-		(text "SA[2]" (rect 81 59 115 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 64)(pt 120 64))
-	)
-	(port
-		(pt 136 80)
-		(output)
-		(text "SAS[2..0]" (rect 0 0 55 19)(font "Intel Clear" (font_size 8)))
-		(text "SAS[2..0]" (rect 60 75 115 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 80)(pt 120 80)(line_width 3))
+		(text "SD[2..0]" (rect 0 0 48 19)(font "Intel Clear" (font_size 8)))
+		(text "SD[2..0]" (rect 67 43 115 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 48)(pt 120 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 120 112))
+		(rectangle (rect 16 16 120 80))
 	)
 )

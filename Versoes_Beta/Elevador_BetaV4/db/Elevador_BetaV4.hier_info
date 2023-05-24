@@ -1,8 +1,6 @@
 |Elevador_BetaV4
-Menor <= 7485:inst2.ALBO
-CLK => Elevador_MovimentoV2:inst.CLK
-CLK => LPM_FIFO:inst8.clock
-CLK => Entrada_PulsoUnico:inst1.CLK
+OA <= 7447:inst14.OA
+CLK => DIV_50MHz_to_1Hz:inst12.Clock_50MHz
 BC[0] => Entrada_PulsoUnico:inst1.BC[0]
 BC[1] => Entrada_PulsoUnico:inst1.BC[1]
 BC[2] => Entrada_PulsoUnico:inst1.BC[2]
@@ -13,15 +11,456 @@ BE[1] => Entrada_PulsoUnico:inst1.BE[1]
 BE[2] => Entrada_PulsoUnico:inst1.BE[2]
 BE[3] => Entrada_PulsoUnico:inst1.BE[3]
 BE[4] => Entrada_PulsoUnico:inst1.BE[4]
-Igual <= 7485:inst2.AEBO
-Maior <= 7485:inst2.AGBO
-OA <= 7447:inst14.OA
 OB <= 7447:inst14.OB
 OC <= 7447:inst14.OC
 OD <= 7447:inst14.OD
 OE <= 7447:inst14.OE
 OF <= 7447:inst14.OF
 OG <= 7447:inst14.OG
+AM <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+LS <= 7485:inst2.AGBO
+LD <= 7485:inst2.ALBO
+
+
+|Elevador_BetaV4|7447:inst14
+OG <= 87.DB_MAX_OUTPUT_PORT_TYPE
+C => 25.IN0
+LTN => 25.IN1
+LTN => 27.IN1
+LTN => 29.IN1
+LTN => 13.IN5
+LTN => 38.IN3
+BIN => 37.IN0
+B => 27.IN0
+D => 14.IN0
+A => 29.IN0
+RBIN => 15.IN0
+OF <= 86.DB_MAX_OUTPUT_PORT_TYPE
+OE <= 85.DB_MAX_OUTPUT_PORT_TYPE
+RBON <= 13.DB_MAX_OUTPUT_PORT_TYPE
+OD <= 84.DB_MAX_OUTPUT_PORT_TYPE
+OC <= 83.DB_MAX_OUTPUT_PORT_TYPE
+OB <= 82.DB_MAX_OUTPUT_PORT_TYPE
+OA <= 81.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador_BetaV4|Elevador_MovimentoV2:inst
+SAS[0] <= Sensor_MovimentoV2:inst1.SA0
+SAS[1] <= Sensor_MovimentoV2:inst1.SA1
+SAS[2] <= Sensor_MovimentoV2:inst1.SA2
+CLK => Sensor_MovimentoV2:inst1.clock
+CLK => LPM_ADD_SUB:inst2.clock
+ACT => Sensor_MovimentoV2:inst1.ACT
+EN => Sensor_MovimentoV2:inst1.EN
+SD[0] <= LPM_ADD_SUB:inst2.result[0]
+SD[1] <= LPM_ADD_SUB:inst2.result[1]
+SD[2] <= LPM_ADD_SUB:inst2.result[2]
+
+
+|Elevador_BetaV4|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1
+reset => reg_fstate.B.OUTPUTSELECT
+reset => reg_fstate.T.OUTPUTSELECT
+reset => reg_fstate.A1.OUTPUTSELECT
+reset => reg_fstate.A2.OUTPUTSELECT
+reset => reg_fstate.A3.OUTPUTSELECT
+reset => reg_fstate.A4.OUTPUTSELECT
+reset => SA0.OUTPUTSELECT
+reset => SA1.OUTPUTSELECT
+reset => SA2.OUTPUTSELECT
+clock => fstate~1.DATAIN
+ACT => always1.IN0
+ACT => always1.IN0
+EN => always1.IN1
+EN => always1.IN1
+EN => Selector0.IN4
+EN => reg_fstate.DATAB
+SA0 <= SA0.DB_MAX_OUTPUT_PORT_TYPE
+SA1 <= SA1.DB_MAX_OUTPUT_PORT_TYPE
+SA2 <= SA2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador_BetaV4|Elevador_MovimentoV2:inst|LPM_ADD_SUB:inst2
+dataa[0] => add_sub_t9l:auto_generated.dataa[0]
+dataa[1] => add_sub_t9l:auto_generated.dataa[1]
+dataa[2] => add_sub_t9l:auto_generated.dataa[2]
+datab[0] => add_sub_t9l:auto_generated.datab[0]
+datab[1] => add_sub_t9l:auto_generated.datab[1]
+datab[2] => add_sub_t9l:auto_generated.datab[2]
+cin => ~NO_FANOUT~
+add_sub => add_sub_t9l:auto_generated.add_sub
+clock => add_sub_t9l:auto_generated.clock
+aclr => ~NO_FANOUT~
+clken => add_sub_t9l:auto_generated.clken
+result[0] <= add_sub_t9l:auto_generated.result[0]
+result[1] <= add_sub_t9l:auto_generated.result[1]
+result[2] <= add_sub_t9l:auto_generated.result[2]
+cout <= <GND>
+overflow <= <GND>
+
+
+|Elevador_BetaV4|Elevador_MovimentoV2:inst|LPM_ADD_SUB:inst2|add_sub_t9l:auto_generated
+add_sub => _.IN0
+add_sub => _.IN0
+add_sub => _.IN0
+clken => pipeline_dffe[2].ENA
+clken => pipeline_dffe[1].ENA
+clken => pipeline_dffe[0].ENA
+clock => pipeline_dffe[2].CLK
+clock => pipeline_dffe[1].CLK
+clock => pipeline_dffe[0].CLK
+dataa[0] => op_1.IN4
+dataa[1] => op_1.IN2
+dataa[2] => op_1.IN0
+datab[0] => _.IN1
+datab[1] => _.IN1
+datab[2] => _.IN1
+result[0] <= pipeline_dffe[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= pipeline_dffe[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= pipeline_dffe[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador_BetaV4|Elevador_MovimentoV2:inst|LPM_CONSTANT:inst5
+result[0] <= <VCC>
+result[1] <= <GND>
+result[2] <= <GND>
+
+
+|Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12
+Q_1Hz <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+Clock_50MHz => LPM_COUNTER:inst.clock
+
+
+|Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12|LPM_COMPARE:inst3
+dataa[0] => cmpr_std:auto_generated.dataa[0]
+dataa[1] => cmpr_std:auto_generated.dataa[1]
+dataa[2] => cmpr_std:auto_generated.dataa[2]
+dataa[3] => cmpr_std:auto_generated.dataa[3]
+dataa[4] => cmpr_std:auto_generated.dataa[4]
+dataa[5] => cmpr_std:auto_generated.dataa[5]
+dataa[6] => cmpr_std:auto_generated.dataa[6]
+dataa[7] => cmpr_std:auto_generated.dataa[7]
+dataa[8] => cmpr_std:auto_generated.dataa[8]
+dataa[9] => cmpr_std:auto_generated.dataa[9]
+dataa[10] => cmpr_std:auto_generated.dataa[10]
+dataa[11] => cmpr_std:auto_generated.dataa[11]
+dataa[12] => cmpr_std:auto_generated.dataa[12]
+dataa[13] => cmpr_std:auto_generated.dataa[13]
+dataa[14] => cmpr_std:auto_generated.dataa[14]
+dataa[15] => cmpr_std:auto_generated.dataa[15]
+dataa[16] => cmpr_std:auto_generated.dataa[16]
+dataa[17] => cmpr_std:auto_generated.dataa[17]
+dataa[18] => cmpr_std:auto_generated.dataa[18]
+dataa[19] => cmpr_std:auto_generated.dataa[19]
+dataa[20] => cmpr_std:auto_generated.dataa[20]
+dataa[21] => cmpr_std:auto_generated.dataa[21]
+dataa[22] => cmpr_std:auto_generated.dataa[22]
+dataa[23] => cmpr_std:auto_generated.dataa[23]
+dataa[24] => cmpr_std:auto_generated.dataa[24]
+datab[0] => cmpr_std:auto_generated.datab[0]
+datab[1] => cmpr_std:auto_generated.datab[1]
+datab[2] => cmpr_std:auto_generated.datab[2]
+datab[3] => cmpr_std:auto_generated.datab[3]
+datab[4] => cmpr_std:auto_generated.datab[4]
+datab[5] => cmpr_std:auto_generated.datab[5]
+datab[6] => cmpr_std:auto_generated.datab[6]
+datab[7] => cmpr_std:auto_generated.datab[7]
+datab[8] => cmpr_std:auto_generated.datab[8]
+datab[9] => cmpr_std:auto_generated.datab[9]
+datab[10] => cmpr_std:auto_generated.datab[10]
+datab[11] => cmpr_std:auto_generated.datab[11]
+datab[12] => cmpr_std:auto_generated.datab[12]
+datab[13] => cmpr_std:auto_generated.datab[13]
+datab[14] => cmpr_std:auto_generated.datab[14]
+datab[15] => cmpr_std:auto_generated.datab[15]
+datab[16] => cmpr_std:auto_generated.datab[16]
+datab[17] => cmpr_std:auto_generated.datab[17]
+datab[18] => cmpr_std:auto_generated.datab[18]
+datab[19] => cmpr_std:auto_generated.datab[19]
+datab[20] => cmpr_std:auto_generated.datab[20]
+datab[21] => cmpr_std:auto_generated.datab[21]
+datab[22] => cmpr_std:auto_generated.datab[22]
+datab[23] => cmpr_std:auto_generated.datab[23]
+datab[24] => cmpr_std:auto_generated.datab[24]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= <GND>
+aeb <= <GND>
+agb <= <GND>
+aleb <= <GND>
+aneb <= <GND>
+ageb <= cmpr_std:auto_generated.ageb
+
+
+|Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12|LPM_COMPARE:inst3|cmpr_std:auto_generated
+ageb <= ageb.DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => _.IN0
+dataa[0] => op_1.IN50
+dataa[1] => _.IN0
+dataa[1] => op_1.IN48
+dataa[2] => _.IN0
+dataa[2] => op_1.IN46
+dataa[3] => _.IN0
+dataa[3] => op_1.IN44
+dataa[4] => _.IN0
+dataa[4] => op_1.IN42
+dataa[5] => _.IN0
+dataa[5] => op_1.IN40
+dataa[6] => _.IN0
+dataa[6] => op_1.IN38
+dataa[7] => _.IN0
+dataa[7] => op_1.IN36
+dataa[8] => _.IN0
+dataa[8] => op_1.IN34
+dataa[9] => _.IN0
+dataa[9] => op_1.IN32
+dataa[10] => _.IN0
+dataa[10] => op_1.IN30
+dataa[11] => _.IN0
+dataa[11] => op_1.IN28
+dataa[12] => _.IN0
+dataa[12] => op_1.IN26
+dataa[13] => _.IN0
+dataa[13] => op_1.IN24
+dataa[14] => _.IN0
+dataa[14] => op_1.IN22
+dataa[15] => _.IN0
+dataa[15] => op_1.IN20
+dataa[16] => _.IN0
+dataa[16] => op_1.IN18
+dataa[17] => _.IN0
+dataa[17] => op_1.IN16
+dataa[18] => _.IN0
+dataa[18] => op_1.IN14
+dataa[19] => _.IN0
+dataa[19] => op_1.IN12
+dataa[20] => _.IN0
+dataa[20] => op_1.IN10
+dataa[21] => _.IN0
+dataa[21] => op_1.IN8
+dataa[22] => _.IN0
+dataa[22] => op_1.IN6
+dataa[23] => _.IN0
+dataa[23] => op_1.IN4
+dataa[24] => _.IN0
+dataa[24] => op_1.IN2
+datab[0] => _.IN1
+datab[0] => op_1.IN49
+datab[1] => _.IN1
+datab[1] => op_1.IN47
+datab[2] => _.IN1
+datab[2] => op_1.IN45
+datab[3] => _.IN1
+datab[3] => op_1.IN43
+datab[4] => _.IN1
+datab[4] => op_1.IN41
+datab[5] => _.IN1
+datab[5] => op_1.IN39
+datab[6] => _.IN1
+datab[6] => op_1.IN37
+datab[7] => _.IN1
+datab[7] => op_1.IN35
+datab[8] => _.IN1
+datab[8] => op_1.IN33
+datab[9] => _.IN1
+datab[9] => op_1.IN31
+datab[10] => _.IN1
+datab[10] => op_1.IN29
+datab[11] => _.IN1
+datab[11] => op_1.IN27
+datab[12] => _.IN1
+datab[12] => op_1.IN25
+datab[13] => _.IN1
+datab[13] => op_1.IN23
+datab[14] => _.IN1
+datab[14] => op_1.IN21
+datab[15] => _.IN1
+datab[15] => op_1.IN19
+datab[16] => _.IN1
+datab[16] => op_1.IN17
+datab[17] => _.IN1
+datab[17] => op_1.IN15
+datab[18] => _.IN1
+datab[18] => op_1.IN13
+datab[19] => _.IN1
+datab[19] => op_1.IN11
+datab[20] => _.IN1
+datab[20] => op_1.IN9
+datab[21] => _.IN1
+datab[21] => op_1.IN7
+datab[22] => _.IN1
+datab[22] => op_1.IN5
+datab[23] => _.IN1
+datab[23] => op_1.IN3
+datab[24] => _.IN1
+datab[24] => op_1.IN1
+
+
+|Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12|LPM_COUNTER:inst
+clock => cntr_2ig:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_2ig:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+data[8] => ~NO_FANOUT~
+data[9] => ~NO_FANOUT~
+data[10] => ~NO_FANOUT~
+data[11] => ~NO_FANOUT~
+data[12] => ~NO_FANOUT~
+data[13] => ~NO_FANOUT~
+data[14] => ~NO_FANOUT~
+data[15] => ~NO_FANOUT~
+data[16] => ~NO_FANOUT~
+data[17] => ~NO_FANOUT~
+data[18] => ~NO_FANOUT~
+data[19] => ~NO_FANOUT~
+data[20] => ~NO_FANOUT~
+data[21] => ~NO_FANOUT~
+data[22] => ~NO_FANOUT~
+data[23] => ~NO_FANOUT~
+data[24] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_2ig:auto_generated.q[0]
+q[1] <= cntr_2ig:auto_generated.q[1]
+q[2] <= cntr_2ig:auto_generated.q[2]
+q[3] <= cntr_2ig:auto_generated.q[3]
+q[4] <= cntr_2ig:auto_generated.q[4]
+q[5] <= cntr_2ig:auto_generated.q[5]
+q[6] <= cntr_2ig:auto_generated.q[6]
+q[7] <= cntr_2ig:auto_generated.q[7]
+q[8] <= cntr_2ig:auto_generated.q[8]
+q[9] <= cntr_2ig:auto_generated.q[9]
+q[10] <= cntr_2ig:auto_generated.q[10]
+q[11] <= cntr_2ig:auto_generated.q[11]
+q[12] <= cntr_2ig:auto_generated.q[12]
+q[13] <= cntr_2ig:auto_generated.q[13]
+q[14] <= cntr_2ig:auto_generated.q[14]
+q[15] <= cntr_2ig:auto_generated.q[15]
+q[16] <= cntr_2ig:auto_generated.q[16]
+q[17] <= cntr_2ig:auto_generated.q[17]
+q[18] <= cntr_2ig:auto_generated.q[18]
+q[19] <= cntr_2ig:auto_generated.q[19]
+q[20] <= cntr_2ig:auto_generated.q[20]
+q[21] <= cntr_2ig:auto_generated.q[21]
+q[22] <= cntr_2ig:auto_generated.q[22]
+q[23] <= cntr_2ig:auto_generated.q[23]
+q[24] <= cntr_2ig:auto_generated.q[24]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12|LPM_COUNTER:inst|cntr_2ig:auto_generated
+clock => counter_reg_bit[24].CLK
+clock => counter_reg_bit[23].CLK
+clock => counter_reg_bit[22].CLK
+clock => counter_reg_bit[21].CLK
+clock => counter_reg_bit[20].CLK
+clock => counter_reg_bit[19].CLK
+clock => counter_reg_bit[18].CLK
+clock => counter_reg_bit[17].CLK
+clock => counter_reg_bit[16].CLK
+clock => counter_reg_bit[15].CLK
+clock => counter_reg_bit[14].CLK
+clock => counter_reg_bit[13].CLK
+clock => counter_reg_bit[12].CLK
+clock => counter_reg_bit[11].CLK
+clock => counter_reg_bit[10].CLK
+clock => counter_reg_bit[9].CLK
+clock => counter_reg_bit[8].CLK
+clock => counter_reg_bit[7].CLK
+clock => counter_reg_bit[6].CLK
+clock => counter_reg_bit[5].CLK
+clock => counter_reg_bit[4].CLK
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= counter_reg_bit[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= counter_reg_bit[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= counter_reg_bit[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= counter_reg_bit[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= counter_reg_bit[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= counter_reg_bit[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= counter_reg_bit[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= counter_reg_bit[15].DB_MAX_OUTPUT_PORT_TYPE
+q[16] <= counter_reg_bit[16].DB_MAX_OUTPUT_PORT_TYPE
+q[17] <= counter_reg_bit[17].DB_MAX_OUTPUT_PORT_TYPE
+q[18] <= counter_reg_bit[18].DB_MAX_OUTPUT_PORT_TYPE
+q[19] <= counter_reg_bit[19].DB_MAX_OUTPUT_PORT_TYPE
+q[20] <= counter_reg_bit[20].DB_MAX_OUTPUT_PORT_TYPE
+q[21] <= counter_reg_bit[21].DB_MAX_OUTPUT_PORT_TYPE
+q[22] <= counter_reg_bit[22].DB_MAX_OUTPUT_PORT_TYPE
+q[23] <= counter_reg_bit[23].DB_MAX_OUTPUT_PORT_TYPE
+q[24] <= counter_reg_bit[24].DB_MAX_OUTPUT_PORT_TYPE
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12|LPM_CONSTANT:inst4
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <VCC>
+result[7] <= <GND>
+result[8] <= <GND>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <VCC>
+result[12] <= <VCC>
+result[13] <= <VCC>
+result[14] <= <VCC>
+result[15] <= <GND>
+result[16] <= <VCC>
+result[17] <= <GND>
+result[18] <= <VCC>
+result[19] <= <VCC>
+result[20] <= <VCC>
+result[21] <= <VCC>
+result[22] <= <VCC>
+result[23] <= <GND>
+result[24] <= <VCC>
 
 
 |Elevador_BetaV4|7485:inst2
@@ -69,40 +508,6 @@ AEBI => 108.IN0
 AEBO <= 108.DB_MAX_OUTPUT_PORT_TYPE
 AGBO <= 86.DB_MAX_OUTPUT_PORT_TYPE
 ALBI => 134.IN0
-
-
-|Elevador_BetaV4|Elevador_MovimentoV2:inst
-SA[0] <= Sensor_MovimentoV2:inst1.SA0
-SA[1] <= Sensor_MovimentoV2:inst1.SA1
-SA[2] <= Sensor_MovimentoV2:inst1.SA2
-SAS[0] <= Sensor_MovimentoV2:inst1.SA0
-SAS[1] <= Sensor_MovimentoV2:inst1.SA1
-SAS[2] <= Sensor_MovimentoV2:inst1.SA2
-CLK => Sensor_MovimentoV2:inst1.clock
-ACT => Sensor_MovimentoV2:inst1.ACT
-EN => Sensor_MovimentoV2:inst1.EN
-
-
-|Elevador_BetaV4|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1
-reset => reg_fstate.B.OUTPUTSELECT
-reset => reg_fstate.T.OUTPUTSELECT
-reset => reg_fstate.A1.OUTPUTSELECT
-reset => reg_fstate.A2.OUTPUTSELECT
-reset => reg_fstate.A3.OUTPUTSELECT
-reset => reg_fstate.A4.OUTPUTSELECT
-reset => SA0.OUTPUTSELECT
-reset => SA1.OUTPUTSELECT
-reset => SA2.OUTPUTSELECT
-clock => fstate~1.DATAIN
-ACT => always1.IN0
-ACT => always1.IN0
-EN => always1.IN1
-EN => always1.IN1
-EN => Selector0.IN4
-EN => reg_fstate.DATAB
-SA0 <= SA0.DB_MAX_OUTPUT_PORT_TYPE
-SA1 <= SA1.DB_MAX_OUTPUT_PORT_TYPE
-SA2 <= SA2.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Elevador_BetaV4|LPM_FIFO:inst8
@@ -701,27 +1106,5 @@ CLK => inst1.CLK
 CLK => inst.CLK
 P => inst8.IN0
 P => inst6.IN0
-
-
-|Elevador_BetaV4|7447:inst14
-OG <= 87.DB_MAX_OUTPUT_PORT_TYPE
-C => 25.IN0
-LTN => 25.IN1
-LTN => 27.IN1
-LTN => 29.IN1
-LTN => 13.IN5
-LTN => 38.IN3
-BIN => 37.IN0
-B => 27.IN0
-D => 14.IN0
-A => 29.IN0
-RBIN => 15.IN0
-OF <= 86.DB_MAX_OUTPUT_PORT_TYPE
-OE <= 85.DB_MAX_OUTPUT_PORT_TYPE
-RBON <= 13.DB_MAX_OUTPUT_PORT_TYPE
-OD <= 84.DB_MAX_OUTPUT_PORT_TYPE
-OC <= 83.DB_MAX_OUTPUT_PORT_TYPE
-OB <= 82.DB_MAX_OUTPUT_PORT_TYPE
-OA <= 81.DB_MAX_OUTPUT_PORT_TYPE
 
 

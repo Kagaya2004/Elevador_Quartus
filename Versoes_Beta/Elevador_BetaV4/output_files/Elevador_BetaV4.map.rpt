@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Elevador_BetaV4
-Tue May 23 23:46:45 2023
+Wed May 24 19:44:56 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -18,13 +18,18 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Source assignments for LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram
- 13. Parameter Settings for User Entity Instance: 7485:inst2
- 14. Parameter Settings for User Entity Instance: Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1
- 15. Parameter Settings for User Entity Instance: LPM_FIFO:inst8
- 16. Parameter Settings for User Entity Instance: Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 13. Parameter Settings for User Entity Instance: Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1
+ 14. Parameter Settings for User Entity Instance: Elevador_MovimentoV2:inst|LPM_ADD_SUB:inst2
+ 15. Parameter Settings for User Entity Instance: Elevador_MovimentoV2:inst|LPM_CONSTANT:inst5
+ 16. Parameter Settings for User Entity Instance: DIV_50MHz_to_1Hz:inst12|LPM_COMPARE:inst3
+ 17. Parameter Settings for User Entity Instance: DIV_50MHz_to_1Hz:inst12|LPM_COUNTER:inst
+ 18. Parameter Settings for User Entity Instance: DIV_50MHz_to_1Hz:inst12|LPM_CONSTANT:inst4
+ 19. Parameter Settings for User Entity Instance: 7485:inst2
+ 20. Parameter Settings for User Entity Instance: LPM_FIFO:inst8
+ 21. Parameter Settings for User Entity Instance: Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -50,15 +55,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 23 23:46:45 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 24 19:44:56 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Elevador_BetaV4                             ;
 ; Top-level Entity Name              ; Elevador_BetaV4                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 87                                          ;
-;     Total combinational functions  ; 87                                          ;
-;     Dedicated logic registers      ; 40                                          ;
-; Total registers                    ; 40                                          ;
+; Total logic elements               ; 124                                         ;
+;     Total combinational functions  ; 124                                         ;
+;     Dedicated logic registers      ; 69                                          ;
+; Total registers                    ; 69                                          ;
 ; Total pins                         ; 21                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 48                                          ;
@@ -72,6 +77,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F23C7      ;                    ;
 ; Top-level entity name                                            ; Elevador_BetaV4    ; Elevador_BetaV4    ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -165,7 +171,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -181,11 +188,35 @@ refer to the applicable agreement for further details.
 ; ../../Multiplexador_Elevador/Multiplexador_Elevador.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Multiplexador_Elevador/Multiplexador_Elevador.bdf                   ;         ;
 ; ../../mod_PU/mod_PU.bdf                                                   ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/mod_PU/mod_PU.bdf                                                   ;         ;
 ; ../../Entrada_PulsoUnico/Entrada_PulsoUnico.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Entrada_PulsoUnico/Entrada_PulsoUnico.bdf                           ;         ;
+; ../../DivFreq50M_v2/DivFreq50M_v2/DIV_50MHz_to_1Hz.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/DivFreq50M_v2/DivFreq50M_v2/DIV_50MHz_to_1Hz.bdf                    ;         ;
 ; ../../Circuito Combinacional (Elevador)/Circuito_Combinacional_5_3bit.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Circuito Combinacional (Elevador)/Circuito_Combinacional_5_3bit.bdf ;         ;
 ; ../../Andares_Elevador_S2/Andares_Elevador_S2.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Andares_Elevador_S2/Andares_Elevador_S2.bdf                         ;         ;
 ; ../../Andares_Elevador_S1/Andares_Elevador_S1.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Andares_Elevador_S1/Andares_Elevador_S1.bdf                         ;         ;
 ; ../../Andares_Elevador_S0/Andares_Elevador_S0.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Andares_Elevador_S0/Andares_Elevador_S0.bdf                         ;         ;
 ; Elevador_BetaV4.bdf                                                       ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/Elevador_BetaV4.bdf                    ;         ;
+; 7447.bdf                                                                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7447.bdf                                ;         ;
+; lpm_add_sub.tdf                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                           ;         ;
+; addcore.inc                                                               ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc                               ;         ;
+; look_add.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc                              ;         ;
+; bypassff.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                              ;         ;
+; altshift.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                              ;         ;
+; alt_stratix_add_sub.inc                                                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                   ;         ;
+; aglobal181.inc                                                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                            ;         ;
+; db/add_sub_t9l.tdf                                                        ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/add_sub_t9l.tdf                     ;         ;
+; lpm_constant.tdf                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.tdf                          ;         ;
+; lpm_compare.tdf                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.tdf                           ;         ;
+; comptree.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/comptree.inc                              ;         ;
+; db/cmpr_std.tdf                                                           ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/cmpr_std.tdf                        ;         ;
+; lpm_counter.tdf                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.tdf                           ;         ;
+; lpm_constant.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.inc                          ;         ;
+; lpm_decode.inc                                                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                            ;         ;
+; lpm_add_sub.inc                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                           ;         ;
+; cmpconst.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cmpconst.inc                              ;         ;
+; lpm_compare.inc                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.inc                           ;         ;
+; lpm_counter.inc                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.inc                           ;         ;
+; dffeea.inc                                                                ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/dffeea.inc                                ;         ;
+; alt_counter_stratix.inc                                                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                   ;         ;
+; db/cntr_2ig.tdf                                                           ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/cntr_2ig.tdf                        ;         ;
 ; 7485.tdf                                                                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf                                ;         ;
 ; aglobal.inc                                                               ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal.inc                               ;         ;
 ; f7485.bdf                                                                 ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/f7485.bdf                               ;         ;
@@ -197,7 +228,6 @@ refer to the applicable agreement for further details.
 ; a_i2fifo.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_i2fifo.inc                              ;         ;
 ; a_fffifo.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_fffifo.inc                              ;         ;
 ; a_f2fifo.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_f2fifo.inc                              ;         ;
-; aglobal181.inc                                                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                            ;         ;
 ; db/scfifo_ji01.tdf                                                        ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/scfifo_ji01.tdf                     ;         ;
 ; db/a_dpfifo_get.tdf                                                       ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_dpfifo_get.tdf                    ;         ;
 ; db/a_fefifo_66f.tdf                                                       ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_fefifo_66f.tdf                    ;         ;
@@ -208,44 +238,41 @@ refer to the applicable agreement for further details.
 ; lpm_mux.inc                                                               ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                               ;         ;
 ; lpm_mux.tdf                                                               ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf                               ;         ;
 ; muxlut.inc                                                                ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muxlut.inc                                ;         ;
-; bypassff.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                              ;         ;
-; altshift.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                              ;         ;
 ; db/mux_9rc.tdf                                                            ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/mux_9rc.tdf                         ;         ;
-; 7447.bdf                                                                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7447.bdf                                ;         ;
 +---------------------------------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 87        ;
-;                                             ;           ;
-; Total combinational functions               ; 87        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 42        ;
-;     -- 3 input functions                    ; 31        ;
-;     -- <=2 input functions                  ; 14        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 78        ;
-;     -- arithmetic mode                      ; 9         ;
-;                                             ;           ;
-; Total registers                             ; 40        ;
-;     -- Dedicated logic registers            ; 40        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 21        ;
-; Total memory bits                           ; 48        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 43        ;
-; Total fan-out                               ; 445       ;
-; Average fan-out                             ; 2.59      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                 ;
++---------------------------------------------+-------------------------------+
+; Resource                                    ; Usage                         ;
++---------------------------------------------+-------------------------------+
+; Estimated Total logic elements              ; 124                           ;
+;                                             ;                               ;
+; Total combinational functions               ; 124                           ;
+; Logic element usage by number of LUT inputs ;                               ;
+;     -- 4 input functions                    ; 44                            ;
+;     -- 3 input functions                    ; 39                            ;
+;     -- <=2 input functions                  ; 41                            ;
+;                                             ;                               ;
+; Logic elements by mode                      ;                               ;
+;     -- normal mode                          ; 91                            ;
+;     -- arithmetic mode                      ; 33                            ;
+;                                             ;                               ;
+; Total registers                             ; 69                            ;
+;     -- Dedicated logic registers            ; 69                            ;
+;     -- I/O registers                        ; 0                             ;
+;                                             ;                               ;
+; I/O pins                                    ; 21                            ;
+; Total memory bits                           ; 48                            ;
+;                                             ;                               ;
+; Embedded Multiplier 9-bit elements          ; 0                             ;
+;                                             ;                               ;
+; Maximum fan-out node                        ; DIV_50MHz_to_1Hz:inst12|inst9 ;
+; Maximum fan-out                             ; 47                            ;
+; Total fan-out                               ; 638                           ;
+; Average fan-out                             ; 2.68                          ;
++---------------------------------------------+-------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -253,8 +280,8 @@ refer to the applicable agreement for further details.
 +------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Entity Name              ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |Elevador_BetaV4                         ; 87 (0)              ; 40 (0)                    ; 48          ; 0            ; 0       ; 0         ; 21   ; 0            ; |Elevador_BetaV4                                                                                                                          ; Elevador_BetaV4          ; work         ;
-;    |7447:inst14|                         ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|7447:inst14                                                                                                              ; 7447                     ; work         ;
+; |Elevador_BetaV4                         ; 124 (1)             ; 69 (0)                    ; 48          ; 0            ; 0       ; 0         ; 21   ; 0            ; |Elevador_BetaV4                                                                                                                          ; Elevador_BetaV4          ; work         ;
+;    |7447:inst14|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|7447:inst14                                                                                                              ; 7447                     ; work         ;
 ;    |7485:inst2|                          ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|7485:inst2                                                                                                               ; 7485                     ; work         ;
 ;       |f7485:sub|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|7485:inst2|f7485:sub                                                                                                     ; f7485                    ; work         ;
 ;    |Controlador_PrioridadeV2:inst5|      ; 19 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Controlador_PrioridadeV2:inst5                                                                                           ; Controlador_PrioridadeV2 ; work         ;
@@ -262,8 +289,15 @@ refer to the applicable agreement for further details.
 ;          |busmux:inst|                   ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|busmux:inst                                                  ; busmux                   ; work         ;
 ;             |lpm_mux:$00000|             ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|busmux:inst|lpm_mux:$00000                                   ; lpm_mux                  ; work         ;
 ;                |mux_9rc:auto_generated|  ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|busmux:inst|lpm_mux:$00000|mux_9rc:auto_generated            ; mux_9rc                  ; work         ;
-;    |Elevador_MovimentoV2:inst|           ; 12 (0)              ; 6 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Elevador_MovimentoV2:inst                                                                                                ; Elevador_MovimentoV2     ; work         ;
-;       |Sensor_MovimentoV2:inst1|         ; 12 (12)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1                                                                       ; Sensor_MovimentoV2       ; work         ;
+;    |DIV_50MHz_to_1Hz:inst12|             ; 33 (1)              ; 26 (1)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12                                                                                                  ; DIV_50MHz_to_1Hz         ; work         ;
+;       |lpm_compare:inst3|                ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12|lpm_compare:inst3                                                                                ; lpm_compare              ; work         ;
+;          |cmpr_std:auto_generated|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12|lpm_compare:inst3|cmpr_std:auto_generated                                                        ; cmpr_std                 ; work         ;
+;       |lpm_counter:inst|                 ; 25 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12|lpm_counter:inst                                                                                 ; lpm_counter              ; work         ;
+;          |cntr_2ig:auto_generated|       ; 25 (25)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated                                                         ; cntr_2ig                 ; work         ;
+;    |Elevador_MovimentoV2:inst|           ; 16 (1)              ; 9 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Elevador_MovimentoV2:inst                                                                                                ; Elevador_MovimentoV2     ; work         ;
+;       |Sensor_MovimentoV2:inst1|         ; 13 (13)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1                                                                       ; Sensor_MovimentoV2       ; work         ;
+;       |lpm_add_sub:inst2|                ; 2 (0)               ; 3 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Elevador_MovimentoV2:inst|lpm_add_sub:inst2                                                                              ; lpm_add_sub              ; work         ;
+;          |add_sub_t9l:auto_generated|    ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Elevador_MovimentoV2:inst|lpm_add_sub:inst2|add_sub_t9l:auto_generated                                                   ; add_sub_t9l              ; work         ;
 ;    |Entrada_PulsoUnico:inst1|            ; 20 (0)              ; 20 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1                                                                                                 ; Entrada_PulsoUnico       ; work         ;
 ;       |mod_PU:inst1|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst1                                                                                    ; mod_PU                   ; work         ;
 ;       |mod_PU:inst2|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst2                                                                                    ; mod_PU                   ; work         ;
@@ -332,12 +366,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 40    ;
+; Total registers                              ; 69    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 25    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Clock Enable       ; 15    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -349,20 +383,6 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+--------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                            ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------+
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: 7485:inst2 ;
-+------------------------+--------------+-----------------+
-; Parameter Name         ; Value        ; Type            ;
-+------------------------+--------------+-----------------+
-; DEVICE_FAMILY          ; Cyclone IV E ; Untyped         ;
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY      ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY    ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE    ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE  ;
-+------------------------+--------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -377,6 +397,125 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; A3             ; 4     ; Signed Integer                                                         ;
 ; A4             ; 5     ; Signed Integer                                                         ;
 +----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Elevador_MovimentoV2:inst|LPM_ADD_SUB:inst2 ;
++------------------------+--------------+--------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                             ;
++------------------------+--------------+--------------------------------------------------+
+; LPM_WIDTH              ; 3            ; Untyped                                          ;
+; LPM_REPRESENTATION     ; SIGNED       ; Untyped                                          ;
+; LPM_DIRECTION          ; DEFAULT      ; Untyped                                          ;
+; ONE_INPUT_IS_CONSTANT  ; YES          ; Untyped                                          ;
+; LPM_PIPELINE           ; 1            ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 1            ; Untyped                                          ;
+; REGISTERED_AT_END      ; 0            ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5            ; Untyped                                          ;
+; USE_CS_BUFFERS         ; 1            ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                          ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                               ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                          ;
+; USE_WYS                ; OFF          ; Untyped                                          ;
+; STYLE                  ; FAST         ; Untyped                                          ;
+; CBXI_PARAMETER         ; add_sub_t9l  ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                   ;
++------------------------+--------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Elevador_MovimentoV2:inst|LPM_CONSTANT:inst5 ;
++--------------------+------------------+---------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                              ;
++--------------------+------------------+---------------------------------------------------+
+; LPM_WIDTH          ; 3                ; Untyped                                           ;
+; LPM_CVALUE         ; 1                ; Untyped                                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                           ;
+; CBXI_PARAMETER     ; lpm_constant_v64 ; Untyped                                           ;
++--------------------+------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DIV_50MHz_to_1Hz:inst12|LPM_COMPARE:inst3 ;
++------------------------+--------------+------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                           ;
++------------------------+--------------+------------------------------------------------+
+; lpm_width              ; 25           ; Untyped                                        ;
+; LPM_REPRESENTATION     ; UNSIGNED     ; Untyped                                        ;
+; LPM_PIPELINE           ; 0            ; Untyped                                        ;
+; CHAIN_SIZE             ; 8            ; Untyped                                        ;
+; ONE_INPUT_IS_CONSTANT  ; NO           ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                        ;
+; CASCADE_CHAIN          ; MANUAL       ; Untyped                                        ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                             ;
+; CASCADE_CHAIN_LENGTH   ; 2            ; CASCADE_CHAIN_LENGTH                           ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                        ;
+; CBXI_PARAMETER         ; cmpr_std     ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                 ;
++------------------------+--------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DIV_50MHz_to_1Hz:inst12|LPM_COUNTER:inst ;
++------------------------+-------------------+------------------------------------------+
+; Parameter Name         ; Value             ; Type                                     ;
++------------------------+-------------------+------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                           ;
+; LPM_WIDTH              ; 25                ; Untyped                                  ;
+; LPM_DIRECTION          ; DEFAULT           ; Untyped                                  ;
+; LPM_MODULUS            ; 0                 ; Untyped                                  ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                  ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                  ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                  ;
+; DEVICE_FAMILY          ; Cyclone IV E      ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                  ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                       ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                       ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                  ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                  ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                  ;
+; CBXI_PARAMETER         ; cntr_2ig          ; Untyped                                  ;
++------------------------+-------------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DIV_50MHz_to_1Hz:inst12|LPM_CONSTANT:inst4 ;
++--------------------+------------------+-------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                            ;
++--------------------+------------------+-------------------------------------------------+
+; LPM_WIDTH          ; 25               ; Untyped                                         ;
+; LPM_CVALUE         ; 25000000         ; Signed Integer                                  ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                         ;
+; CBXI_PARAMETER     ; lpm_constant_1k4 ; Untyped                                         ;
++--------------------+------------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: 7485:inst2 ;
++------------------------+--------------+-----------------+
+; Parameter Name         ; Value        ; Type            ;
++------------------------+--------------+-----------------+
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped         ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY      ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY    ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE    ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE  ;
++------------------------+--------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -413,22 +552,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 21                          ;
-; cycloneiii_ff         ; 40                          ;
-;     ENA               ; 12                          ;
-;     plain             ; 28                          ;
-; cycloneiii_lcell_comb ; 89                          ;
-;     arith             ; 9                           ;
-;         2 data inputs ; 6                           ;
+; cycloneiii_ff         ; 69                          ;
+;     ENA               ; 15                          ;
+;     SLD               ; 25                          ;
+;     plain             ; 29                          ;
+; cycloneiii_lcell_comb ; 126                         ;
+;     arith             ; 33                          ;
+;         2 data inputs ; 30                          ;
 ;         3 data inputs ; 3                           ;
-;     normal            ; 80                          ;
-;         1 data inputs ; 5                           ;
+;     normal            ; 93                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
 ;         2 data inputs ; 5                           ;
-;         3 data inputs ; 28                          ;
-;         4 data inputs ; 42                          ;
+;         3 data inputs ; 36                          ;
+;         4 data inputs ; 44                          ;
 ; cycloneiii_ram_block  ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.30                        ;
-; Average LUT depth     ; 3.31                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -437,7 +578,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -447,7 +588,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 23 23:46:27 2023
+    Info: Processing started: Wed May 24 19:44:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Elevador_BetaV4 -c Elevador_BetaV4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -486,12 +627,51 @@ Info (12021): Found 1 design units, including 1 entities, in source file /quartu
 Info (12021): Found 1 design units, including 1 entities, in source file elevador_betav4.bdf
     Info (12023): Found entity 1: Elevador_BetaV4
 Info (12127): Elaborating entity "Elevador_BetaV4" for the top level hierarchy
+Info (12128): Elaborating entity "7447" for hierarchy "7447:inst14"
+Info (12130): Elaborated megafunction instantiation "7447:inst14"
+Info (12128): Elaborating entity "Elevador_MovimentoV2" for hierarchy "Elevador_MovimentoV2:inst"
+Info (12128): Elaborating entity "Sensor_MovimentoV2" for hierarchy "Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1"
+Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "Elevador_MovimentoV2:inst|LPM_ADD_SUB:inst2"
+Info (12130): Elaborated megafunction instantiation "Elevador_MovimentoV2:inst|LPM_ADD_SUB:inst2"
+Info (12133): Instantiated megafunction "Elevador_MovimentoV2:inst|LPM_ADD_SUB:inst2" with the following parameter:
+    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info (12134): Parameter "LPM_PIPELINE" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_WIDTH" = "3"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "1"
+    Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t9l.tdf
+    Info (12023): Found entity 1: add_sub_t9l File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/add_sub_t9l.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_t9l" for hierarchy "Elevador_MovimentoV2:inst|LPM_ADD_SUB:inst2|add_sub_t9l:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 118
+Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "Elevador_MovimentoV2:inst|LPM_CONSTANT:inst5"
+Info (12130): Elaborated megafunction instantiation "Elevador_MovimentoV2:inst|LPM_CONSTANT:inst5"
+Info (12133): Instantiated megafunction "Elevador_MovimentoV2:inst|LPM_CONSTANT:inst5" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "1"
+    Info (12134): Parameter "LPM_WIDTH" = "3"
+Info (12128): Elaborating entity "DIV_50MHz_to_1Hz" for hierarchy "DIV_50MHz_to_1Hz:inst12"
+Info (12128): Elaborating entity "LPM_COMPARE" for hierarchy "DIV_50MHz_to_1Hz:inst12|LPM_COMPARE:inst3"
+Info (12130): Elaborated megafunction instantiation "DIV_50MHz_to_1Hz:inst12|LPM_COMPARE:inst3"
+Info (12133): Instantiated megafunction "DIV_50MHz_to_1Hz:inst12|LPM_COMPARE:inst3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "25"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_std.tdf
+    Info (12023): Found entity 1: cmpr_std File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/cmpr_std.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_std" for hierarchy "DIV_50MHz_to_1Hz:inst12|LPM_COMPARE:inst3|cmpr_std:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.tdf Line: 280
+Info (12128): Elaborating entity "LPM_COUNTER" for hierarchy "DIV_50MHz_to_1Hz:inst12|LPM_COUNTER:inst"
+Info (12130): Elaborated megafunction instantiation "DIV_50MHz_to_1Hz:inst12|LPM_COUNTER:inst"
+Info (12133): Instantiated megafunction "DIV_50MHz_to_1Hz:inst12|LPM_COUNTER:inst" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "25"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_2ig.tdf
+    Info (12023): Found entity 1: cntr_2ig File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/cntr_2ig.tdf Line: 25
+Info (12128): Elaborating entity "cntr_2ig" for hierarchy "DIV_50MHz_to_1Hz:inst12|LPM_COUNTER:inst|cntr_2ig:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 258
+Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "DIV_50MHz_to_1Hz:inst12|LPM_CONSTANT:inst4"
+Info (12130): Elaborated megafunction instantiation "DIV_50MHz_to_1Hz:inst12|LPM_CONSTANT:inst4"
+Info (12133): Instantiated megafunction "DIV_50MHz_to_1Hz:inst12|LPM_CONSTANT:inst4" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "25000000"
+    Info (12134): Parameter "LPM_WIDTH" = "25"
 Info (12128): Elaborating entity "7485" for hierarchy "7485:inst2"
 Info (12130): Elaborated megafunction instantiation "7485:inst2"
 Info (12128): Elaborating entity "f7485" for hierarchy "7485:inst2|f7485:sub" File: c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf Line: 27
 Info (12131): Elaborated megafunction instantiation "7485:inst2|f7485:sub", which is child of megafunction instantiation "7485:inst2" File: c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf Line: 27
-Info (12128): Elaborating entity "Elevador_MovimentoV2" for hierarchy "Elevador_MovimentoV2:inst"
-Info (12128): Elaborating entity "Sensor_MovimentoV2" for hierarchy "Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1"
 Info (12128): Elaborating entity "LPM_FIFO" for hierarchy "LPM_FIFO:inst8"
 Info (12130): Elaborated megafunction instantiation "LPM_FIFO:inst8"
 Info (12133): Instantiated megafunction "LPM_FIFO:inst8" with the following parameter:
@@ -542,23 +722,21 @@ Info (12128): Elaborating entity "Andares_Elevador_S0" for hierarchy "Controlado
 Info (12128): Elaborating entity "Andares_Elevador_S1" for hierarchy "Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S1:inst4"
 Info (12128): Elaborating entity "Entrada_PulsoUnico" for hierarchy "Entrada_PulsoUnico:inst1"
 Info (12128): Elaborating entity "mod_PU" for hierarchy "Entrada_PulsoUnico:inst1|mod_PU:inst"
-Info (12128): Elaborating entity "7447" for hierarchy "7447:inst14"
-Info (12130): Elaborated megafunction instantiation "7447:inst14"
 Info (13014): Ignored 1 buffer(s)
     Info (13017): Ignored 1 CASCADE buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 111 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 149 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 87 logic cells
+    Info (21061): Implemented 125 logic cells
     Info (21064): Implemented 3 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4771 megabytes
-    Info: Processing ended: Tue May 23 23:46:45 2023
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Wed May 24 19:44:56 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:30
 
 

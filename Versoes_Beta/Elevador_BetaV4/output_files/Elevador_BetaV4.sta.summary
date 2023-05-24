@@ -3,39 +3,111 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -4.213
-TNS   : -94.408
+Slack : -5.251
+TNS   : -110.119
+
+Type  : Slow 1200mV 85C Model Setup 'DIV_50MHz_to_1Hz:inst12|inst9'
+Slack : -5.242
+TNS   : -120.907
+
+Type  : Slow 1200mV 85C Model Setup 'DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated|counter_reg_bit[10]'
+Slack : 0.150
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated|counter_reg_bit[10]'
+Slack : -0.388
+TNS   : -0.388
+
+Type  : Slow 1200mV 85C Model Hold 'DIV_50MHz_to_1Hz:inst12|inst9'
+Slack : 0.385
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.341
+Slack : 0.633
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -51.696
+TNS   : -35.125
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DIV_50MHz_to_1Hz:inst12|inst9'
+Slack : -2.693
+TNS   : -66.027
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated|counter_reg_bit[10]'
+Slack : -1.285
+TNS   : -1.285
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -3.701
-TNS   : -80.925
+Slack : -4.716
+TNS   : -99.209
+
+Type  : Slow 1200mV 0C Model Setup 'DIV_50MHz_to_1Hz:inst12|inst9'
+Slack : -4.706
+TNS   : -107.108
+
+Type  : Slow 1200mV 0C Model Setup 'DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated|counter_reg_bit[10]'
+Slack : 0.228
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated|counter_reg_bit[10]'
+Slack : -0.422
+TNS   : -0.422
+
+Type  : Slow 1200mV 0C Model Hold 'DIV_50MHz_to_1Hz:inst12|inst9'
+Slack : 0.338
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.297
+Slack : 0.578
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -51.696
+TNS   : -35.125
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DIV_50MHz_to_1Hz:inst12|inst9'
+Slack : -2.649
+TNS   : -65.851
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated|counter_reg_bit[10]'
+Slack : -1.285
+TNS   : -1.285
 
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -1.690
-TNS   : -35.595
+Slack : -2.196
+TNS   : -43.662
+
+Type  : Fast 1200mV 0C Model Setup 'DIV_50MHz_to_1Hz:inst12|inst9'
+Slack : -1.854
+TNS   : -38.112
+
+Type  : Fast 1200mV 0C Model Setup 'DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated|counter_reg_bit[10]'
+Slack : 0.160
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated|counter_reg_bit[10]'
+Slack : -0.006
+TNS   : -0.006
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : 0.178
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'DIV_50MHz_to_1Hz:inst12|inst9'
+Slack : 0.173
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -50.535
+TNS   : -28.935
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DIV_50MHz_to_1Hz:inst12|inst9'
+Slack : -1.000
+TNS   : -47.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DIV_50MHz_to_1Hz:inst12|lpm_counter:inst|cntr_2ig:auto_generated|counter_reg_bit[10]'
+Slack : -1.000
+TNS   : -1.000
 
 ------------------------------------------------------------

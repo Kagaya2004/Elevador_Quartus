@@ -3,7 +3,7 @@ $comment
 		vcd file Elevador_MovimentoV2.msim.vcd -direction
 $end
 $date
-	Tue May 23 21:58:42 2023
+	Wed May 24 19:11:34 2023
 $end
 $version
 	ModelSim Version 10.5b
@@ -16,12 +16,12 @@ $scope module Elevador_MovimentoV2_vlg_vec_tst $end
 $var reg 1 ! ACT $end
 $var reg 1 " CLK $end
 $var reg 1 # EN $end
-$var wire 1 $ SA [2] $end
-$var wire 1 % SA [1] $end
-$var wire 1 & SA [0] $end
-$var wire 1 ' SAS [2] $end
-$var wire 1 ( SAS [1] $end
-$var wire 1 ) SAS [0] $end
+$var wire 1 $ SAS [2] $end
+$var wire 1 % SAS [1] $end
+$var wire 1 & SAS [0] $end
+$var wire 1 ' SD [2] $end
+$var wire 1 ( SD [1] $end
+$var wire 1 ) SD [0] $end
 
 $scope module i1 $end
 $var wire 1 * gnd $end
@@ -30,35 +30,42 @@ $var wire 1 , unknown $end
 $var tri1 1 - devclrn $end
 $var tri1 1 . devpor $end
 $var tri1 1 / devoe $end
-$var wire 1 0 SA[2]~output_o $end
-$var wire 1 1 SA[1]~output_o $end
-$var wire 1 2 SA[0]~output_o $end
-$var wire 1 3 SAS[2]~output_o $end
-$var wire 1 4 SAS[1]~output_o $end
-$var wire 1 5 SAS[0]~output_o $end
+$var wire 1 0 SAS[2]~output_o $end
+$var wire 1 1 SAS[1]~output_o $end
+$var wire 1 2 SAS[0]~output_o $end
+$var wire 1 3 SD[2]~output_o $end
+$var wire 1 4 SD[1]~output_o $end
+$var wire 1 5 SD[0]~output_o $end
 $var wire 1 6 CLK~input_o $end
 $var wire 1 7 CLK~inputclkctrl_outclk $end
-$var wire 1 8 EN~input_o $end
-$var wire 1 9 ACT~input_o $end
-$var wire 1 : inst1|Selector4~0_combout $end
-$var wire 1 ; inst1|fstate.A4~q $end
-$var wire 1 < inst1|fstate.B~feeder_combout $end
-$var wire 1 = inst1|fstate.B~q $end
-$var wire 1 > inst1|Selector0~0_combout $end
-$var wire 1 ? inst1|Selector0~1_combout $end
-$var wire 1 @ inst1|fstate.T~q $end
-$var wire 1 A inst1|Selector1~0_combout $end
-$var wire 1 B inst1|Selector1~1_combout $end
-$var wire 1 C inst1|fstate.A1~q $end
-$var wire 1 D inst1|Selector2~0_combout $end
-$var wire 1 E inst1|Selector2~1_combout $end
-$var wire 1 F inst1|fstate.A2~q $end
-$var wire 1 G inst1|Selector3~0_combout $end
-$var wire 1 H inst1|Selector3~1_combout $end
-$var wire 1 I inst1|fstate.A3~q $end
+$var wire 1 8 ACT~input_o $end
+$var wire 1 9 EN~input_o $end
+$var wire 1 : inst1|Selector0~0_combout $end
+$var wire 1 ; inst1|fstate.B~feeder_combout $end
+$var wire 1 < inst1|fstate.B~q $end
+$var wire 1 = inst1|Selector0~1_combout $end
+$var wire 1 > inst1|fstate.T~q $end
+$var wire 1 ? inst1|Selector1~0_combout $end
+$var wire 1 @ inst1|Selector1~1_combout $end
+$var wire 1 A inst1|fstate.A1~q $end
+$var wire 1 B inst1|Selector2~0_combout $end
+$var wire 1 C inst1|Selector2~1_combout $end
+$var wire 1 D inst1|fstate.A2~q $end
+$var wire 1 E inst1|Selector3~0_combout $end
+$var wire 1 F inst1|Selector3~1_combout $end
+$var wire 1 G inst1|fstate.A3~q $end
+$var wire 1 H inst1|Selector4~0_combout $end
+$var wire 1 I inst1|fstate.A4~q $end
 $var wire 1 J inst1|SA2~0_combout $end
 $var wire 1 K inst1|SA1~0_combout $end
 $var wire 1 L inst1|WideOr5~0_combout $end
+$var wire 1 M inst2|auto_generated|op_1~5_combout $end
+$var wire 1 N inst4~0_combout $end
+$var wire 1 O inst4~combout $end
+$var wire 1 P inst2|auto_generated|op_1~4_combout $end
+$var wire 1 Q inst2|auto_generated|pipeline_dffe [2] $end
+$var wire 1 R inst2|auto_generated|pipeline_dffe [1] $end
+$var wire 1 S inst2|auto_generated|pipeline_dffe [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -87,14 +94,14 @@ x,
 05
 06
 07
-18
-09
+08
+19
 0:
-0;
-1<
-0=
+1;
+0<
+1=
 0>
-1?
+0?
 0@
 0A
 0B
@@ -108,191 +115,209 @@ x,
 0J
 0K
 1L
+1M
+0N
+0O
+1P
+0S
+0R
+0Q
 $end
 #20000
 1"
 16
 17
-1@
-1=
 1>
+1<
+1:
+1N
+0P
 0L
-0?
-15
+0=
 12
+1O
 1&
-1)
-1?
+1=
+0M
 #40000
 1!
 0"
-19
+18
 06
 07
-1A
-0>
-1B
-0?
+1?
+0:
+1@
+0=
 #60000
 0!
 1"
-09
+08
 16
 17
-0A
-1>
-0B
-1?
-1C
+0?
+1:
 0@
+1=
+1A
+0>
 1L
 1K
-11
-14
-05
 02
-0&
-0)
-1(
+11
 1%
+0&
 #80000
 1!
 0"
-19
+18
 06
 07
-1D
-0>
-1E
-0?
+1B
+0:
+1C
+0=
 #100000
 0!
 1"
-09
+08
 16
 17
-0D
-1>
-0E
-1?
-1F
+0B
+1:
 0C
-1A
-0L
-0>
+1=
+1D
+0A
+1S
 15
+1?
+0:
+1)
+1P
+0L
 12
 1&
-1)
-1B
-0?
+1@
+0=
 #120000
 1!
 0"
-19
+18
 06
 07
-1G
-0A
-1H
-0B
+1E
+0?
+1F
+0@
 #140000
 0!
 1"
-09
+08
 16
 17
-0G
-1A
-0H
-1B
-1I
+0E
+1?
 0F
+1@
+1G
+0D
+0S
+1R
+14
+05
+1B
+0?
+0)
+1(
 1L
-1D
-0A
 1J
 0K
-01
-04
-10
-13
-05
 02
-0&
-0)
-1'
+01
+10
 1$
-0(
 0%
-1E
-0B
+0&
+1C
+0@
 #160000
 1!
 0"
-19
+18
 06
 07
-0D
-1:
-0E
+0B
+1H
+0C
 #180000
 0!
 1"
-09
+08
 16
 17
-1D
-0:
-1E
-0I
-1;
-0L
-0D
-1G
+1B
+0H
+1C
+1I
+0G
+1S
 15
+1E
+0B
+1)
+0P
+0L
 12
 1&
-1)
-0E
-1H
+1F
+0C
+1M
 #200000
 1!
 0"
-19
+18
 06
 07
-0G
-1:
-0H
+0E
+1H
+0F
 #220000
 0!
 1"
-09
+08
 16
 17
-1G
-0:
-1H
-#240000
-0"
-06
-07
-#260000
-1"
-16
-17
-1I
-0;
-1L
-1D
-0G
-05
-02
-0&
-0)
 1E
 0H
+1F
+0S
+0R
+1Q
+13
+04
+05
+0)
+0(
+1'
+#240000
+1!
+0"
+18
+06
+07
+0E
+1H
+0F
+#260000
+0!
+1"
+08
+16
+17
+1E
+0H
+1F
 #280000
 0"
 06
@@ -302,26 +327,16 @@ $end
 16
 17
 0I
-1F
-0L
-0D
-1A
-0J
-1K
-11
-14
-00
-03
-15
-12
-1&
-1)
-0'
-0$
-1(
-1%
+1G
 0E
 1B
+1P
+1L
+02
+0&
+0F
+1C
+0M
 #320000
 0"
 06
@@ -330,17 +345,32 @@ $end
 1"
 16
 17
-0F
-1C
-0A
-1L
-1>
-05
-02
-0&
-0)
+0G
+1D
+1S
+1R
+0Q
+03
+14
+15
 0B
 1?
+1)
+1(
+0'
+0L
+0J
+1M
+1K
+12
+11
+00
+0$
+1%
+1&
+0C
+1@
+0M
 #360000
 0"
 06
@@ -349,18 +379,19 @@ $end
 1"
 16
 17
-0C
-1@
-0L
-0K
-01
-04
-15
-12
-1&
-1)
-0(
-0%
+0D
+1A
+0S
+05
+0?
+1:
+0)
+0P
+1L
+02
+0&
+0@
+1=
 #400000
 0"
 06
@@ -369,6 +400,22 @@ $end
 1"
 16
 17
+0A
+1>
+1S
+0R
+04
+15
+1)
+0(
+1M
+0L
+0K
+12
+01
+0%
+1&
+0M
 #440000
 0"
 06
@@ -377,6 +424,9 @@ $end
 1"
 16
 17
+0S
+05
+0)
 #480000
 0"
 06

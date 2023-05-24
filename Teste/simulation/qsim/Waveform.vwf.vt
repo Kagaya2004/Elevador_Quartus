@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/23/2023 20:55:29"
+// Generated on "05/24/2023 19:04:10"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          Teste
 // 
@@ -33,6 +33,7 @@ reg ACT;
 reg CLK;
 reg EN;
 // wires                                               
+wire [2:0] NUM;
 wire [2:0] SA;
 
 // assign statements (if any)                          
@@ -41,11 +42,18 @@ Teste i1 (
 	.ACT(ACT),
 	.CLK(CLK),
 	.EN(EN),
+	.NUM(NUM),
 	.SA(SA)
 );
 initial 
 begin 
 #1000000 $finish;
+end 
+
+// ACT
+initial
+begin
+	ACT = 1'b0;
 end 
 
 // CLK
@@ -54,18 +62,6 @@ begin
 	CLK = 1'b0;
 	CLK = #20000 1'b1;
 	#20000;
-end 
-
-// ACT
-initial
-begin
-	ACT = 1'b0;
-	ACT = #40000 1'b1;
-	ACT = #20000 1'b0;
-	ACT = #20000 1'b1;
-	ACT = #20000 1'b0;
-	ACT = #60000 1'b1;
-	ACT = #20000 1'b0;
 end 
 
 // EN

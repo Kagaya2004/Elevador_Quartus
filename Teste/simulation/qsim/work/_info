@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dC:/Quartus (Project Test V2)/Teste/simulation/qsim
 vhard_block
-Z1 !s110 1684886131
+Z1 !s110 1684965853
 !i10b 1
-!s100 BZW?m^SnF5Q`6:@L@FT7f1
-IdPk]e8>MF;F6W3m<OR;Ag1
+!s100 38dOAAigRUII?E8EVd_3a3
+I@zh0>AOff`n`M6n><S:Q51
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1684886130
+Z3 w1684965852
 Z4 8Teste.vo
 Z5 FTeste.vo
-L0 519
+L0 702
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1684886131.000000
+Z7 !s108 1684965853.000000
 Z8 !s107 Teste.vo|
 Z9 !s90 -work|work|Teste.vo|
 !i113 1
@@ -32,8 +32,8 @@ Z11 tCvgOpt 0
 vTeste
 R1
 !i10b 1
-!s100 XoF^N8^cI_5X=>8S`dU]71
-I@JZ6`INl`H=AgfL6SX_Y:0
+!s100 4hK`K15^X4l1XaW08egU01
+IXZQi>oU:D0>Lji@z@Q1HR2
 R2
 R0
 R3
@@ -54,11 +54,11 @@ n@teste
 vTeste_vlg_vec_tst
 R1
 !i10b 1
-!s100 XI=QN0A4X9caLm<z9h8<62
-IXaZXm`9e1P^6>ZLSk@7d82
+!s100 Z69Qca^b^Q6EQ^?jcg31L3
+I:cHVCMDccHT]AcQPFN6;73
 R2
 R0
-w1684886129
+w1684965850
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29

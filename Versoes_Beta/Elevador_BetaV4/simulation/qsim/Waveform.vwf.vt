@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/23/2023 23:47:54"
+// Generated on "05/24/2023 19:19:15"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          Elevador_BetaV4
 // 
@@ -33,6 +33,7 @@ reg [4:0] BC;
 reg [4:0] BE;
 reg CLK;
 // wires                                               
+wire [2:0] FIFO;
 wire Igual;
 wire Maior;
 wire Menor;
@@ -43,6 +44,7 @@ wire OD;
 wire OE;
 wire OF;
 wire OG;
+wire [2:0] SA;
 
 // assign statements (if any)                          
 Elevador_BetaV4 i1 (
@@ -50,6 +52,7 @@ Elevador_BetaV4 i1 (
 	.BC(BC),
 	.BE(BE),
 	.CLK(CLK),
+	.FIFO(FIFO),
 	.Igual(Igual),
 	.Maior(Maior),
 	.Menor(Menor),
@@ -59,7 +62,8 @@ Elevador_BetaV4 i1 (
 	.OD(OD),
 	.OE(OE),
 	.OF(OF),
-	.OG(OG)
+	.OG(OG),
+	.SA(SA)
 );
 initial 
 begin 
@@ -88,8 +92,6 @@ end
 initial
 begin
 	BC[2] = 1'b0;
-	BC[2] = #80000 1'b1;
-	BC[2] = #20000 1'b0;
 end 
 // BC[ 1 ]
 initial
