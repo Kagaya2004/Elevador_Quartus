@@ -1,5 +1,5 @@
 
-State Machine - |ElevadorBetaV3|Sensor_MovimentoV2:inst|fstate
+State Machine - |ElevadorBetaV3|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate
 Name fstate.A4 fstate.A3 fstate.A2 fstate.A1 fstate.T fstate.B 
 fstate.B 0 0 0 0 0 0 
 fstate.T 0 0 0 0 1 1 

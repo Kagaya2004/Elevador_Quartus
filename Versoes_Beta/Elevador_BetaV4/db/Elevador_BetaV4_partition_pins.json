@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Menor",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Igual",
+					"strict" : false
+				},
+				{
+					"name" : "Maior",
+					"strict" : false
+				},
+				{
+					"name" : "OA",
+					"strict" : false
+				},
+				{
+					"name" : "OB",
+					"strict" : false
+				},
+				{
+					"name" : "OC",
+					"strict" : false
+				},
+				{
+					"name" : "OD",
+					"strict" : false
+				},
+				{
+					"name" : "OE",
+					"strict" : false
+				},
+				{
+					"name" : "OF",
+					"strict" : false
+				},
+				{
+					"name" : "OG",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "BE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "BE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BC[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

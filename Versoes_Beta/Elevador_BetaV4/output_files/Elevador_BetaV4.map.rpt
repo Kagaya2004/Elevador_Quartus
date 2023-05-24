@@ -1,0 +1,571 @@
+Analysis & Synthesis report for Elevador_BetaV4
+Tue May 23 22:22:15 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |Elevador_BetaV4|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Source assignments for LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram
+ 13. Parameter Settings for User Entity Instance: 7485:inst2
+ 14. Parameter Settings for User Entity Instance: Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1
+ 15. Parameter Settings for User Entity Instance: LPM_FIFO:inst8
+ 16. Parameter Settings for User Entity Instance: Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue May 23 22:22:15 2023       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Elevador_BetaV4                             ;
+; Top-level Entity Name              ; Elevador_BetaV4                             ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 74                                          ;
+;     Total combinational functions  ; 74                                          ;
+;     Dedicated logic registers      ; 36                                          ;
+; Total registers                    ; 36                                          ;
+; Total pins                         ; 24                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 48                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; Elevador_BetaV4    ; Elevador_BetaV4    ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                        ;
++---------------------------------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ; Library ;
++---------------------------------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; ../../Elevador_MovimentoV2/Elevador_MovimentoV2.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Elevador_MovimentoV2/Elevador_MovimentoV2.bdf                       ;         ;
+; ../../Valor_Serial_Paralelo/Valor_Serial_Paralelo.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Valor_Serial_Paralelo/Valor_Serial_Paralelo.bdf                     ;         ;
+; ../../Sensor_MovimentacaoV2/Sensor_MovimentoV2.v                          ; yes             ; User Verilog HDL File              ; C:/Quartus (Project Test V2)/Sensor_MovimentacaoV2/Sensor_MovimentoV2.v                          ;         ;
+; ../../Preferencia_Elevador/Preferencia_Elevador.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Preferencia_Elevador/Preferencia_Elevador.bdf                       ;         ;
+; ../../Multiplexador_Elevador/Multiplexador_Elevador.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Multiplexador_Elevador/Multiplexador_Elevador.bdf                   ;         ;
+; ../../mod_PU/mod_PU.bdf                                                   ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/mod_PU/mod_PU.bdf                                                   ;         ;
+; ../../Entrada_PulsoUnico/Entrada_PulsoUnico.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Entrada_PulsoUnico/Entrada_PulsoUnico.bdf                           ;         ;
+; ../../Controlador_Prioridade/Controlador_Prioridade.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Controlador_Prioridade/Controlador_Prioridade.bdf                   ;         ;
+; ../../Circuito Combinacional (Elevador)/Circuito_Combinacional_5_3bit.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Circuito Combinacional (Elevador)/Circuito_Combinacional_5_3bit.bdf ;         ;
+; ../../Andares_Elevador_S2/Andares_Elevador_S2.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Andares_Elevador_S2/Andares_Elevador_S2.bdf                         ;         ;
+; ../../Andares_Elevador_S1/Andares_Elevador_S1.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Andares_Elevador_S1/Andares_Elevador_S1.bdf                         ;         ;
+; ../../Andares_Elevador_S0/Andares_Elevador_S0.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Andares_Elevador_S0/Andares_Elevador_S0.bdf                         ;         ;
+; Elevador_BetaV4.bdf                                                       ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/Elevador_BetaV4.bdf                    ;         ;
+; 7485.tdf                                                                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf                                ;         ;
+; aglobal.inc                                                               ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal.inc                               ;         ;
+; f7485.bdf                                                                 ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/f7485.bdf                               ;         ;
+; lpm_fifo.tdf                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_fifo.tdf                              ;         ;
+; scfifo.inc                                                                ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.inc                                ;         ;
+; scfifo.tdf                                                                ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf                                ;         ;
+; a_regfifo.inc                                                             ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_regfifo.inc                             ;         ;
+; a_dpfifo.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_dpfifo.inc                              ;         ;
+; a_i2fifo.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_i2fifo.inc                              ;         ;
+; a_fffifo.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_fffifo.inc                              ;         ;
+; a_f2fifo.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_f2fifo.inc                              ;         ;
+; aglobal181.inc                                                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                            ;         ;
+; db/scfifo_ji01.tdf                                                        ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/scfifo_ji01.tdf                     ;         ;
+; db/a_dpfifo_get.tdf                                                       ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_dpfifo_get.tdf                    ;         ;
+; db/a_fefifo_66f.tdf                                                       ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_fefifo_66f.tdf                    ;         ;
+; db/cntr_bo7.tdf                                                           ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/cntr_bo7.tdf                        ;         ;
+; db/altsyncram_ugm1.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/altsyncram_ugm1.tdf                 ;         ;
+; db/cntr_vnb.tdf                                                           ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/cntr_vnb.tdf                        ;         ;
+; busmux.tdf                                                                ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf                                ;         ;
+; lpm_mux.inc                                                               ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                               ;         ;
+; lpm_mux.tdf                                                               ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf                               ;         ;
+; muxlut.inc                                                                ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muxlut.inc                                ;         ;
+; bypassff.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                              ;         ;
+; altshift.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                              ;         ;
+; db/mux_9rc.tdf                                                            ; yes             ; Auto-Generated Megafunction        ; C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/mux_9rc.tdf                         ;         ;
+; 7447.bdf                                                                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7447.bdf                                ;         ;
++---------------------------------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 74        ;
+;                                             ;           ;
+; Total combinational functions               ; 74        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 38        ;
+;     -- 3 input functions                    ; 23        ;
+;     -- <=2 input functions                  ; 13        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 65        ;
+;     -- arithmetic mode                      ; 9         ;
+;                                             ;           ;
+; Total registers                             ; 36        ;
+;     -- Dedicated logic registers            ; 36        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 24        ;
+; Total memory bits                           ; 48        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 39        ;
+; Total fan-out                               ; 401       ;
+; Average fan-out                             ; 2.49      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                     ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Entity Name            ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |Elevador_BetaV4                         ; 74 (0)              ; 36 (0)                    ; 48          ; 0            ; 0       ; 0         ; 24   ; 0            ; |Elevador_BetaV4                                                                                                                          ; Elevador_BetaV4        ; work         ;
+;    |7447:inst14|                         ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|7447:inst14                                                                                                              ; 7447                   ; work         ;
+;    |7485:inst2|                          ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|7485:inst2                                                                                                               ; 7485                   ; work         ;
+;       |f7485:sub|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|7485:inst2|f7485:sub                                                                                                     ; f7485                  ; work         ;
+;    |Controlador_Prioridade:inst6|        ; 10 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Controlador_Prioridade:inst6                                                                                             ; Controlador_Prioridade ; work         ;
+;       |Multiplexador_Elevador:inst6|     ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6                                                                ; Multiplexador_Elevador ; work         ;
+;          |busmux:inst|                   ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|busmux:inst                                                    ; busmux                 ; work         ;
+;             |lpm_mux:$00000|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|busmux:inst|lpm_mux:$00000                                     ; lpm_mux                ; work         ;
+;                |mux_9rc:auto_generated|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|busmux:inst|lpm_mux:$00000|mux_9rc:auto_generated              ; mux_9rc                ; work         ;
+;    |Elevador_MovimentoV2:inst|           ; 12 (0)              ; 6 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Elevador_MovimentoV2:inst                                                                                                ; Elevador_MovimentoV2   ; work         ;
+;       |Sensor_MovimentoV2:inst1|         ; 12 (12)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1                                                                       ; Sensor_MovimentoV2     ; work         ;
+;    |Entrada_PulsoUnico:inst1|            ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1                                                                                                 ; Entrada_PulsoUnico     ; work         ;
+;       |mod_PU:inst1|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst1                                                                                    ; mod_PU                 ; work         ;
+;       |mod_PU:inst2|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst2                                                                                    ; mod_PU                 ; work         ;
+;       |mod_PU:inst3|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst3                                                                                    ; mod_PU                 ; work         ;
+;       |mod_PU:inst4|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst4                                                                                    ; mod_PU                 ; work         ;
+;       |mod_PU:inst5|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst5                                                                                    ; mod_PU                 ; work         ;
+;       |mod_PU:inst6|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst6                                                                                    ; mod_PU                 ; work         ;
+;       |mod_PU:inst8|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst8                                                                                    ; mod_PU                 ; work         ;
+;       |mod_PU:inst|                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|Entrada_PulsoUnico:inst1|mod_PU:inst                                                                                     ; mod_PU                 ; work         ;
+;    |lpm_fifo:inst8|                      ; 21 (0)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|lpm_fifo:inst8                                                                                                           ; lpm_fifo               ; work         ;
+;       |scfifo:myFIFO|                    ; 21 (0)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|lpm_fifo:inst8|scfifo:myFIFO                                                                                             ; scfifo                 ; work         ;
+;          |scfifo_ji01:auto_generated|    ; 21 (0)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated                                                                  ; scfifo_ji01            ; work         ;
+;             |a_dpfifo_get:dpfifo|        ; 21 (2)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo                                              ; a_dpfifo_get           ; work         ;
+;                |a_fefifo_66f:fifo_state| ; 11 (7)              ; 6 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state                      ; a_fefifo_66f           ; work         ;
+;                   |cntr_bo7:count_usedw| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state|cntr_bo7:count_usedw ; cntr_bo7               ; work         ;
+;                |altsyncram_ugm1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram                      ; altsyncram_ugm1        ; work         ;
+;                |cntr_vnb:rd_ptr_count|   ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:rd_ptr_count                        ; cntr_vnb               ; work         ;
+;                |cntr_vnb:wr_ptr|         ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Elevador_BetaV4|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:wr_ptr                              ; cntr_vnb               ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                   ;
++----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                           ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 3            ; 16           ; 3            ; 48   ; None ;
++----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------+
+; State Machine - |Elevador_BetaV4|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate ;
++-----------+-----------+-----------+-----------+-----------+----------+---------------------+
+; Name      ; fstate.A4 ; fstate.A3 ; fstate.A2 ; fstate.A1 ; fstate.T ; fstate.B            ;
++-----------+-----------+-----------+-----------+-----------+----------+---------------------+
+; fstate.B  ; 0         ; 0         ; 0         ; 0         ; 0        ; 0                   ;
+; fstate.T  ; 0         ; 0         ; 0         ; 0         ; 1        ; 1                   ;
+; fstate.A1 ; 0         ; 0         ; 0         ; 1         ; 0        ; 1                   ;
+; fstate.A2 ; 0         ; 0         ; 1         ; 0         ; 0        ; 1                   ;
+; fstate.A3 ; 0         ; 1         ; 0         ; 0         ; 0        ; 1                   ;
+; fstate.A4 ; 1         ; 0         ; 0         ; 0         ; 0        ; 1                   ;
++-----------+-----------+-----------+-----------+-----------+----------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                 ;
++-------------------------------------------------------------+--------------------------------------+
+; Register name                                               ; Reason for Removal                   ;
++-------------------------------------------------------------+--------------------------------------+
+; Entrada_PulsoUnico:inst1|mod_PU:inst7|inst1                 ; Stuck at GND due to stuck port clock ;
+; Entrada_PulsoUnico:inst1|mod_PU:inst7|inst                  ; Stuck at GND due to stuck port clock ;
+; Entrada_PulsoUnico:inst1|mod_PU:inst9|inst1                 ; Stuck at GND due to stuck port clock ;
+; Entrada_PulsoUnico:inst1|mod_PU:inst9|inst                  ; Stuck at GND due to stuck port clock ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~2 ; Lost fanout                          ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~3 ; Lost fanout                          ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~4 ; Lost fanout                          ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~5 ; Lost fanout                          ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~6 ; Lost fanout                          ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~7 ; Lost fanout                          ;
+; Total Number of Removed Registers = 10                      ;                                      ;
++-------------------------------------------------------------+--------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 36    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram ;
++---------------------------------+--------------------+------+--------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                           ;
++---------------------------------+--------------------+------+--------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                            ;
++---------------------------------+--------------------+------+--------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: 7485:inst2 ;
++------------------------+--------------+-----------------+
+; Parameter Name         ; Value        ; Type            ;
++------------------------+--------------+-----------------+
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped         ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY      ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY    ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE    ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE  ;
++------------------------+--------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; B              ; 0     ; Signed Integer                                                         ;
+; T              ; 1     ; Signed Integer                                                         ;
+; A1             ; 2     ; Signed Integer                                                         ;
+; A2             ; 3     ; Signed Integer                                                         ;
+; A3             ; 4     ; Signed Integer                                                         ;
+; A4             ; 5     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_FIFO:inst8 ;
++-------------------------+-------+---------------------------+
+; Parameter Name          ; Value ; Type                      ;
++-------------------------+-------+---------------------------+
+; lpm_width               ; 3     ; Untyped                   ;
+; LPM_NUMWORDS            ; 16    ; Untyped                   ;
+; LPM_WIDTHU              ; 4     ; Untyped                   ;
+; LPM_SHOWAHEAD           ; OFF   ; Untyped                   ;
+; UNDERFLOW_CHECKING      ; ON    ; Untyped                   ;
+; OVERFLOW_CHECKING       ; ON    ; Untyped                   ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF   ; Untyped                   ;
+; USE_EAB                 ; ON    ; Untyped                   ;
++-------------------------+-------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; WIDTH          ; 3     ; Untyped                                                                                   ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 24                          ;
+; cycloneiii_ff         ; 36                          ;
+;     ENA               ; 12                          ;
+;     plain             ; 24                          ;
+; cycloneiii_lcell_comb ; 76                          ;
+;     arith             ; 9                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 3                           ;
+;     normal            ; 67                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 38                          ;
+; cycloneiii_ram_block  ; 3                           ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.12                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue May 23 22:21:55 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Elevador_BetaV4 -c Elevador_BetaV4
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/elevador_movimentov2/elevador_movimentov2.bdf
+    Info (12023): Found entity 1: Elevador_MovimentoV2
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/sensor_movimentacao/mov_elevador.v
+    Info (12023): Found entity 1: Mov_Elevador File: C:/Quartus (Project Test V2)/Sensor_Movimentacao/Mov_Elevador.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/valor_serial_paralelo/valor_serial_paralelo.bdf
+    Info (12023): Found entity 1: Valor_Serial_Paralelo
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/sensor_movimentacaov2/sensor_movimentov2.v
+    Info (12023): Found entity 1: Sensor_MovimentoV2 File: C:/Quartus (Project Test V2)/Sensor_MovimentacaoV2/Sensor_MovimentoV2.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/preferencia_elevador/preferencia_elevador.bdf
+    Info (12023): Found entity 1: Preferencia_Elevador
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/multiplexador_elevador/multiplexador_elevador.bdf
+    Info (12023): Found entity 1: Multiplexador_Elevador
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/mod_pu/mod_pu.bdf
+    Info (12023): Found entity 1: mod_PU
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/entrada_pulsounico/entrada_pulsounico.bdf
+    Info (12023): Found entity 1: Entrada_PulsoUnico
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/elevador_movimento/elevador_movimento.bdf
+    Info (12023): Found entity 1: Elevador_Movimento
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/divfreq50m_v2/divfreq50m_v2/div_50mhz_to_1hz.bdf
+    Info (12023): Found entity 1: DIV_50MHz_to_1Hz
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/controlador_prioridade/controlador_prioridade.bdf
+    Info (12023): Found entity 1: Controlador_Prioridade
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/circuito combinacional (elevador)/circuito_combinacional_5_3bit.bdf
+    Info (12023): Found entity 1: Circuito_Combinacional_5_3bit
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/andares_elevador_s2/andares_elevador_s2.bdf
+    Info (12023): Found entity 1: Andares_Elevador_S2
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/andares_elevador_s1/andares_elevador_s1.bdf
+    Info (12023): Found entity 1: Andares_Elevador_S1
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/andares_elevador_s0/andares_elevador_s0.bdf
+    Info (12023): Found entity 1: Andares_Elevador_S0
+Info (12021): Found 1 design units, including 1 entities, in source file elevador_betav4.bdf
+    Info (12023): Found entity 1: Elevador_BetaV4
+Info (12127): Elaborating entity "Elevador_BetaV4" for the top level hierarchy
+Info (12128): Elaborating entity "7485" for hierarchy "7485:inst2"
+Info (12130): Elaborated megafunction instantiation "7485:inst2"
+Info (12128): Elaborating entity "f7485" for hierarchy "7485:inst2|f7485:sub" File: c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf Line: 27
+Info (12131): Elaborated megafunction instantiation "7485:inst2|f7485:sub", which is child of megafunction instantiation "7485:inst2" File: c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/7485.tdf Line: 27
+Info (12128): Elaborating entity "Elevador_MovimentoV2" for hierarchy "Elevador_MovimentoV2:inst"
+Info (12128): Elaborating entity "Sensor_MovimentoV2" for hierarchy "Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1"
+Info (12128): Elaborating entity "LPM_FIFO" for hierarchy "LPM_FIFO:inst8"
+Info (12130): Elaborated megafunction instantiation "LPM_FIFO:inst8"
+Info (12133): Instantiated megafunction "LPM_FIFO:inst8" with the following parameter:
+    Info (12134): Parameter "ALLOW_RWCYCLE_WHEN_FULL" = "OFF"
+    Info (12134): Parameter "LPM_NUMWORDS" = "16"
+    Info (12134): Parameter "LPM_SHOWAHEAD" = "OFF"
+    Info (12134): Parameter "LPM_WIDTH" = "3"
+    Info (12134): Parameter "LPM_WIDTHU" = "4"
+    Info (12134): Parameter "OVERFLOW_CHECKING" = "ON"
+    Info (12134): Parameter "UNDERFLOW_CHECKING" = "ON"
+    Info (12134): Parameter "USE_EAB" = "ON"
+Info (12128): Elaborating entity "scfifo" for hierarchy "LPM_FIFO:inst8|scfifo:myFIFO" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_fifo.tdf Line: 53
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst8|scfifo:myFIFO", which is child of megafunction instantiation "LPM_FIFO:inst8" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_fifo.tdf Line: 53
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_ji01.tdf
+    Info (12023): Found entity 1: scfifo_ji01 File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/scfifo_ji01.tdf Line: 24
+Info (12128): Elaborating entity "scfifo_ji01" for hierarchy "LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf Line: 299
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_get.tdf
+    Info (12023): Found entity 1: a_dpfifo_get File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_dpfifo_get.tdf Line: 28
+Info (12128): Elaborating entity "a_dpfifo_get" for hierarchy "LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo" File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/scfifo_ji01.tdf Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_fefifo_66f.tdf
+    Info (12023): Found entity 1: a_fefifo_66f File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_fefifo_66f.tdf Line: 24
+Info (12128): Elaborating entity "a_fefifo_66f" for hierarchy "LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state" File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_dpfifo_get.tdf Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_bo7.tdf
+    Info (12023): Found entity 1: cntr_bo7 File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/cntr_bo7.tdf Line: 25
+Info (12128): Elaborating entity "cntr_bo7" for hierarchy "LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state|cntr_bo7:count_usedw" File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_fefifo_66f.tdf Line: 38
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ugm1.tdf
+    Info (12023): Found entity 1: altsyncram_ugm1 File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/altsyncram_ugm1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_ugm1" for hierarchy "LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram" File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_dpfifo_get.tdf Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_vnb.tdf
+    Info (12023): Found entity 1: cntr_vnb File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/cntr_vnb.tdf Line: 25
+Info (12128): Elaborating entity "cntr_vnb" for hierarchy "LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:rd_ptr_count" File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/a_dpfifo_get.tdf Line: 43
+Info (12128): Elaborating entity "Controlador_Prioridade" for hierarchy "Controlador_Prioridade:inst6"
+Info (12128): Elaborating entity "Valor_Serial_Paralelo" for hierarchy "Controlador_Prioridade:inst6|Valor_Serial_Paralelo:inst"
+Info (12128): Elaborating entity "Multiplexador_Elevador" for hierarchy "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst"
+Info (12130): Elaborated megafunction instantiation "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst"
+Info (12133): Instantiated megafunction "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "3"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000", which is child of megafunction instantiation "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_9rc.tdf
+    Info (12023): Found entity 1: mux_9rc File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/mux_9rc.tdf Line: 22
+Info (12128): Elaborating entity "mux_9rc" for hierarchy "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000|mux_9rc:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "Preferencia_Elevador" for hierarchy "Controlador_Prioridade:inst6|Preferencia_Elevador:inst13"
+Info (12128): Elaborating entity "Circuito_Combinacional_5_3bit" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4"
+Info (12128): Elaborating entity "Andares_Elevador_S2" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S2:inst5"
+Warning (275008): Primitive "NOT" of instance "inst4" not used
+Info (12128): Elaborating entity "Andares_Elevador_S0" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S0:inst"
+Info (12128): Elaborating entity "Andares_Elevador_S1" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S1:inst4"
+Info (12128): Elaborating entity "Entrada_PulsoUnico" for hierarchy "Entrada_PulsoUnico:inst1"
+Warning (275013): Port "CLK" of type mod_PU and instance "inst9" is missing source signal
+Warning (275013): Port "CLK" of type mod_PU and instance "inst7" is missing source signal
+Info (12128): Elaborating entity "mod_PU" for hierarchy "Entrada_PulsoUnico:inst1|mod_PU:inst"
+Info (12128): Elaborating entity "7447" for hierarchy "7447:inst14"
+Info (12130): Elaborated megafunction instantiation "7447:inst14"
+Info (13014): Ignored 1 buffer(s)
+    Info (13017): Ignored 1 CASCADE buffer(s)
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "BE[2]"
+    Warning (15610): No output dependent on input pin "BE[0]"
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 13 output pins
+    Info (21061): Implemented 74 logic cells
+    Info (21064): Implemented 3 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Tue May 23 22:22:15 2023
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:42
+
+

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue May 23 21:39:57 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Elevador_MovimentoV2
+Top-level Entity Name : Elevador_MovimentoV2
+Family : Cyclone IV E
+Device : EP4CE6E22C6
+Timing Models : Final
+Total logic elements : 13 / 6,272 ( < 1 % )
+    Total combinational functions : 13 / 6,272 ( < 1 % )
+    Dedicated logic registers : 6 / 6,272 ( < 1 % )
+Total registers : 6
+Total pins : 9 / 92 ( 10 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

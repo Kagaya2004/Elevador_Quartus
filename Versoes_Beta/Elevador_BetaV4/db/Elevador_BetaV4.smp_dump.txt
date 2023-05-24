@@ -1,0 +1,9 @@
+
+State Machine - |Elevador_BetaV4|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate
+Name fstate.A4 fstate.A3 fstate.A2 fstate.A1 fstate.T fstate.B 
+fstate.B 0 0 0 0 0 0 
+fstate.T 0 0 0 0 1 1 
+fstate.A1 0 0 0 1 0 1 
+fstate.A2 0 0 1 0 0 1 
+fstate.A3 0 1 0 0 0 1 
+fstate.A4 1 0 0 0 0 1 

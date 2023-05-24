@@ -1,20 +1,11 @@
 |ElevadorBetaV3
 Menor <= 7485:inst2.ALBO
-CLK => Sensor_MovimentoV2:inst.clock
-CLK => Entrada_PulsoUnico:inst1.CLK
+CLK => Elevador_MovimentoV2:inst.CLK
 CLK => LPM_FIFO:inst8.clock
-Igual <= 7485:inst2.AEBO
-Maior <= 7485:inst2.AGBO
-OA <= 7447:inst14.OA
-OB <= 7447:inst14.OB
-OC <= 7447:inst14.OC
-OD <= 7447:inst14.OD
-OE <= 7447:inst14.OE
-OF <= 7447:inst14.OF
-OG <= 7447:inst14.OG
-Enable <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-Rd <= 7485:inst2.AEBO
-WR <= Controlador_Prioridade:inst6.EN
+CLK => Entrada_PulsoUnico:inst1.CLK
+FIFO[0] <= MOVS[0].DB_MAX_OUTPUT_PORT_TYPE
+FIFO[1] <= MOVS[1].DB_MAX_OUTPUT_PORT_TYPE
+FIFO[2] <= MOVS[2].DB_MAX_OUTPUT_PORT_TYPE
 BC[0] => Entrada_PulsoUnico:inst1.BC[0]
 BC[1] => Entrada_PulsoUnico:inst1.BC[1]
 BC[2] => Entrada_PulsoUnico:inst1.BC[2]
@@ -25,12 +16,21 @@ BE[1] => Entrada_PulsoUnico:inst1.BE[1]
 BE[2] => Entrada_PulsoUnico:inst1.BE[2]
 BE[3] => Entrada_PulsoUnico:inst1.BE[3]
 BE[4] => Entrada_PulsoUnico:inst1.BE[4]
-FIFO[0] <= Controlador_Prioridade:inst6.MOVS[0]
-FIFO[1] <= Controlador_Prioridade:inst6.MOVS[1]
-FIFO[2] <= Controlador_Prioridade:inst6.MOVS[2]
-SAP[0] <= SA[0].DB_MAX_OUTPUT_PORT_TYPE
-SAP[1] <= SA[1].DB_MAX_OUTPUT_PORT_TYPE
-SAP[2] <= SA[2].DB_MAX_OUTPUT_PORT_TYPE
+Igual <= 7485:inst2.AEBO
+Maior <= 7485:inst2.AGBO
+OA <= 7447:inst14.OA
+OB <= 7447:inst14.OB
+OC <= 7447:inst14.OC
+OD <= 7447:inst14.OD
+OE <= 7447:inst14.OE
+OF <= 7447:inst14.OF
+OG <= 7447:inst14.OG
+Enable <= 7485:inst2.AGBO
+Rd <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+WR <= Controlador_Prioridade:inst6.EN
+SAP[0] <= SAS[0].DB_MAX_OUTPUT_PORT_TYPE
+SAP[1] <= SAS[1].DB_MAX_OUTPUT_PORT_TYPE
+SAP[2] <= SAS[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ElevadorBetaV3|7485:inst2
@@ -80,7 +80,19 @@ AGBO <= 86.DB_MAX_OUTPUT_PORT_TYPE
 ALBI => 134.IN0
 
 
-|ElevadorBetaV3|Sensor_MovimentoV2:inst
+|ElevadorBetaV3|Elevador_MovimentoV2:inst
+SA[0] <= Sensor_MovimentoV2:inst1.SA0
+SA[1] <= Sensor_MovimentoV2:inst1.SA1
+SA[2] <= Sensor_MovimentoV2:inst1.SA2
+SAS[0] <= Sensor_MovimentoV2:inst1.SA0
+SAS[1] <= Sensor_MovimentoV2:inst1.SA1
+SAS[2] <= Sensor_MovimentoV2:inst1.SA2
+CLK => Sensor_MovimentoV2:inst1.clock
+ACT => Sensor_MovimentoV2:inst1.ACT
+EN => Sensor_MovimentoV2:inst1.EN
+
+
+|ElevadorBetaV3|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1
 reset => reg_fstate.B.OUTPUTSELECT
 reset => reg_fstate.T.OUTPUTSELECT
 reset => reg_fstate.A1.OUTPUTSELECT
@@ -102,66 +114,222 @@ SA1 <= SA1.DB_MAX_OUTPUT_PORT_TYPE
 SA2 <= SA2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ElevadorBetaV3|7447:inst14
-OG <= 87.DB_MAX_OUTPUT_PORT_TYPE
-C => 25.IN0
-LTN => 25.IN1
-LTN => 27.IN1
-LTN => 29.IN1
-LTN => 13.IN5
-LTN => 38.IN3
-BIN => 37.IN0
-B => 27.IN0
-D => 14.IN0
-A => 29.IN0
-RBIN => 15.IN0
-OF <= 86.DB_MAX_OUTPUT_PORT_TYPE
-OE <= 85.DB_MAX_OUTPUT_PORT_TYPE
-RBON <= 13.DB_MAX_OUTPUT_PORT_TYPE
-OD <= 84.DB_MAX_OUTPUT_PORT_TYPE
-OC <= 83.DB_MAX_OUTPUT_PORT_TYPE
-OB <= 82.DB_MAX_OUTPUT_PORT_TYPE
-OA <= 81.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ElevadorBetaV3|LPM_ADD_SUB:inst22
-dataa[0] => add_sub_6ek:auto_generated.dataa[0]
-dataa[1] => add_sub_6ek:auto_generated.dataa[1]
-dataa[2] => add_sub_6ek:auto_generated.dataa[2]
-datab[0] => add_sub_6ek:auto_generated.datab[0]
-datab[1] => add_sub_6ek:auto_generated.datab[1]
-datab[2] => add_sub_6ek:auto_generated.datab[2]
-cin => ~NO_FANOUT~
-add_sub => add_sub_6ek:auto_generated.add_sub
-clock => ~NO_FANOUT~
+|ElevadorBetaV3|LPM_FIFO:inst8
+data[0] => scfifo:myFIFO.data[0]
+data[1] => scfifo:myFIFO.data[1]
+data[2] => scfifo:myFIFO.data[2]
+q[0] <= scfifo:myFIFO.q[0]
+q[1] <= scfifo:myFIFO.q[1]
+q[2] <= scfifo:myFIFO.q[2]
+clock => scfifo:myFIFO.clock
+rdreq => scfifo:myFIFO.rdreq
+wrreq => scfifo:myFIFO.wrreq
+sclr => scfifo:myFIFO.sclr
 aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= add_sub_6ek:auto_generated.result[0]
-result[1] <= add_sub_6ek:auto_generated.result[1]
-result[2] <= add_sub_6ek:auto_generated.result[2]
-cout <= <GND>
-overflow <= <GND>
+empty <= scfifo:myFIFO.empty
+full <= full.DB_MAX_OUTPUT_PORT_TYPE
+usedw[0] <= usedw[0].DB_MAX_OUTPUT_PORT_TYPE
+usedw[1] <= usedw[1].DB_MAX_OUTPUT_PORT_TYPE
+usedw[2] <= usedw[2].DB_MAX_OUTPUT_PORT_TYPE
+usedw[3] <= usedw[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ElevadorBetaV3|LPM_ADD_SUB:inst22|add_sub_6ek:auto_generated
-add_sub => _.IN0
-add_sub => _.IN0
-add_sub => _.IN0
-dataa[0] => op_1.IN4
-dataa[1] => op_1.IN2
-dataa[2] => op_1.IN0
-datab[0] => _.IN1
-datab[1] => _.IN1
-datab[2] => _.IN1
-result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO
+data[0] => scfifo_ji01:auto_generated.data[0]
+data[1] => scfifo_ji01:auto_generated.data[1]
+data[2] => scfifo_ji01:auto_generated.data[2]
+q[0] <= scfifo_ji01:auto_generated.q[0]
+q[1] <= scfifo_ji01:auto_generated.q[1]
+q[2] <= scfifo_ji01:auto_generated.q[2]
+wrreq => scfifo_ji01:auto_generated.wrreq
+rdreq => scfifo_ji01:auto_generated.rdreq
+clock => scfifo_ji01:auto_generated.clock
+aclr => ~NO_FANOUT~
+sclr => scfifo_ji01:auto_generated.sclr
+eccstatus[0] <= <UNC>
+eccstatus[1] <= <UNC>
+empty <= scfifo_ji01:auto_generated.empty
+full <= scfifo_ji01:auto_generated.full
+almost_full <= <GND>
+almost_empty <= <GND>
+usedw[0] <= scfifo_ji01:auto_generated.usedw[0]
+usedw[1] <= scfifo_ji01:auto_generated.usedw[1]
+usedw[2] <= scfifo_ji01:auto_generated.usedw[2]
+usedw[3] <= scfifo_ji01:auto_generated.usedw[3]
 
 
-|ElevadorBetaV3|LPM_CONSTANT:inst18
-result[0] <= <VCC>
-result[1] <= <GND>
-result[2] <= <GND>
+|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated
+clock => a_dpfifo_get:dpfifo.clock
+data[0] => a_dpfifo_get:dpfifo.data[0]
+data[1] => a_dpfifo_get:dpfifo.data[1]
+data[2] => a_dpfifo_get:dpfifo.data[2]
+empty <= a_dpfifo_get:dpfifo.empty
+full <= a_dpfifo_get:dpfifo.full
+q[0] <= a_dpfifo_get:dpfifo.q[0]
+q[1] <= a_dpfifo_get:dpfifo.q[1]
+q[2] <= a_dpfifo_get:dpfifo.q[2]
+rdreq => a_dpfifo_get:dpfifo.rreq
+sclr => a_dpfifo_get:dpfifo.sclr
+usedw[0] <= a_dpfifo_get:dpfifo.usedw[0]
+usedw[1] <= a_dpfifo_get:dpfifo.usedw[1]
+usedw[2] <= a_dpfifo_get:dpfifo.usedw[2]
+usedw[3] <= a_dpfifo_get:dpfifo.usedw[3]
+wrreq => a_dpfifo_get:dpfifo.wreq
+
+
+|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo
+clock => a_fefifo_66f:fifo_state.clock
+clock => altsyncram_ugm1:FIFOram.clock0
+clock => altsyncram_ugm1:FIFOram.clock1
+clock => cntr_vnb:rd_ptr_count.clock
+clock => cntr_vnb:wr_ptr.clock
+data[0] => altsyncram_ugm1:FIFOram.data_a[0]
+data[1] => altsyncram_ugm1:FIFOram.data_a[1]
+data[2] => altsyncram_ugm1:FIFOram.data_a[2]
+empty <= a_fefifo_66f:fifo_state.empty
+full <= a_fefifo_66f:fifo_state.full
+q[0] <= altsyncram_ugm1:FIFOram.q_b[0]
+q[1] <= altsyncram_ugm1:FIFOram.q_b[1]
+q[2] <= altsyncram_ugm1:FIFOram.q_b[2]
+rreq => a_fefifo_66f:fifo_state.rreq
+rreq => valid_rreq.IN0
+sclr => a_fefifo_66f:fifo_state.sclr
+sclr => _.IN0
+sclr => _.IN1
+sclr => cntr_vnb:rd_ptr_count.sclr
+sclr => cntr_vnb:wr_ptr.sclr
+usedw[0] <= a_fefifo_66f:fifo_state.usedw_out[0]
+usedw[1] <= a_fefifo_66f:fifo_state.usedw_out[1]
+usedw[2] <= a_fefifo_66f:fifo_state.usedw_out[2]
+usedw[3] <= a_fefifo_66f:fifo_state.usedw_out[3]
+wreq => a_fefifo_66f:fifo_state.wreq
+wreq => valid_wreq.IN0
+
+
+|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state
+aclr => b_full.IN0
+aclr => b_non_empty.IN0
+aclr => cntr_bo7:count_usedw.aclr
+clock => cntr_bo7:count_usedw.clock
+clock => b_full.CLK
+clock => b_non_empty.CLK
+empty <= empty.DB_MAX_OUTPUT_PORT_TYPE
+full <= b_full.DB_MAX_OUTPUT_PORT_TYPE
+rreq => _.IN1
+rreq => _.IN0
+rreq => _.IN1
+rreq => valid_rreq.IN0
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN1
+sclr => _.IN0
+sclr => _.IN0
+sclr => cntr_bo7:count_usedw.sclr
+usedw_out[0] <= usedw[0].DB_MAX_OUTPUT_PORT_TYPE
+usedw_out[1] <= usedw[1].DB_MAX_OUTPUT_PORT_TYPE
+usedw_out[2] <= usedw[2].DB_MAX_OUTPUT_PORT_TYPE
+usedw_out[3] <= usedw[3].DB_MAX_OUTPUT_PORT_TYPE
+wreq => _.IN1
+wreq => _.IN1
+wreq => _.IN0
+wreq => valid_wreq.IN0
+
+
+|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state|cntr_bo7:count_usedw
+aclr => counter_reg_bit[3].IN0
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+updown => counter_comb_bita0.DATAB
+updown => counter_comb_bita1.DATAB
+updown => counter_comb_bita2.DATAB
+updown => counter_comb_bita3.DATAB
+
+
+|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[2] => ram_block1a0.PORTAADDR2
+address_a[2] => ram_block1a1.PORTAADDR2
+address_a[2] => ram_block1a2.PORTAADDR2
+address_a[3] => ram_block1a0.PORTAADDR3
+address_a[3] => ram_block1a1.PORTAADDR3
+address_a[3] => ram_block1a2.PORTAADDR3
+address_b[0] => ram_block1a0.PORTBADDR
+address_b[0] => ram_block1a1.PORTBADDR
+address_b[0] => ram_block1a2.PORTBADDR
+address_b[1] => ram_block1a0.PORTBADDR1
+address_b[1] => ram_block1a1.PORTBADDR1
+address_b[1] => ram_block1a2.PORTBADDR1
+address_b[2] => ram_block1a0.PORTBADDR2
+address_b[2] => ram_block1a1.PORTBADDR2
+address_b[2] => ram_block1a2.PORTBADDR2
+address_b[3] => ram_block1a0.PORTBADDR3
+address_b[3] => ram_block1a1.PORTBADDR3
+address_b[3] => ram_block1a2.PORTBADDR3
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a2.CLK0
+clock1 => ram_block1a0.CLK1
+clock1 => ram_block1a1.CLK1
+clock1 => ram_block1a2.CLK1
+clocken1 => ram_block1a0.ENA1
+clocken1 => ram_block1a1.ENA1
+clocken1 => ram_block1a2.ENA1
+data_a[0] => ram_block1a0.PORTADATAIN
+data_a[1] => ram_block1a1.PORTADATAIN
+data_a[2] => ram_block1a2.PORTADATAIN
+q_b[0] <= ram_block1a0.PORTBDATAOUT
+q_b[1] <= ram_block1a1.PORTBDATAOUT
+q_b[2] <= ram_block1a2.PORTBDATAOUT
+wren_a => ram_block1a0.PORTAWE
+wren_a => ram_block1a1.PORTAWE
+wren_a => ram_block1a2.PORTAWE
+
+
+|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:rd_ptr_count
+aclr => counter_reg_bit[3].IN0
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:wr_ptr
+aclr => counter_reg_bit[3].IN0
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
 
 
 |ElevadorBetaV3|Controlador_Prioridade:inst6
@@ -554,221 +722,25 @@ P => inst8.IN0
 P => inst6.IN0
 
 
-|ElevadorBetaV3|LPM_FIFO:inst8
-data[0] => scfifo:myFIFO.data[0]
-data[1] => scfifo:myFIFO.data[1]
-data[2] => scfifo:myFIFO.data[2]
-q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
-clock => scfifo:myFIFO.clock
-rdreq => scfifo:myFIFO.rdreq
-wrreq => scfifo:myFIFO.wrreq
-sclr => scfifo:myFIFO.sclr
-aclr => ~NO_FANOUT~
-empty <= scfifo:myFIFO.empty
-full <= full.DB_MAX_OUTPUT_PORT_TYPE
-usedw[0] <= usedw[0].DB_MAX_OUTPUT_PORT_TYPE
-usedw[1] <= usedw[1].DB_MAX_OUTPUT_PORT_TYPE
-usedw[2] <= usedw[2].DB_MAX_OUTPUT_PORT_TYPE
-usedw[3] <= usedw[3].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO
-data[0] => scfifo_ji01:auto_generated.data[0]
-data[1] => scfifo_ji01:auto_generated.data[1]
-data[2] => scfifo_ji01:auto_generated.data[2]
-q[0] <= scfifo_ji01:auto_generated.q[0]
-q[1] <= scfifo_ji01:auto_generated.q[1]
-q[2] <= scfifo_ji01:auto_generated.q[2]
-wrreq => scfifo_ji01:auto_generated.wrreq
-rdreq => scfifo_ji01:auto_generated.rdreq
-clock => scfifo_ji01:auto_generated.clock
-aclr => ~NO_FANOUT~
-sclr => scfifo_ji01:auto_generated.sclr
-eccstatus[0] <= <UNC>
-eccstatus[1] <= <UNC>
-empty <= scfifo_ji01:auto_generated.empty
-full <= scfifo_ji01:auto_generated.full
-almost_full <= <GND>
-almost_empty <= <GND>
-usedw[0] <= scfifo_ji01:auto_generated.usedw[0]
-usedw[1] <= scfifo_ji01:auto_generated.usedw[1]
-usedw[2] <= scfifo_ji01:auto_generated.usedw[2]
-usedw[3] <= scfifo_ji01:auto_generated.usedw[3]
-
-
-|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated
-clock => a_dpfifo_get:dpfifo.clock
-data[0] => a_dpfifo_get:dpfifo.data[0]
-data[1] => a_dpfifo_get:dpfifo.data[1]
-data[2] => a_dpfifo_get:dpfifo.data[2]
-empty <= a_dpfifo_get:dpfifo.empty
-full <= a_dpfifo_get:dpfifo.full
-q[0] <= a_dpfifo_get:dpfifo.q[0]
-q[1] <= a_dpfifo_get:dpfifo.q[1]
-q[2] <= a_dpfifo_get:dpfifo.q[2]
-rdreq => a_dpfifo_get:dpfifo.rreq
-sclr => a_dpfifo_get:dpfifo.sclr
-usedw[0] <= a_dpfifo_get:dpfifo.usedw[0]
-usedw[1] <= a_dpfifo_get:dpfifo.usedw[1]
-usedw[2] <= a_dpfifo_get:dpfifo.usedw[2]
-usedw[3] <= a_dpfifo_get:dpfifo.usedw[3]
-wrreq => a_dpfifo_get:dpfifo.wreq
-
-
-|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo
-clock => a_fefifo_66f:fifo_state.clock
-clock => altsyncram_ugm1:FIFOram.clock0
-clock => altsyncram_ugm1:FIFOram.clock1
-clock => cntr_vnb:rd_ptr_count.clock
-clock => cntr_vnb:wr_ptr.clock
-data[0] => altsyncram_ugm1:FIFOram.data_a[0]
-data[1] => altsyncram_ugm1:FIFOram.data_a[1]
-data[2] => altsyncram_ugm1:FIFOram.data_a[2]
-empty <= a_fefifo_66f:fifo_state.empty
-full <= a_fefifo_66f:fifo_state.full
-q[0] <= altsyncram_ugm1:FIFOram.q_b[0]
-q[1] <= altsyncram_ugm1:FIFOram.q_b[1]
-q[2] <= altsyncram_ugm1:FIFOram.q_b[2]
-rreq => a_fefifo_66f:fifo_state.rreq
-rreq => valid_rreq.IN0
-sclr => a_fefifo_66f:fifo_state.sclr
-sclr => _.IN0
-sclr => _.IN1
-sclr => cntr_vnb:rd_ptr_count.sclr
-sclr => cntr_vnb:wr_ptr.sclr
-usedw[0] <= a_fefifo_66f:fifo_state.usedw_out[0]
-usedw[1] <= a_fefifo_66f:fifo_state.usedw_out[1]
-usedw[2] <= a_fefifo_66f:fifo_state.usedw_out[2]
-usedw[3] <= a_fefifo_66f:fifo_state.usedw_out[3]
-wreq => a_fefifo_66f:fifo_state.wreq
-wreq => valid_wreq.IN0
-
-
-|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state
-aclr => b_full.IN0
-aclr => b_non_empty.IN0
-aclr => cntr_bo7:count_usedw.aclr
-clock => cntr_bo7:count_usedw.clock
-clock => b_full.CLK
-clock => b_non_empty.CLK
-empty <= empty.DB_MAX_OUTPUT_PORT_TYPE
-full <= b_full.DB_MAX_OUTPUT_PORT_TYPE
-rreq => _.IN1
-rreq => _.IN0
-rreq => _.IN1
-rreq => valid_rreq.IN0
-sclr => _.IN0
-sclr => _.IN0
-sclr => _.IN1
-sclr => _.IN0
-sclr => _.IN0
-sclr => cntr_bo7:count_usedw.sclr
-usedw_out[0] <= usedw[0].DB_MAX_OUTPUT_PORT_TYPE
-usedw_out[1] <= usedw[1].DB_MAX_OUTPUT_PORT_TYPE
-usedw_out[2] <= usedw[2].DB_MAX_OUTPUT_PORT_TYPE
-usedw_out[3] <= usedw[3].DB_MAX_OUTPUT_PORT_TYPE
-wreq => _.IN1
-wreq => _.IN1
-wreq => _.IN0
-wreq => valid_wreq.IN0
-
-
-|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state|cntr_bo7:count_usedw
-aclr => counter_reg_bit[3].IN0
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-sclr => _.IN0
-sclr => _.IN0
-sclr => _.IN0
-updown => counter_comb_bita0.DATAB
-updown => counter_comb_bita1.DATAB
-updown => counter_comb_bita2.DATAB
-updown => counter_comb_bita3.DATAB
-
-
-|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram
-address_a[0] => ram_block1a0.PORTAADDR
-address_a[0] => ram_block1a1.PORTAADDR
-address_a[0] => ram_block1a2.PORTAADDR
-address_a[1] => ram_block1a0.PORTAADDR1
-address_a[1] => ram_block1a1.PORTAADDR1
-address_a[1] => ram_block1a2.PORTAADDR1
-address_a[2] => ram_block1a0.PORTAADDR2
-address_a[2] => ram_block1a1.PORTAADDR2
-address_a[2] => ram_block1a2.PORTAADDR2
-address_a[3] => ram_block1a0.PORTAADDR3
-address_a[3] => ram_block1a1.PORTAADDR3
-address_a[3] => ram_block1a2.PORTAADDR3
-address_b[0] => ram_block1a0.PORTBADDR
-address_b[0] => ram_block1a1.PORTBADDR
-address_b[0] => ram_block1a2.PORTBADDR
-address_b[1] => ram_block1a0.PORTBADDR1
-address_b[1] => ram_block1a1.PORTBADDR1
-address_b[1] => ram_block1a2.PORTBADDR1
-address_b[2] => ram_block1a0.PORTBADDR2
-address_b[2] => ram_block1a1.PORTBADDR2
-address_b[2] => ram_block1a2.PORTBADDR2
-address_b[3] => ram_block1a0.PORTBADDR3
-address_b[3] => ram_block1a1.PORTBADDR3
-address_b[3] => ram_block1a2.PORTBADDR3
-clock0 => ram_block1a0.CLK0
-clock0 => ram_block1a1.CLK0
-clock0 => ram_block1a2.CLK0
-clock1 => ram_block1a0.CLK1
-clock1 => ram_block1a1.CLK1
-clock1 => ram_block1a2.CLK1
-clocken1 => ram_block1a0.ENA1
-clocken1 => ram_block1a1.ENA1
-clocken1 => ram_block1a2.ENA1
-data_a[0] => ram_block1a0.PORTADATAIN
-data_a[1] => ram_block1a1.PORTADATAIN
-data_a[2] => ram_block1a2.PORTADATAIN
-q_b[0] <= ram_block1a0.PORTBDATAOUT
-q_b[1] <= ram_block1a1.PORTBDATAOUT
-q_b[2] <= ram_block1a2.PORTBDATAOUT
-wren_a => ram_block1a0.PORTAWE
-wren_a => ram_block1a1.PORTAWE
-wren_a => ram_block1a2.PORTAWE
-
-
-|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:rd_ptr_count
-aclr => counter_reg_bit[3].IN0
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-sclr => _.IN0
-sclr => _.IN0
-sclr => _.IN0
-
-
-|ElevadorBetaV3|LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:wr_ptr
-aclr => counter_reg_bit[3].IN0
-clock => counter_reg_bit[3].CLK
-clock => counter_reg_bit[2].CLK
-clock => counter_reg_bit[1].CLK
-clock => counter_reg_bit[0].CLK
-cnt_en => _.IN1
-q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
-sclr => _.IN0
-sclr => _.IN0
-sclr => _.IN0
+|ElevadorBetaV3|7447:inst14
+OG <= 87.DB_MAX_OUTPUT_PORT_TYPE
+C => 25.IN0
+LTN => 25.IN1
+LTN => 27.IN1
+LTN => 29.IN1
+LTN => 13.IN5
+LTN => 38.IN3
+BIN => 37.IN0
+B => 27.IN0
+D => 14.IN0
+A => 29.IN0
+RBIN => 15.IN0
+OF <= 86.DB_MAX_OUTPUT_PORT_TYPE
+OE <= 85.DB_MAX_OUTPUT_PORT_TYPE
+RBON <= 13.DB_MAX_OUTPUT_PORT_TYPE
+OD <= 84.DB_MAX_OUTPUT_PORT_TYPE
+OC <= 83.DB_MAX_OUTPUT_PORT_TYPE
+OB <= 82.DB_MAX_OUTPUT_PORT_TYPE
+OA <= 81.DB_MAX_OUTPUT_PORT_TYPE
 
 
