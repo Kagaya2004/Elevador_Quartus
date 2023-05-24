@@ -1,26 +1,26 @@
 # do Multiplexador_Elevador.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:36:44 on Apr 26,2023
+# Start time: 23:04:35 on May 23,2023
 # vlog -work work Multiplexador_Elevador.vo 
 # -- Compiling module Multiplexador_Elevador
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	Multiplexador_Elevador
-# End time: 22:36:44 on Apr 26,2023, Elapsed time: 0:00:00
+# End time: 23:04:35 on May 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:36:44 on Apr 26,2023
+# Start time: 23:04:35 on May 23,2023
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module Multiplexador_Elevador_vlg_vec_tst
 # 
 # Top level modules:
 # 	Multiplexador_Elevador_vlg_vec_tst
-# End time: 22:36:44 on Apr 26,2023, Elapsed time: 0:00:00
+# End time: 23:04:35 on May 23,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Multiplexador_Elevador_vlg_vec_tst 
-# Start time: 22:36:44 on Apr 26,2023
+# Start time: 23:04:35 on May 23,2023
 # Loading work.Multiplexador_Elevador_vlg_vec_tst
 # Loading work.Multiplexador_Elevador
 # Loading work.hard_block
@@ -30,5 +30,5 @@
 # after#26
 # ** Note: $finish    : Waveform.vwf.vt(48)
 #    Time: 1 us  Iteration: 0  Instance: /Multiplexador_Elevador_vlg_vec_tst
-# End time: 22:36:45 on Apr 26,2023, Elapsed time: 0:00:01
+# End time: 23:04:36 on May 23,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
