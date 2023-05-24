@@ -23,7 +23,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 48 216 64)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BC[0]" (rect 5 0 34 12)(font "Arial" ))
+	(text "BC[0]" (rect 5 0 33 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 144 216 160)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BC[1]" (rect 5 0 33 17)(font "Intel Clear" ))
+	(text "BC[1]" (rect 5 0 32 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 248 216 264)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BC[2]" (rect 5 0 33 17)(font "Intel Clear" ))
+	(text "BC[2]" (rect 5 0 32 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +71,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 344 216 360)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BC[3]" (rect 5 0 33 17)(font "Intel Clear" ))
+	(text "BC[3]" (rect 5 0 32 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -87,7 +87,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 440 216 456)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BC[4]" (rect 5 0 33 17)(font "Intel Clear" ))
+	(text "BC[4]" (rect 5 0 32 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -103,7 +103,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 536 216 552)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BE[0]" (rect 5 0 31 17)(font "Intel Clear" ))
+	(text "BE[0]" (rect 5 0 30 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -119,7 +119,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 632 216 648)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BE[1]" (rect 5 0 31 17)(font "Intel Clear" ))
+	(text "BE[1]" (rect 5 0 30 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -135,7 +135,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 728 216 744)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BE[2]" (rect 5 0 31 17)(font "Intel Clear" ))
+	(text "BE[2]" (rect 5 0 30 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -151,7 +151,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 824 216 840)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BE[3]" (rect 5 0 31 17)(font "Intel Clear" ))
+	(text "BE[3]" (rect 5 0 30 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -167,7 +167,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 920 216 936)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "BE[4]" (rect 5 0 31 17)(font "Intel Clear" ))
+	(text "BE[4]" (rect 5 0 30 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -183,7 +183,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 1000 216 1016)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 27 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -734,16 +734,8 @@ refer to the applicable agreement for further details.
 	(pt 312 656)
 )
 (connector
-	(pt 312 656)
-	(pt 312 464)
-)
-(connector
 	(pt 400 848)
 	(pt 312 848)
-)
-(connector
-	(pt 312 848)
-	(pt 312 656)
 )
 (connector
 	(pt 400 944)
@@ -797,6 +789,30 @@ refer to the applicable agreement for further details.
 	(pt 560 56)
 	(pt 496 56)
 )
+(connector
+	(pt 400 752)
+	(pt 312 752)
+)
+(connector
+	(pt 312 848)
+	(pt 312 752)
+)
+(connector
+	(pt 312 752)
+	(pt 312 656)
+)
+(connector
+	(pt 400 560)
+	(pt 312 560)
+)
+(connector
+	(pt 312 656)
+	(pt 312 560)
+)
+(connector
+	(pt 312 560)
+	(pt 312 464)
+)
 (junction (pt 312 72))
 (junction (pt 312 168))
 (junction (pt 312 272))
@@ -805,3 +821,5 @@ refer to the applicable agreement for further details.
 (junction (pt 312 656))
 (junction (pt 312 848))
 (junction (pt 312 944))
+(junction (pt 312 752))
+(junction (pt 312 560))

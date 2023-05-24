@@ -1,5 +1,5 @@
 Flow report for ElevadorBetaV3
-Tue May 23 22:52:00 2023
+Tue May 23 23:43:18 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue May 23 22:51:54 2023       ;
+; Flow Status                        ; Successful - Tue May 23 23:43:18 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ElevadorBetaV3                              ;
 ; Top-level Entity Name              ; ElevadorBetaV3                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 74 / 6,272 ( 1 % )                          ;
-;     Total combinational functions  ; 74 / 6,272 ( 1 % )                          ;
-;     Dedicated logic registers      ; 36 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 36                                          ;
-; Total pins                         ; 30 / 92 ( 33 % )                            ;
+; Total logic elements               ; 87 / 6,272 ( 1 % )                          ;
+;     Total combinational functions  ; 87 / 6,272 ( 1 % )                          ;
+;     Dedicated logic registers      ; 40 / 6,272 ( < 1 % )                        ;
+; Total registers                    ; 40                                          ;
+; Total pins                         ; 33 / 92 ( 36 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 48 / 276,480 ( < 1 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/23/2023 22:50:38 ;
+; Start date & time ; 05/23/2023 23:42:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ElevadorBetaV3      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 2544350940739.168489303410760          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 2544350940739.168489615507840          ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -88,11 +88,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4782 MB             ; 00:00:40                           ;
-; Fitter               ; 00:00:27     ; 1.0                     ; 5491 MB             ; 00:00:07                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4771 MB             ; 00:00:29                           ;
+; Fitter               ; 00:00:05     ; 1.0                     ; 5490 MB             ; 00:00:06                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4668 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4764 MB             ; 00:00:02                           ;
-; Total                ; 00:01:07     ; --                      ; --                  ; 00:00:50                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4762 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4622 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4630 MB             ; 00:00:01                           ;
+; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:40                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -105,6 +107,8 @@ refer to the applicable agreement for further details.
 ; Fitter               ; LAPTOP-M9RETNPA  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; LAPTOP-M9RETNPA  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; LAPTOP-M9RETNPA  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-M9RETNPA  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-M9RETNPA  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -115,6 +119,8 @@ quartus_map --read_settings_files=on --write_settings_files=off ElevadorBetaV3 -
 quartus_fit --read_settings_files=off --write_settings_files=off ElevadorBetaV3 -c ElevadorBetaV3
 quartus_asm --read_settings_files=off --write_settings_files=off ElevadorBetaV3 -c ElevadorBetaV3
 quartus_sta ElevadorBetaV3 -c ElevadorBetaV3
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ElevadorBetaV3 -c ElevadorBetaV3 --vector_source="C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV3/Waveform1.vwf" --testbench_file="C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV3/simulation/qsim/Waveform1.vwf.vt"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV3/simulation/qsim/" ElevadorBetaV3 -c ElevadorBetaV3
 
 
 

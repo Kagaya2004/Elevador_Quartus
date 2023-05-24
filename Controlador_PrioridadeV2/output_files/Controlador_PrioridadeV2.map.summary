@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue May 23 23:11:34 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Controlador_PrioridadeV2
+Top-level Entity Name : Controlador_PrioridadeV2
+Family : Cyclone IV E
+Total logic elements : 17
+    Total combinational functions : 17
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

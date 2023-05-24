@@ -3,9 +3,9 @@ Menor <= 7485:inst2.ALBO
 CLK => Elevador_MovimentoV2:inst.CLK
 CLK => LPM_FIFO:inst8.clock
 CLK => Entrada_PulsoUnico:inst1.CLK
-FIFO[0] <= MOVS[0].DB_MAX_OUTPUT_PORT_TYPE
-FIFO[1] <= MOVS[1].DB_MAX_OUTPUT_PORT_TYPE
-FIFO[2] <= MOVS[2].DB_MAX_OUTPUT_PORT_TYPE
+FIFO[0] <= LPM_FIFO:inst8.q[0]
+FIFO[1] <= LPM_FIFO:inst8.q[1]
+FIFO[2] <= LPM_FIFO:inst8.q[2]
 BC[0] => Entrada_PulsoUnico:inst1.BC[0]
 BC[1] => Entrada_PulsoUnico:inst1.BC[1]
 BC[2] => Entrada_PulsoUnico:inst1.BC[2]
@@ -27,7 +27,10 @@ OF <= 7447:inst14.OF
 OG <= 7447:inst14.OG
 Enable <= 7485:inst2.AGBO
 Rd <= inst19.DB_MAX_OUTPUT_PORT_TYPE
-WR <= Controlador_Prioridade:inst6.EN
+WR <= Controlador_PrioridadeV2:inst5.EN
+MOVS[0] <= Controlador_PrioridadeV2:inst5.MUX[0]
+MOVS[1] <= Controlador_PrioridadeV2:inst5.MUX[1]
+MOVS[2] <= Controlador_PrioridadeV2:inst5.MUX[2]
 SAP[0] <= SAS[0].DB_MAX_OUTPUT_PORT_TYPE
 SAP[1] <= SAS[1].DB_MAX_OUTPUT_PORT_TYPE
 SAP[2] <= SAS[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -332,8 +335,11 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5
 EN <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+MUX[0] <= Multiplexador_Elevador:inst6.MUX[0]
+MUX[1] <= Multiplexador_Elevador:inst6.MUX[1]
+MUX[2] <= Multiplexador_Elevador:inst6.MUX[2]
 BE[0] => Circuito_Combinacional_5_3bit:inst4.I[0]
 BE[1] => Circuito_Combinacional_5_3bit:inst4.I[1]
 BE[2] => Circuito_Combinacional_5_3bit:inst4.I[2]
@@ -344,24 +350,9 @@ BC[1] => Circuito_Combinacional_5_3bit:inst1.I[1]
 BC[2] => Circuito_Combinacional_5_3bit:inst1.I[2]
 BC[3] => Circuito_Combinacional_5_3bit:inst1.I[3]
 BC[4] => Circuito_Combinacional_5_3bit:inst1.I[4]
-MOVP[0] <= Valor_Serial_Paralelo:inst.VP[0]
-MOVP[1] <= Valor_Serial_Paralelo:inst.VP[1]
-MOVP[2] <= Valor_Serial_Paralelo:inst.VP[2]
-MOVS[0] <= Multiplexador_Elevador:inst6.MUX[0]
-MOVS[1] <= Multiplexador_Elevador:inst6.MUX[1]
-MOVS[2] <= Multiplexador_Elevador:inst6.MUX[2]
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Valor_Serial_Paralelo:inst
-VP[0] <= VS[0].DB_MAX_OUTPUT_PORT_TYPE
-VP[1] <= VS[1].DB_MAX_OUTPUT_PORT_TYPE
-VP[2] <= VS[2].DB_MAX_OUTPUT_PORT_TYPE
-VS[0] => VP[0].DATAIN
-VS[1] => VP[1].DATAIN
-VS[2] => VP[2].DATAIN
-
-
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6
 MUX[0] <= BUSMUX:inst.result[0]
 MUX[1] <= BUSMUX:inst.result[1]
 MUX[2] <= BUSMUX:inst.result[2]
@@ -374,7 +365,7 @@ IP[1] => BUSMUX:inst.datab[1]
 IP[2] => BUSMUX:inst.datab[2]
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst
 dataa[0] => lpm_mux:$00000.data[0][0]
 dataa[1] => lpm_mux:$00000.data[0][1]
 dataa[2] => lpm_mux:$00000.data[0][2]
@@ -387,7 +378,7 @@ result[1] <= lpm_mux:$00000.result[1]
 result[2] <= lpm_mux:$00000.result[2]
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000
 data[0][0] => mux_9rc:auto_generated.data[0]
 data[0][1] => mux_9rc:auto_generated.data[1]
 data[0][2] => mux_9rc:auto_generated.data[2]
@@ -403,7 +394,7 @@ result[1] <= mux_9rc:auto_generated.result[1]
 result[2] <= mux_9rc:auto_generated.result[2]
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000|mux_9rc:auto_generated
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000|mux_9rc:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[1].IN1
 data[2] => result_node[2].IN1
@@ -421,7 +412,7 @@ sel[0] => result_node[0].IN0
 sel[0] => _.IN0
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Preferencia_Elevador:inst13
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Preferencia_Elevador:inst3
 ~SP <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 BP1 => inst.IN0
 BP2 => inst.IN1
@@ -429,7 +420,7 @@ BP0 => inst.IN2
 SP <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst4
 SP[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
 SP[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
 SP[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -453,7 +444,7 @@ SS[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
 SS[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S2:inst5
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S2:inst5
 S2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
 B4 => ins5.IN0
 B4 => inst7.IN0
@@ -475,7 +466,7 @@ B0 => inst9.IN3
 B0 => inst13.IN3
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S0:inst
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S0:inst
 S0 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
 B2 => inst.IN0
 B2 => inst6.IN0
@@ -494,7 +485,7 @@ B0 => inst6.IN1
 B0 => inst1.IN0
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S1:inst4
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S1:inst4
 S1 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
 B4 => ins5.IN0
 B4 => inst9.IN0
@@ -520,7 +511,7 @@ B0 => inst9.IN3
 B0 => inst10.IN3
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst1
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst1
 SP[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
 SP[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
 SP[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -544,7 +535,7 @@ SS[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
 SS[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst1|Andares_Elevador_S2:inst5
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst1|Andares_Elevador_S2:inst5
 S2 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
 B4 => ins5.IN0
 B4 => inst7.IN0
@@ -566,7 +557,7 @@ B0 => inst9.IN3
 B0 => inst13.IN3
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst1|Andares_Elevador_S0:inst
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst1|Andares_Elevador_S0:inst
 S0 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
 B2 => inst.IN0
 B2 => inst6.IN0
@@ -585,7 +576,7 @@ B0 => inst6.IN1
 B0 => inst1.IN0
 
 
-|ElevadorBetaV3|Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst1|Andares_Elevador_S1:inst4
+|ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst1|Andares_Elevador_S1:inst4
 S1 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
 B4 => ins5.IN0
 B4 => inst9.IN0
@@ -627,7 +618,9 @@ CLK => mod_PU:inst1.CLK
 CLK => mod_PU:inst2.CLK
 CLK => mod_PU:inst3.CLK
 CLK => mod_PU:inst4.CLK
+CLK => mod_PU:inst9.CLK
 CLK => mod_PU:inst8.CLK
+CLK => mod_PU:inst7.CLK
 CLK => mod_PU:inst6.CLK
 CLK => mod_PU:inst5.CLK
 SBE[0] <= mod_PU:inst9.PU

@@ -8,18 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "FIFO[2]",
-					"strict" : false
-				},
-				{
-					"name" : "FIFO[1]",
-					"strict" : false
-				},
-				{
-					"name" : "FIFO[0]",
-					"strict" : false
-				},
-				{
 					"name" : "Igual",
 					"strict" : false
 				},
@@ -60,7 +48,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "BE[4]",
+					"name" : "BE[2]",
 					"strict" : false
 				},
 				{
@@ -68,7 +56,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "BC[2]",
+					"strict" : false
+				},
+				{
 					"name" : "BC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "BC[1]",
 					"strict" : false
 				},
 				{
@@ -76,19 +72,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "BC[2]",
-					"strict" : false
-				},
-				{
-					"name" : "BE[1]",
-					"strict" : false
-				},
-				{
 					"name" : "BC[0]",
 					"strict" : false
 				},
 				{
-					"name" : "BC[1]",
+					"name" : "BE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "BE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BE[1]",
 					"strict" : false
 				}
 			]

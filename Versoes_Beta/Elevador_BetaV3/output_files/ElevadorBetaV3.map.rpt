@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ElevadorBetaV3
-Tue May 23 22:51:13 2023
+Tue May 23 23:42:48 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -21,7 +21,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  13. Parameter Settings for User Entity Instance: 7485:inst2
  14. Parameter Settings for User Entity Instance: Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1
  15. Parameter Settings for User Entity Instance: LPM_FIFO:inst8
- 16. Parameter Settings for User Entity Instance: Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst
+ 16. Parameter Settings for User Entity Instance: Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst
  17. Post-Synthesis Netlist Statistics for Top Partition
  18. Elapsed Time Per Partition
  19. Analysis & Synthesis Messages
@@ -50,16 +50,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 23 22:51:13 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 23 23:42:48 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ElevadorBetaV3                              ;
 ; Top-level Entity Name              ; ElevadorBetaV3                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 74                                          ;
-;     Total combinational functions  ; 74                                          ;
-;     Dedicated logic registers      ; 36                                          ;
-; Total registers                    ; 36                                          ;
-; Total pins                         ; 30                                          ;
+; Total logic elements               ; 87                                          ;
+;     Total combinational functions  ; 87                                          ;
+;     Dedicated logic registers      ; 40                                          ;
+; Total registers                    ; 40                                          ;
+; Total pins                         ; 33                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 48                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -174,14 +174,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                                          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ; Library ;
 +---------------------------------------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; ../../Controlador_PrioridadeV2/Controlador_PrioridadeV2.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Controlador_PrioridadeV2/Controlador_PrioridadeV2.bdf               ;         ;
+; ../../Preferencia_Elevador/Preferencia_Elevador.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Preferencia_Elevador/Preferencia_Elevador.bdf                       ;         ;
 ; ../../Elevador_MovimentoV2/Elevador_MovimentoV2.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Elevador_MovimentoV2/Elevador_MovimentoV2.bdf                       ;         ;
 ; ../../Sensor_MovimentacaoV2/Sensor_MovimentoV2.v                          ; yes             ; User Verilog HDL File              ; C:/Quartus (Project Test V2)/Sensor_MovimentacaoV2/Sensor_MovimentoV2.v                          ;         ;
-; ../../Valor_Serial_Paralelo/Valor_Serial_Paralelo.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Valor_Serial_Paralelo/Valor_Serial_Paralelo.bdf                     ;         ;
-; ../../Preferencia_Elevador/Preferencia_Elevador.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Preferencia_Elevador/Preferencia_Elevador.bdf                       ;         ;
 ; ../../Multiplexador_Elevador/Multiplexador_Elevador.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Multiplexador_Elevador/Multiplexador_Elevador.bdf                   ;         ;
 ; ../../mod_PU/mod_PU.bdf                                                   ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/mod_PU/mod_PU.bdf                                                   ;         ;
 ; ../../Entrada_PulsoUnico/Entrada_PulsoUnico.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Entrada_PulsoUnico/Entrada_PulsoUnico.bdf                           ;         ;
-; ../../Controlador_Prioridade/Controlador_Prioridade.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Controlador_Prioridade/Controlador_Prioridade.bdf                   ;         ;
 ; ../../Circuito Combinacional (Elevador)/Circuito_Combinacional_5_3bit.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Circuito Combinacional (Elevador)/Circuito_Combinacional_5_3bit.bdf ;         ;
 ; ../../Andares_Elevador_S2/Andares_Elevador_S2.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Andares_Elevador_S2/Andares_Elevador_S2.bdf                         ;         ;
 ; ../../Andares_Elevador_S1/Andares_Elevador_S1.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Quartus (Project Test V2)/Andares_Elevador_S1/Andares_Elevador_S1.bdf                         ;         ;
@@ -221,69 +220,71 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 74        ;
+; Estimated Total logic elements              ; 87        ;
 ;                                             ;           ;
-; Total combinational functions               ; 74        ;
+; Total combinational functions               ; 87        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 37        ;
-;     -- 3 input functions                    ; 24        ;
-;     -- <=2 input functions                  ; 13        ;
+;     -- 4 input functions                    ; 44        ;
+;     -- 3 input functions                    ; 29        ;
+;     -- <=2 input functions                  ; 14        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 65        ;
+;     -- normal mode                          ; 78        ;
 ;     -- arithmetic mode                      ; 9         ;
 ;                                             ;           ;
-; Total registers                             ; 36        ;
-;     -- Dedicated logic registers            ; 36        ;
+; Total registers                             ; 40        ;
+;     -- Dedicated logic registers            ; 40        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 30        ;
+; I/O pins                                    ; 33        ;
 ; Total memory bits                           ; 48        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 39        ;
-; Total fan-out                               ; 412       ;
-; Average fan-out                             ; 2.38      ;
+; Maximum fan-out                             ; 43        ;
+; Total fan-out                               ; 471       ;
+; Average fan-out                             ; 2.40      ;
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                    ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Entity Name            ; Library Name ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |ElevadorBetaV3                          ; 74 (1)              ; 36 (0)                    ; 48          ; 0            ; 0       ; 0         ; 30   ; 0            ; |ElevadorBetaV3                                                                                                                          ; ElevadorBetaV3         ; work         ;
-;    |7447:inst14|                         ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|7447:inst14                                                                                                              ; 7447                   ; work         ;
-;    |7485:inst2|                          ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|7485:inst2                                                                                                               ; 7485                   ; work         ;
-;       |f7485:sub|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|7485:inst2|f7485:sub                                                                                                     ; f7485                  ; work         ;
-;    |Controlador_Prioridade:inst6|        ; 10 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_Prioridade:inst6                                                                                             ; Controlador_Prioridade ; work         ;
-;       |Multiplexador_Elevador:inst6|     ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6                                                                ; Multiplexador_Elevador ; work         ;
-;          |busmux:inst|                   ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|busmux:inst                                                    ; busmux                 ; work         ;
-;             |lpm_mux:$00000|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|busmux:inst|lpm_mux:$00000                                     ; lpm_mux                ; work         ;
-;                |mux_9rc:auto_generated|  ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|busmux:inst|lpm_mux:$00000|mux_9rc:auto_generated              ; mux_9rc                ; work         ;
-;    |Elevador_MovimentoV2:inst|           ; 12 (0)              ; 6 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Elevador_MovimentoV2:inst                                                                                                ; Elevador_MovimentoV2   ; work         ;
-;       |Sensor_MovimentoV2:inst1|         ; 12 (12)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1                                                                       ; Sensor_MovimentoV2     ; work         ;
-;    |Entrada_PulsoUnico:inst1|            ; 16 (0)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1                                                                                                 ; Entrada_PulsoUnico     ; work         ;
-;       |mod_PU:inst1|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst1                                                                                    ; mod_PU                 ; work         ;
-;       |mod_PU:inst2|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst2                                                                                    ; mod_PU                 ; work         ;
-;       |mod_PU:inst3|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst3                                                                                    ; mod_PU                 ; work         ;
-;       |mod_PU:inst4|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst4                                                                                    ; mod_PU                 ; work         ;
-;       |mod_PU:inst5|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst5                                                                                    ; mod_PU                 ; work         ;
-;       |mod_PU:inst6|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst6                                                                                    ; mod_PU                 ; work         ;
-;       |mod_PU:inst8|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst8                                                                                    ; mod_PU                 ; work         ;
-;       |mod_PU:inst|                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst                                                                                     ; mod_PU                 ; work         ;
-;    |lpm_fifo:inst8|                      ; 20 (0)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8                                                                                                           ; lpm_fifo               ; work         ;
-;       |scfifo:myFIFO|                    ; 20 (0)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO                                                                                             ; scfifo                 ; work         ;
-;          |scfifo_ji01:auto_generated|    ; 20 (0)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated                                                                  ; scfifo_ji01            ; work         ;
-;             |a_dpfifo_get:dpfifo|        ; 20 (1)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo                                              ; a_dpfifo_get           ; work         ;
-;                |a_fefifo_66f:fifo_state| ; 11 (7)              ; 6 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state                      ; a_fefifo_66f           ; work         ;
-;                   |cntr_bo7:count_usedw| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state|cntr_bo7:count_usedw ; cntr_bo7               ; work         ;
-;                |altsyncram_ugm1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram                      ; altsyncram_ugm1        ; work         ;
-;                |cntr_vnb:rd_ptr_count|   ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:rd_ptr_count                        ; cntr_vnb               ; work         ;
-;                |cntr_vnb:wr_ptr|         ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:wr_ptr                              ; cntr_vnb               ; work         ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                      ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Entity Name              ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; |ElevadorBetaV3                          ; 87 (1)              ; 40 (0)                    ; 48          ; 0            ; 0       ; 0         ; 33   ; 0            ; |ElevadorBetaV3                                                                                                                          ; ElevadorBetaV3           ; work         ;
+;    |7447:inst14|                         ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|7447:inst14                                                                                                              ; 7447                     ; work         ;
+;    |7485:inst2|                          ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|7485:inst2                                                                                                               ; 7485                     ; work         ;
+;       |f7485:sub|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|7485:inst2|f7485:sub                                                                                                     ; f7485                    ; work         ;
+;    |Controlador_PrioridadeV2:inst5|      ; 19 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_PrioridadeV2:inst5                                                                                           ; Controlador_PrioridadeV2 ; work         ;
+;       |Multiplexador_Elevador:inst6|     ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6                                                              ; Multiplexador_Elevador   ; work         ;
+;          |busmux:inst|                   ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|busmux:inst                                                  ; busmux                   ; work         ;
+;             |lpm_mux:$00000|             ; 18 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|busmux:inst|lpm_mux:$00000                                   ; lpm_mux                  ; work         ;
+;                |mux_9rc:auto_generated|  ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|busmux:inst|lpm_mux:$00000|mux_9rc:auto_generated            ; mux_9rc                  ; work         ;
+;    |Elevador_MovimentoV2:inst|           ; 12 (0)              ; 6 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Elevador_MovimentoV2:inst                                                                                                ; Elevador_MovimentoV2     ; work         ;
+;       |Sensor_MovimentoV2:inst1|         ; 12 (12)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1                                                                       ; Sensor_MovimentoV2       ; work         ;
+;    |Entrada_PulsoUnico:inst1|            ; 20 (0)              ; 20 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1                                                                                                 ; Entrada_PulsoUnico       ; work         ;
+;       |mod_PU:inst1|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst1                                                                                    ; mod_PU                   ; work         ;
+;       |mod_PU:inst2|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst2                                                                                    ; mod_PU                   ; work         ;
+;       |mod_PU:inst3|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst3                                                                                    ; mod_PU                   ; work         ;
+;       |mod_PU:inst4|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst4                                                                                    ; mod_PU                   ; work         ;
+;       |mod_PU:inst5|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst5                                                                                    ; mod_PU                   ; work         ;
+;       |mod_PU:inst6|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst6                                                                                    ; mod_PU                   ; work         ;
+;       |mod_PU:inst7|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst7                                                                                    ; mod_PU                   ; work         ;
+;       |mod_PU:inst8|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst8                                                                                    ; mod_PU                   ; work         ;
+;       |mod_PU:inst9|                     ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst9                                                                                    ; mod_PU                   ; work         ;
+;       |mod_PU:inst|                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|Entrada_PulsoUnico:inst1|mod_PU:inst                                                                                     ; mod_PU                   ; work         ;
+;    |lpm_fifo:inst8|                      ; 20 (0)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8                                                                                                           ; lpm_fifo                 ; work         ;
+;       |scfifo:myFIFO|                    ; 20 (0)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO                                                                                             ; scfifo                   ; work         ;
+;          |scfifo_ji01:auto_generated|    ; 20 (0)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated                                                                  ; scfifo_ji01              ; work         ;
+;             |a_dpfifo_get:dpfifo|        ; 20 (1)              ; 14 (0)                    ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo                                              ; a_dpfifo_get             ; work         ;
+;                |a_fefifo_66f:fifo_state| ; 11 (7)              ; 6 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state                      ; a_fefifo_66f             ; work         ;
+;                   |cntr_bo7:count_usedw| ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|a_fefifo_66f:fifo_state|cntr_bo7:count_usedw ; cntr_bo7                 ; work         ;
+;                |altsyncram_ugm1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 48          ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|altsyncram_ugm1:FIFOram                      ; altsyncram_ugm1          ; work         ;
+;                |cntr_vnb:rd_ptr_count|   ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:rd_ptr_count                        ; cntr_vnb                 ; work         ;
+;                |cntr_vnb:wr_ptr|         ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ElevadorBetaV3|lpm_fifo:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:wr_ptr                              ; cntr_vnb                 ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -311,23 +312,19 @@ Encoding Type:  One-Hot
 +-----------+-----------+-----------+-----------+-----------+----------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                 ;
-+-------------------------------------------------------------+--------------------------------------+
-; Register name                                               ; Reason for Removal                   ;
-+-------------------------------------------------------------+--------------------------------------+
-; Entrada_PulsoUnico:inst1|mod_PU:inst7|inst1                 ; Stuck at GND due to stuck port clock ;
-; Entrada_PulsoUnico:inst1|mod_PU:inst7|inst                  ; Stuck at GND due to stuck port clock ;
-; Entrada_PulsoUnico:inst1|mod_PU:inst9|inst1                 ; Stuck at GND due to stuck port clock ;
-; Entrada_PulsoUnico:inst1|mod_PU:inst9|inst                  ; Stuck at GND due to stuck port clock ;
-; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~2 ; Lost fanout                          ;
-; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~3 ; Lost fanout                          ;
-; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~4 ; Lost fanout                          ;
-; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~5 ; Lost fanout                          ;
-; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~6 ; Lost fanout                          ;
-; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~7 ; Lost fanout                          ;
-; Total Number of Removed Registers = 10                      ;                                      ;
-+-------------------------------------------------------------+--------------------------------------+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-------------------------------------------------------------+--------------------+
+; Register name                                               ; Reason for Removal ;
++-------------------------------------------------------------+--------------------+
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~2 ; Lost fanout        ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~3 ; Lost fanout        ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~4 ; Lost fanout        ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~5 ; Lost fanout        ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~6 ; Lost fanout        ;
+; Elevador_MovimentoV2:inst|Sensor_MovimentoV2:inst1|fstate~7 ; Lost fanout        ;
+; Total Number of Removed Registers = 6                       ;                    ;
++-------------------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -335,7 +332,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 36    ;
+; Total registers                              ; 40    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -400,13 +397,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst ;
-+----------------+-------+-------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                      ;
-+----------------+-------+-------------------------------------------------------------------------------------------+
-; WIDTH          ; 3     ; Untyped                                                                                   ;
-+----------------+-------+-------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; WIDTH          ; 3     ; Untyped                                                                                     ;
++----------------+-------+---------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -415,23 +412,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 30                          ;
-; cycloneiii_ff         ; 36                          ;
+; boundary_port         ; 33                          ;
+; cycloneiii_ff         ; 40                          ;
 ;     ENA               ; 12                          ;
-;     plain             ; 24                          ;
-; cycloneiii_lcell_comb ; 78                          ;
+;     plain             ; 28                          ;
+; cycloneiii_lcell_comb ; 91                          ;
 ;     arith             ; 9                           ;
 ;         2 data inputs ; 6                           ;
 ;         3 data inputs ; 3                           ;
-;     normal            ; 69                          ;
+;     normal            ; 82                          ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 37                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 26                          ;
+;         4 data inputs ; 44                          ;
 ; cycloneiii_ram_block  ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.11                        ;
+; Average LUT depth     ; 3.17                        ;
 +-----------------------+-----------------------------+
 
 
@@ -440,7 +437,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -450,18 +447,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 23 22:50:34 2023
+    Info: Processing started: Tue May 23 23:42:34 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ElevadorBetaV3 -c ElevadorBetaV3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/controlador_prioridadev2/controlador_prioridadev2.bdf
+    Info (12023): Found entity 1: Controlador_PrioridadeV2
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/controlador_prioridade/controlador_prioridade.bdf
+    Info (12023): Found entity 1: Controlador_Prioridade
+Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/preferencia_elevador/preferencia_elevador.bdf
+    Info (12023): Found entity 1: Preferencia_Elevador
 Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/elevador_movimentov2/elevador_movimentov2.bdf
     Info (12023): Found entity 1: Elevador_MovimentoV2
 Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/sensor_movimentacaov2/sensor_movimentov2.v
     Info (12023): Found entity 1: Sensor_MovimentoV2 File: C:/Quartus (Project Test V2)/Sensor_MovimentacaoV2/Sensor_MovimentoV2.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/valor_serial_paralelo/valor_serial_paralelo.bdf
     Info (12023): Found entity 1: Valor_Serial_Paralelo
-Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/preferencia_elevador/preferencia_elevador.bdf
-    Info (12023): Found entity 1: Preferencia_Elevador
 Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/multiplexador_elevador/multiplexador_elevador.bdf
     Info (12023): Found entity 1: Multiplexador_Elevador
 Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/mod_pu/mod_pu.bdf
@@ -472,8 +473,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file /quartu
     Info (12023): Found entity 1: Elevador_Movimento
 Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/divfreq50m_v2/divfreq50m_v2/div_50mhz_to_1hz.bdf
     Info (12023): Found entity 1: DIV_50MHz_to_1Hz
-Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/controlador_prioridade/controlador_prioridade.bdf
-    Info (12023): Found entity 1: Controlador_Prioridade
 Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/circuito combinacional (elevador)/circuito_combinacional_5_3bit.bdf
     Info (12023): Found entity 1: Circuito_Combinacional_5_3bit
 Info (12021): Found 1 design units, including 1 entities, in source file /quartus (project test v2)/andares_elevador_s2/andares_elevador_s2.bdf
@@ -522,27 +521,24 @@ Info (12128): Elaborating entity "altsyncram_ugm1" for hierarchy "LPM_FIFO:inst8
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_vnb.tdf
     Info (12023): Found entity 1: cntr_vnb File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV3/db/cntr_vnb.tdf Line: 25
 Info (12128): Elaborating entity "cntr_vnb" for hierarchy "LPM_FIFO:inst8|scfifo:myFIFO|scfifo_ji01:auto_generated|a_dpfifo_get:dpfifo|cntr_vnb:rd_ptr_count" File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV3/db/a_dpfifo_get.tdf Line: 43
-Info (12128): Elaborating entity "Controlador_Prioridade" for hierarchy "Controlador_Prioridade:inst6"
-Info (12128): Elaborating entity "Valor_Serial_Paralelo" for hierarchy "Controlador_Prioridade:inst6|Valor_Serial_Paralelo:inst"
-Info (12128): Elaborating entity "Multiplexador_Elevador" for hierarchy "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6"
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst"
-Info (12130): Elaborated megafunction instantiation "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst"
-Info (12133): Instantiated megafunction "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst" with the following parameter:
+Info (12128): Elaborating entity "Controlador_PrioridadeV2" for hierarchy "Controlador_PrioridadeV2:inst5"
+Info (12128): Elaborating entity "Multiplexador_Elevador" for hierarchy "Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst"
+Info (12130): Elaborated megafunction instantiation "Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst"
+Info (12133): Instantiated megafunction "Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst" with the following parameter:
     Info (12134): Parameter "WIDTH" = "3"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
-Info (12131): Elaborated megafunction instantiation "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000", which is child of megafunction instantiation "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000", which is child of megafunction instantiation "Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_9rc.tdf
     Info (12023): Found entity 1: mux_9rc File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV3/db/mux_9rc.tdf Line: 22
-Info (12128): Elaborating entity "mux_9rc" for hierarchy "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000|mux_9rc:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
-Info (12128): Elaborating entity "Preferencia_Elevador" for hierarchy "Controlador_Prioridade:inst6|Preferencia_Elevador:inst13"
-Info (12128): Elaborating entity "Circuito_Combinacional_5_3bit" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4"
-Info (12128): Elaborating entity "Andares_Elevador_S2" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S2:inst5"
+Info (12128): Elaborating entity "mux_9rc" for hierarchy "Controlador_PrioridadeV2:inst5|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000|mux_9rc:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "Preferencia_Elevador" for hierarchy "Controlador_PrioridadeV2:inst5|Preferencia_Elevador:inst3"
+Info (12128): Elaborating entity "Circuito_Combinacional_5_3bit" for hierarchy "Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst4"
+Info (12128): Elaborating entity "Andares_Elevador_S2" for hierarchy "Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S2:inst5"
 Warning (275008): Primitive "NOT" of instance "inst4" not used
-Info (12128): Elaborating entity "Andares_Elevador_S0" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S0:inst"
-Info (12128): Elaborating entity "Andares_Elevador_S1" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S1:inst4"
+Info (12128): Elaborating entity "Andares_Elevador_S0" for hierarchy "Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S0:inst"
+Info (12128): Elaborating entity "Andares_Elevador_S1" for hierarchy "Controlador_PrioridadeV2:inst5|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S1:inst4"
 Info (12128): Elaborating entity "Entrada_PulsoUnico" for hierarchy "Entrada_PulsoUnico:inst1"
-Warning (275013): Port "CLK" of type mod_PU and instance "inst9" is missing source signal
-Warning (275013): Port "CLK" of type mod_PU and instance "inst7" is missing source signal
 Info (12128): Elaborating entity "mod_PU" for hierarchy "Entrada_PulsoUnico:inst1|mod_PU:inst"
 Info (12128): Elaborating entity "7447" for hierarchy "7447:inst14"
 Info (12130): Elaborated megafunction instantiation "7447:inst14"
@@ -552,18 +548,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "BE[2]"
-    Warning (15610): No output dependent on input pin "BE[0]"
-Info (21057): Implemented 107 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 74 logic cells
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 87 logic cells
     Info (21064): Implemented 3 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Tue May 23 22:51:14 2023
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:00:40
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Tue May 23 23:42:48 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
 
 

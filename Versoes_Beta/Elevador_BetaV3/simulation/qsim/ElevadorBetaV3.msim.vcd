@@ -3,7 +3,7 @@ $comment
 		vcd file ElevadorBetaV3.msim.vcd -direction
 $end
 $date
-	Tue May 23 22:49:29 2023
+	Tue May 23 23:43:20 2023
 $end
 $version
 	ModelSim Version 10.5b
@@ -23,222 +23,245 @@ $var wire 1 ' FIFO [0] $end
 $var wire 1 ( Igual $end
 $var wire 1 ) Maior $end
 $var wire 1 * Menor $end
-$var wire 1 + OA $end
-$var wire 1 , OB $end
-$var wire 1 - OC $end
-$var wire 1 . OD $end
-$var wire 1 / OE $end
-$var wire 1 0 OF $end
-$var wire 1 1 OG $end
-$var wire 1 2 Rd $end
-$var wire 1 3 SAP [2] $end
-$var wire 1 4 SAP [1] $end
-$var wire 1 5 SAP [0] $end
-$var wire 1 6 WR $end
+$var wire 1 + MOVS [2] $end
+$var wire 1 , MOVS [1] $end
+$var wire 1 - MOVS [0] $end
+$var wire 1 . OA $end
+$var wire 1 / OB $end
+$var wire 1 0 OC $end
+$var wire 1 1 OD $end
+$var wire 1 2 OE $end
+$var wire 1 3 OF $end
+$var wire 1 4 OG $end
+$var wire 1 5 Rd $end
+$var wire 1 6 SAP [2] $end
+$var wire 1 7 SAP [1] $end
+$var wire 1 8 SAP [0] $end
+$var wire 1 9 WR $end
 
 $scope module i1 $end
-$var wire 1 7 gnd $end
-$var wire 1 8 vcc $end
-$var wire 1 9 unknown $end
-$var tri1 1 : devclrn $end
-$var tri1 1 ; devpor $end
-$var tri1 1 < devoe $end
-$var wire 1 = BE[2]~input_o $end
-$var wire 1 > BE[0]~input_o $end
-$var wire 1 ? Menor~output_o $end
-$var wire 1 @ FIFO[2]~output_o $end
-$var wire 1 A FIFO[1]~output_o $end
-$var wire 1 B FIFO[0]~output_o $end
-$var wire 1 C Igual~output_o $end
-$var wire 1 D Maior~output_o $end
-$var wire 1 E OA~output_o $end
-$var wire 1 F OB~output_o $end
-$var wire 1 G OC~output_o $end
-$var wire 1 H OD~output_o $end
-$var wire 1 I OE~output_o $end
-$var wire 1 J OF~output_o $end
-$var wire 1 K OG~output_o $end
-$var wire 1 L Enable~output_o $end
-$var wire 1 M Rd~output_o $end
-$var wire 1 N WR~output_o $end
-$var wire 1 O SAP[2]~output_o $end
-$var wire 1 P SAP[1]~output_o $end
-$var wire 1 Q SAP[0]~output_o $end
-$var wire 1 R CLK~input_o $end
-$var wire 1 S CLK~inputclkctrl_outclk $end
-$var wire 1 T BE[4]~input_o $end
-$var wire 1 U inst1|inst5|inst7~combout $end
-$var wire 1 V inst1|inst5|inst~q $end
-$var wire 1 W inst1|inst5|inst8~0_combout $end
-$var wire 1 X inst1|inst5|inst1~q $end
-$var wire 1 Y BE[1]~input_o $end
-$var wire 1 Z inst1|inst8|inst7~combout $end
-$var wire 1 [ inst1|inst8|inst~q $end
-$var wire 1 \ inst1|inst8|inst8~0_combout $end
-$var wire 1 ] inst1|inst8|inst1~q $end
-$var wire 1 ^ BE[3]~input_o $end
-$var wire 1 _ inst1|inst6|inst7~combout $end
-$var wire 1 ` inst1|inst6|inst~q $end
-$var wire 1 a inst1|inst6|inst8~0_combout $end
-$var wire 1 b inst1|inst6|inst1~q $end
-$var wire 1 c BC[3]~input_o $end
-$var wire 1 d inst1|inst3|inst7~combout $end
-$var wire 1 e inst1|inst3|inst~q $end
-$var wire 1 f inst1|inst3|inst8~0_combout $end
-$var wire 1 g inst1|inst3|inst1~q $end
-$var wire 1 h BC[1]~input_o $end
-$var wire 1 i inst1|inst1|inst7~combout $end
-$var wire 1 j inst1|inst1|inst~q $end
-$var wire 1 k inst1|inst1|inst8~0_combout $end
-$var wire 1 l inst1|inst1|inst1~q $end
-$var wire 1 m BC[2]~input_o $end
-$var wire 1 n inst1|inst2|inst7~combout $end
-$var wire 1 o inst1|inst2|inst~q $end
-$var wire 1 p inst1|inst2|inst8~0_combout $end
-$var wire 1 q inst1|inst2|inst1~q $end
-$var wire 1 r BC[0]~input_o $end
-$var wire 1 s inst1|inst|inst7~combout $end
-$var wire 1 t inst1|inst|inst~q $end
-$var wire 1 u inst1|inst|inst8~0_combout $end
-$var wire 1 v inst1|inst|inst1~q $end
-$var wire 1 w inst6|inst6|inst|$00000|auto_generated|result_node[2]~29_combout $end
-$var wire 1 x BC[4]~input_o $end
-$var wire 1 y inst1|inst4|inst7~combout $end
-$var wire 1 z inst1|inst4|inst~q $end
-$var wire 1 { inst1|inst4|inst8~0_combout $end
-$var wire 1 | inst1|inst4|inst1~q $end
-$var wire 1 } inst6|inst6|inst|$00000|auto_generated|result_node[2]~30_combout $end
-$var wire 1 ~ inst6|inst6|inst|$00000|auto_generated|result_node[2]~25_combout $end
-$var wire 1 !! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~combout $end
-$var wire 1 "! inst|inst1|WideOr5~0_combout $end
-$var wire 1 #! inst6|inst6|inst|$00000|auto_generated|result_node[0]~22_combout $end
-$var wire 1 $! inst6|inst6|inst|$00000|auto_generated|result_node[0]~23_combout $end
-$var wire 1 %! inst6|inst6|inst|$00000|auto_generated|result_node[0]~24_combout $end
-$var wire 1 &! inst6|inst6|inst|$00000|auto_generated|result_node[1]~27_combout $end
-$var wire 1 '! inst6|inst6|inst|$00000|auto_generated|result_node[1]~28_combout $end
-$var wire 1 (! inst6|inst6|inst|$00000|auto_generated|result_node[1]~26_combout $end
-$var wire 1 )! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~COUT $end
-$var wire 1 *! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~combout $end
-$var wire 1 +! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_non_empty~2_combout $end
-$var wire 1 ,! inst2|sub|109~1_combout $end
-$var wire 1 -! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_non_empty~3_combout $end
-$var wire 1 .! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_non_empty~4_combout $end
-$var wire 1 /! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_non_empty~q $end
-$var wire 1 0! inst19~combout $end
-$var wire 1 1! inst8|myFIFO|auto_generated|dpfifo|fifo_state|_~0_combout $end
-$var wire 1 2! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~COUT $end
-$var wire 1 3! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~combout $end
-$var wire 1 4! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~COUT $end
-$var wire 1 5! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~combout $end
-$var wire 1 6! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_full~0_combout $end
-$var wire 1 7! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_full~1_combout $end
-$var wire 1 8! inst6|inst2~combout $end
-$var wire 1 9! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_full~2_combout $end
-$var wire 1 :! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_full~q $end
-$var wire 1 ;! inst8|myFIFO|auto_generated|dpfifo|valid_wreq~combout $end
-$var wire 1 <! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~combout $end
-$var wire 1 =! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~COUT $end
-$var wire 1 >! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~combout $end
-$var wire 1 ?! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~COUT $end
-$var wire 1 @! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~combout $end
-$var wire 1 A! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~COUT $end
-$var wire 1 B! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~combout $end
-$var wire 1 C! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~combout $end
-$var wire 1 D! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~COUT $end
-$var wire 1 E! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~combout $end
-$var wire 1 F! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~COUT $end
-$var wire 1 G! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~combout $end
-$var wire 1 H! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~COUT $end
-$var wire 1 I! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~combout $end
-$var wire 1 J! inst|inst1|fstate.B~0_combout $end
-$var wire 1 K! inst|inst1|fstate.B~q $end
-$var wire 1 L! inst|inst1|Selector0~0_combout $end
-$var wire 1 M! inst|inst1|Selector0~1_combout $end
-$var wire 1 N! inst|inst1|fstate.T~q $end
-$var wire 1 O! inst|inst1|Selector1~0_combout $end
-$var wire 1 P! inst|inst1|Selector1~1_combout $end
-$var wire 1 Q! inst|inst1|fstate.A1~q $end
-$var wire 1 R! inst|inst1|SA1~0_combout $end
-$var wire 1 S! inst2|sub|91~combout $end
-$var wire 1 T! inst2|sub|88~4_combout $end
-$var wire 1 U! inst2|sub|88~2_combout $end
-$var wire 1 V! inst2|sub|84~combout $end
-$var wire 1 W! inst|inst1|Selector2~0_combout $end
-$var wire 1 X! inst|inst1|Selector2~1_combout $end
-$var wire 1 Y! inst|inst1|fstate.A2~q $end
-$var wire 1 Z! inst|inst1|Selector3~0_combout $end
-$var wire 1 [! inst|inst1|Selector3~1_combout $end
-$var wire 1 \! inst|inst1|fstate.A3~q $end
-$var wire 1 ]! inst|inst1|fstate.A4~2_combout $end
-$var wire 1 ^! inst|inst1|fstate.A4~q $end
-$var wire 1 _! inst14|86~0_combout $end
-$var wire 1 `! inst2|sub|109~0_combout $end
-$var wire 1 a! inst2|sub|85~combout $end
-$var wire 1 b! inst14|81~combout $end
-$var wire 1 c! inst14|82~4_combout $end
-$var wire 1 d! inst14|5~5_combout $end
-$var wire 1 e! inst14|84~4_combout $end
-$var wire 1 f! inst14|85~combout $end
-$var wire 1 g! inst14|86~1_combout $end
-$var wire 1 h! inst14|5~4_combout $end
-$var wire 1 i! inst8|myFIFO|auto_generated|dpfifo|FIFOram|q_b [2] $end
-$var wire 1 j! inst8|myFIFO|auto_generated|dpfifo|FIFOram|q_b [1] $end
-$var wire 1 k! inst8|myFIFO|auto_generated|dpfifo|FIFOram|q_b [0] $end
-$var wire 1 l! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3] $end
-$var wire 1 m! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2] $end
-$var wire 1 n! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1] $end
-$var wire 1 o! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0] $end
-$var wire 1 p! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [3] $end
-$var wire 1 q! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [2] $end
-$var wire 1 r! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [1] $end
-$var wire 1 s! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [0] $end
-$var wire 1 t! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_reg_bit [3] $end
-$var wire 1 u! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_reg_bit [2] $end
-$var wire 1 v! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_reg_bit [1] $end
-$var wire 1 w! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_reg_bit [0] $end
-$var wire 1 x! inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [35] $end
-$var wire 1 y! inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [34] $end
-$var wire 1 z! inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [33] $end
-$var wire 1 {! inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [32] $end
-$var wire 1 |! inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [31] $end
-$var wire 1 }! inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [30] $end
-$var wire 1 ~! inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [29] $end
-$var wire 1 !" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [28] $end
-$var wire 1 "" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [27] $end
-$var wire 1 #" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [26] $end
-$var wire 1 $" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [25] $end
-$var wire 1 %" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [24] $end
-$var wire 1 &" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [23] $end
-$var wire 1 '" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [22] $end
-$var wire 1 (" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [21] $end
-$var wire 1 )" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [20] $end
-$var wire 1 *" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [19] $end
-$var wire 1 +" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [18] $end
-$var wire 1 ," inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [17] $end
-$var wire 1 -" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [16] $end
-$var wire 1 ." inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [15] $end
-$var wire 1 /" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [14] $end
-$var wire 1 0" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [13] $end
-$var wire 1 1" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [12] $end
-$var wire 1 2" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [11] $end
-$var wire 1 3" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [10] $end
-$var wire 1 4" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [9] $end
-$var wire 1 5" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [8] $end
-$var wire 1 6" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [7] $end
-$var wire 1 7" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [6] $end
-$var wire 1 8" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [5] $end
-$var wire 1 9" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [4] $end
-$var wire 1 :" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [3] $end
-$var wire 1 ;" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [2] $end
-$var wire 1 <" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [1] $end
-$var wire 1 =" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [0] $end
+$var wire 1 : gnd $end
+$var wire 1 ; vcc $end
+$var wire 1 < unknown $end
+$var tri1 1 = devclrn $end
+$var tri1 1 > devpor $end
+$var tri1 1 ? devoe $end
+$var wire 1 @ Menor~output_o $end
+$var wire 1 A FIFO[2]~output_o $end
+$var wire 1 B FIFO[1]~output_o $end
+$var wire 1 C FIFO[0]~output_o $end
+$var wire 1 D Igual~output_o $end
+$var wire 1 E Maior~output_o $end
+$var wire 1 F OA~output_o $end
+$var wire 1 G OB~output_o $end
+$var wire 1 H OC~output_o $end
+$var wire 1 I OD~output_o $end
+$var wire 1 J OE~output_o $end
+$var wire 1 K OF~output_o $end
+$var wire 1 L OG~output_o $end
+$var wire 1 M Enable~output_o $end
+$var wire 1 N Rd~output_o $end
+$var wire 1 O WR~output_o $end
+$var wire 1 P MOVS[2]~output_o $end
+$var wire 1 Q MOVS[1]~output_o $end
+$var wire 1 R MOVS[0]~output_o $end
+$var wire 1 S SAP[2]~output_o $end
+$var wire 1 T SAP[1]~output_o $end
+$var wire 1 U SAP[0]~output_o $end
+$var wire 1 V CLK~input_o $end
+$var wire 1 W CLK~inputclkctrl_outclk $end
+$var wire 1 X BE[0]~input_o $end
+$var wire 1 Y inst1|inst9|inst7~combout $end
+$var wire 1 Z inst1|inst9|inst~q $end
+$var wire 1 [ inst1|inst9|inst8~0_combout $end
+$var wire 1 \ inst1|inst9|inst1~q $end
+$var wire 1 ] BE[2]~input_o $end
+$var wire 1 ^ inst1|inst7|inst7~combout $end
+$var wire 1 _ inst1|inst7|inst~q $end
+$var wire 1 ` inst1|inst7|inst8~0_combout $end
+$var wire 1 a inst1|inst7|inst1~q $end
+$var wire 1 b BE[4]~input_o $end
+$var wire 1 c inst1|inst5|inst7~combout $end
+$var wire 1 d inst1|inst5|inst~q $end
+$var wire 1 e inst1|inst5|inst8~0_combout $end
+$var wire 1 f inst1|inst5|inst1~q $end
+$var wire 1 g BE[1]~input_o $end
+$var wire 1 h inst1|inst8|inst7~combout $end
+$var wire 1 i inst1|inst8|inst~q $end
+$var wire 1 j inst1|inst8|inst8~0_combout $end
+$var wire 1 k inst1|inst8|inst1~q $end
+$var wire 1 l BE[3]~input_o $end
+$var wire 1 m inst1|inst6|inst7~combout $end
+$var wire 1 n inst1|inst6|inst~q $end
+$var wire 1 o inst1|inst6|inst8~0_combout $end
+$var wire 1 p inst1|inst6|inst1~q $end
+$var wire 1 q inst5|inst6|inst|$00000|auto_generated|result_node[0]~13_combout $end
+$var wire 1 r inst5|inst6|inst|$00000|auto_generated|result_node[0]~14_combout $end
+$var wire 1 s BC[0]~input_o $end
+$var wire 1 t inst1|inst|inst7~combout $end
+$var wire 1 u inst1|inst|inst~q $end
+$var wire 1 v inst1|inst|inst8~0_combout $end
+$var wire 1 w inst1|inst|inst1~q $end
+$var wire 1 x BC[3]~input_o $end
+$var wire 1 y inst1|inst3|inst7~combout $end
+$var wire 1 z inst1|inst3|inst~q $end
+$var wire 1 { inst1|inst3|inst8~0_combout $end
+$var wire 1 | inst1|inst3|inst1~q $end
+$var wire 1 } BC[1]~input_o $end
+$var wire 1 ~ inst1|inst1|inst7~combout $end
+$var wire 1 !! inst1|inst1|inst~q $end
+$var wire 1 "! inst1|inst1|inst8~0_combout $end
+$var wire 1 #! inst1|inst1|inst1~q $end
+$var wire 1 $! BC[2]~input_o $end
+$var wire 1 %! inst1|inst2|inst7~combout $end
+$var wire 1 &! inst1|inst2|inst~q $end
+$var wire 1 '! inst1|inst2|inst8~0_combout $end
+$var wire 1 (! inst1|inst2|inst1~q $end
+$var wire 1 )! inst5|inst6|inst|$00000|auto_generated|result_node[0]~11_combout $end
+$var wire 1 *! inst5|inst6|inst|$00000|auto_generated|result_node[0]~10_combout $end
+$var wire 1 +! BC[4]~input_o $end
+$var wire 1 ,! inst1|inst4|inst7~combout $end
+$var wire 1 -! inst1|inst4|inst~q $end
+$var wire 1 .! inst1|inst4|inst8~0_combout $end
+$var wire 1 /! inst1|inst4|inst1~q $end
+$var wire 1 0! inst5|inst6|inst|$00000|auto_generated|result_node[0]~9_combout $end
+$var wire 1 1! inst5|inst6|inst|$00000|auto_generated|result_node[0]~12_combout $end
+$var wire 1 2! inst5|inst6|inst|$00000|auto_generated|result_node[0]~15_combout $end
+$var wire 1 3! inst5|inst6|inst|$00000|auto_generated|result_node[2]~16_combout $end
+$var wire 1 4! inst5|inst6|inst|$00000|auto_generated|result_node[2]~17_combout $end
+$var wire 1 5! inst5|inst6|inst|$00000|auto_generated|result_node[2]~7_combout $end
+$var wire 1 6! inst5|inst6|inst|$00000|auto_generated|result_node[2]~6_combout $end
+$var wire 1 7! inst5|inst6|inst|$00000|auto_generated|result_node[2]~8_combout $end
+$var wire 1 8! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~combout $end
+$var wire 1 9! inst5|inst6|inst|$00000|auto_generated|result_node[1]~4_combout $end
+$var wire 1 :! inst5|inst6|inst|$00000|auto_generated|result_node[1]~0_combout $end
+$var wire 1 ;! inst5|inst6|inst|$00000|auto_generated|result_node[1]~1_combout $end
+$var wire 1 <! inst5|inst6|inst|$00000|auto_generated|result_node[1]~2_combout $end
+$var wire 1 =! inst5|inst6|inst|$00000|auto_generated|result_node[1]~3_combout $end
+$var wire 1 >! inst5|inst6|inst|$00000|auto_generated|result_node[1]~5_combout $end
+$var wire 1 ?! inst5|inst2~combout $end
+$var wire 1 @! inst|inst1|SA1~0_combout $end
+$var wire 1 A! inst2|sub|109~1_combout $end
+$var wire 1 B! inst|inst1|fstate.A4~2_combout $end
+$var wire 1 C! inst|inst1|fstate.A4~q $end
+$var wire 1 D! inst14|86~0_combout $end
+$var wire 1 E! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~combout $end
+$var wire 1 F! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita0~COUT $end
+$var wire 1 G! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~combout $end
+$var wire 1 H! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita1~COUT $end
+$var wire 1 I! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~combout $end
+$var wire 1 J! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita2~COUT $end
+$var wire 1 K! inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_comb_bita3~combout $end
+$var wire 1 L! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~combout $end
+$var wire 1 M! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita0~COUT $end
+$var wire 1 N! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~combout $end
+$var wire 1 O! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita1~COUT $end
+$var wire 1 P! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~combout $end
+$var wire 1 Q! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita2~COUT $end
+$var wire 1 R! inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_comb_bita3~combout $end
+$var wire 1 S! inst2|sub|109~0_combout $end
+$var wire 1 T! inst|inst1|fstate.B~0_combout $end
+$var wire 1 U! inst|inst1|fstate.B~q $end
+$var wire 1 V! inst|inst1|Selector0~0_combout $end
+$var wire 1 W! inst|inst1|Selector0~1_combout $end
+$var wire 1 X! inst|inst1|fstate.T~q $end
+$var wire 1 Y! inst|inst1|Selector1~0_combout $end
+$var wire 1 Z! inst|inst1|Selector1~1_combout $end
+$var wire 1 [! inst|inst1|fstate.A1~q $end
+$var wire 1 \! inst|inst1|Selector2~0_combout $end
+$var wire 1 ]! inst|inst1|Selector2~1_combout $end
+$var wire 1 ^! inst|inst1|fstate.A2~q $end
+$var wire 1 _! inst2|sub|113~0_combout $end
+$var wire 1 `! inst2|sub|88~5_combout $end
+$var wire 1 a! inst2|sub|88~4_combout $end
+$var wire 1 b! inst2|sub|84~combout $end
+$var wire 1 c! inst|inst1|Selector3~0_combout $end
+$var wire 1 d! inst|inst1|Selector3~1_combout $end
+$var wire 1 e! inst|inst1|fstate.A3~q $end
+$var wire 1 f! inst|inst1|WideOr5~0_combout $end
+$var wire 1 g! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~COUT $end
+$var wire 1 h! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~combout $end
+$var wire 1 i! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita2~COUT $end
+$var wire 1 j! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita3~combout $end
+$var wire 1 k! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_non_empty~0_combout $end
+$var wire 1 l! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_non_empty~1_combout $end
+$var wire 1 m! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_non_empty~2_combout $end
+$var wire 1 n! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_non_empty~q $end
+$var wire 1 o! inst19~combout $end
+$var wire 1 p! inst8|myFIFO|auto_generated|dpfifo|fifo_state|_~0_combout $end
+$var wire 1 q! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita0~COUT $end
+$var wire 1 r! inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_comb_bita1~combout $end
+$var wire 1 s! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_full~0_combout $end
+$var wire 1 t! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_full~1_combout $end
+$var wire 1 u! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_full~2_combout $end
+$var wire 1 v! inst8|myFIFO|auto_generated|dpfifo|fifo_state|b_full~q $end
+$var wire 1 w! inst8|myFIFO|auto_generated|dpfifo|valid_wreq~combout $end
+$var wire 1 x! inst2|sub|85~combout $end
+$var wire 1 y! inst14|81~combout $end
+$var wire 1 z! inst14|82~4_combout $end
+$var wire 1 {! inst14|5~5_combout $end
+$var wire 1 |! inst14|84~4_combout $end
+$var wire 1 }! inst14|85~combout $end
+$var wire 1 ~! inst14|86~1_combout $end
+$var wire 1 !" inst14|5~4_combout $end
+$var wire 1 "" inst8|myFIFO|auto_generated|dpfifo|FIFOram|q_b [2] $end
+$var wire 1 #" inst8|myFIFO|auto_generated|dpfifo|FIFOram|q_b [1] $end
+$var wire 1 $" inst8|myFIFO|auto_generated|dpfifo|FIFOram|q_b [0] $end
+$var wire 1 %" inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [3] $end
+$var wire 1 &" inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [2] $end
+$var wire 1 '" inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [1] $end
+$var wire 1 (" inst8|myFIFO|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit [0] $end
+$var wire 1 )" inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [3] $end
+$var wire 1 *" inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [2] $end
+$var wire 1 +" inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [1] $end
+$var wire 1 ," inst8|myFIFO|auto_generated|dpfifo|rd_ptr_count|counter_reg_bit [0] $end
+$var wire 1 -" inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_reg_bit [3] $end
+$var wire 1 ." inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_reg_bit [2] $end
+$var wire 1 /" inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_reg_bit [1] $end
+$var wire 1 0" inst8|myFIFO|auto_generated|dpfifo|wr_ptr|counter_reg_bit [0] $end
+$var wire 1 1" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [35] $end
+$var wire 1 2" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [34] $end
+$var wire 1 3" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [33] $end
+$var wire 1 4" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [32] $end
+$var wire 1 5" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [31] $end
+$var wire 1 6" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [30] $end
+$var wire 1 7" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [29] $end
+$var wire 1 8" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [28] $end
+$var wire 1 9" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [27] $end
+$var wire 1 :" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [26] $end
+$var wire 1 ;" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [25] $end
+$var wire 1 <" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [24] $end
+$var wire 1 =" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [23] $end
+$var wire 1 >" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [22] $end
+$var wire 1 ?" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [21] $end
+$var wire 1 @" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [20] $end
+$var wire 1 A" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [19] $end
+$var wire 1 B" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [18] $end
+$var wire 1 C" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [17] $end
+$var wire 1 D" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [16] $end
+$var wire 1 E" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [15] $end
+$var wire 1 F" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [14] $end
+$var wire 1 G" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [13] $end
+$var wire 1 H" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [12] $end
+$var wire 1 I" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [11] $end
+$var wire 1 J" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [10] $end
+$var wire 1 K" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [9] $end
+$var wire 1 L" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [8] $end
+$var wire 1 M" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [7] $end
+$var wire 1 N" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [6] $end
+$var wire 1 O" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [5] $end
+$var wire 1 P" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [4] $end
+$var wire 1 Q" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [3] $end
+$var wire 1 R" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [2] $end
+$var wire 1 S" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [1] $end
+$var wire 1 T" inst8|myFIFO|auto_generated|dpfifo|FIFOram|ram_block1a0_PORTBDATAOUT_bus [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b10000 !
-b0 "
+b1 !
+b10000 "
 0#
 0$
 0'
@@ -247,40 +270,40 @@ b0 "
 1(
 0)
 0*
-0+
-0,
 0-
+0,
+0+
 0.
 0/
 00
-11
+01
 02
-05
-04
 03
-06
+14
+05
+08
 07
-18
-x9
-1:
+06
+09
+0:
 1;
-1<
-0=
-0>
-0?
+x<
+1=
+1>
+1?
 0@
 0A
 0B
-1C
-0D
+0C
+1D
 0E
 0F
 0G
 0H
 0I
 0J
-1K
-0L
+0K
+1L
 0M
 0N
 0O
@@ -302,10 +325,10 @@ x9
 0_
 0`
 0a
-0b
+1b
 0c
 0d
-0e
+1e
 0f
 0g
 0h
@@ -319,70 +342,70 @@ x9
 0p
 0q
 0r
-0s
+1s
 0t
 0u
-0v
-1w
-1x
+1v
+0w
+0x
 0y
 0z
-1{
+0{
 0|
 0}
 0~
-1!!
-1"!
+0!!
+0"!
 0#!
 0$!
 0%!
 0&!
 0'!
 0(!
-1)!
-1*!
-1+!
-1,!
+0)!
+0*!
+0+!
+0,!
 0-!
 0.!
 0/!
 00!
 01!
-12!
-13!
+02!
+03!
 04!
-15!
+05!
 06!
 07!
-08!
+18!
 09!
 0:!
 0;!
 1<!
-0=!
+1=!
 0>!
-1?!
+0?!
 0@!
-0A!
+1A!
 0B!
-1C!
-0D!
-0E!
-1F!
+0C!
+1D!
+1E!
+0F!
 0G!
-0H!
+1H!
 0I!
 0J!
 0K!
-0L!
+1L!
 0M!
 0N!
-0O!
+1O!
 0P!
 0Q!
 0R!
-0S!
-1T!
+1S!
+0T!
 0U!
 0V!
 0W!
@@ -393,31 +416,77 @@ x9
 0\!
 0]!
 0^!
-1_!
+0_!
 1`!
-1a!
+0a!
 0b!
 0c!
 0d!
-1e!
-0f!
+0e!
+1f!
 0g!
 1h!
-0k!
-0j!
-0i!
-0o!
-0n!
-0m!
+1i!
+1j!
+1k!
 0l!
-0s!
-0r!
-0q!
+0m!
+0n!
+0o!
 0p!
-0w!
-0v!
-0u!
+1q!
+1r!
+0s!
 0t!
+0u!
+0v!
+0w!
+1x!
+0y!
+0z!
+0{!
+1|!
+0}!
+0~!
+1!"
+0$"
+0#"
+0""
+0("
+0'"
+0&"
+0%"
+0,"
+0+"
+0*"
+0)"
+00"
+0/"
+0."
+0-"
+0T"
+0S"
+0R"
+0Q"
+0P"
+0O"
+0N"
+0M"
+0L"
+0K"
+0J"
+0I"
+0H"
+0G"
+0F"
+0E"
+0D"
+0C"
+0B"
+0A"
+0@"
+0?"
+0>"
 0="
 0<"
 0;"
@@ -431,952 +500,692 @@ x9
 03"
 02"
 01"
-00"
-0/"
-0."
-0-"
-0,"
-0+"
-0*"
-0)"
-0("
-0'"
-0&"
-0%"
-0$"
-0#"
-0""
-0!"
-0~!
-0}!
-0|!
-0{!
-0z!
-0y!
-0x!
 $end
 #20000
 1#
 b0 !
-1R
-0x
-1S
-0{
-1|
-1#!
-1}
-1y
-1$!
-1~
-1%!
-1;!
-18!
-1.!
-1N
-14!
-11!
-0)!
-02!
-16
-05!
-0*!
-03!
-#40000
-b1 !
-b100 "
-0#
-1=
+b0 "
+1V
+0b
+0s
+1W
+0e
+0v
+1w
+1f
+1)!
+0<!
+16!
+10!
+1q
+1t
+1c
+0=!
 1r
-0R
-0S
-1u
+17!
+1P
+1w!
+1+
+1?!
+12!
+1R
+1O
+0i!
+1g!
+0q!
+1p!
+19
+1-
+1m!
+0j!
+0h!
+0r!
+#40000
+b10000 !
+b1 "
+0#
+1X
+1+!
+0V
+0W
+1[
+1.!
 #60000
 b0 !
 b0 "
 1#
-0=
-0r
-1R
-1S
-0u
-1w!
-1o!
-1/!
-0|
-1z
-1v
-1=!
+0X
 0+!
-12!
-1-!
-0#!
-0}
-0$!
-0<!
-0!!
-10!
-0y
-1s
-1M
-0-!
-1$!
-0~
-0%!
-01!
-12
-1>!
-13!
-1%!
-0;!
+1V
+1W
+0[
 0.!
-08!
-0N
-1;!
-04!
-11!
-02!
-06
-18!
-1.!
-1N
-14!
-01!
-12!
-16
-03!
-15!
-05!
-13!
-#80000
-b100 !
-0#
-1m
-0R
-0S
-1p
-#100000
-b0 !
-1#
-0m
-1R
-1S
-0p
-1s!
-1v!
-0w!
-0z
-0v
-1t
-1q
-1D!
-0?!
-0=!
-0$!
+1("
+1n!
+10"
+1/!
 0w
-1&!
-1#!
-0C!
-0>!
-1<!
-0s
-1n
-1?!
-0%!
-1'!
-1$!
-1E!
-1@!
-1>!
-0;!
-1(!
-1%!
-0@!
-08!
-0.!
-0N
-04!
-11!
-02!
-1;!
-06
-18!
-1.!
-1N
-14!
-01!
-12!
-16
-15!
-03!
-05!
+1u
+0f
+1d
+1\
+0k!
+1q!
+1l!
+1F!
 13!
-#100001
-1="
-1;"
-1k!
+0)!
+06!
+15!
+00!
+0q
+0r
+08!
+1o!
+0E!
+1,!
+0t
+0c
+1Y
+1N
+0l!
+14!
+11!
+1r
+0p!
+15
+1r!
+1G!
+07!
+02!
+0R
+0P
+0w!
+0+
+0-
+12!
+1R
+0g!
+0q!
+1w!
+1-
+1g!
+1q!
+1h!
+0r!
+0h!
+1r!
+#80000
+0#
+0V
+0W
+#100000
+1#
+1V
+1W
+1,"
+1/"
+00"
+0/!
+1-!
+0u
+0d
+0\
+1Z
+1M!
+0H!
+0F!
+03!
+01!
+1<!
+05!
+0r
+0L!
+0G!
+1E!
+0,!
+0Y
+1H!
+04!
+1=!
+1N!
+1I!
+1G!
+0?!
+02!
+17!
+1P
+0R
+0O
+1p!
+09
+0-
+1+
+0I!
+07!
+0m!
+1?!
+1O
+0P
+0w!
+0p!
+0+
+19
+0?!
+1m!
+0O
+0g!
+0q!
+1p!
+09
+0m!
 1i!
-1@
-1B
-0a!
-1U!
-0`!
-1S!
+1g!
+1h!
+0r!
+0i!
+1j!
+0h!
+0j!
+#100001
+1T"
+1R"
+1$"
+1""
+1A
+1C
+0x!
+1a!
+0S!
 1'
 1%
-1J!
-00!
-0,!
-0C
-0M
-1?
-11!
-1-!
+0o!
+1T!
+0A!
+0D
+0N
+1@
+0p!
+1l!
 1*
-02
+05
 0(
-1V!
-1M!
-1D
-1L
-1a!
+1b!
+1W!
+1E
+1M
+1x!
 1$
 1)
-0?
+1m!
+0@
 0*
 #120000
-b10 "
 0#
-1Y
-0R
-0S
-1\
+0V
+0W
 #140000
-b0 "
 1#
-0Y
-1R
-1S
-0\
-1N!
-1K!
-1w!
-1n!
-0o!
-0t
-0q
-1o
-1]
-0"!
-1=!
-04!
-1+!
-02!
-0&!
-0#!
-1w
-0%!
-1g!
-1P!
-0M!
-0<!
-03!
-1!!
-0n
-1Z
+1V
+1W
+1X!
+1U!
+0-!
+0Z
+0f!
+1~!
+1Z!
+0W!
+1K
+1U
+0|!
+0`!
+18
+13
+1}!
+1y!
+1F
 1J
-1Q
-0e!
-0T!
-0?!
-14!
-0'!
-0$!
-15
-10
-1f!
-1b!
-0>!
-15!
-13!
-1E
 1I
-1H
+11
+12
 1.
-1/
-1+
-1@!
-05!
 #160000
 0#
-0R
-0S
+0V
+0W
 #180000
 1#
-1R
-1S
-1Q!
-0N!
-1u!
-0v!
-0w!
-1o!
-0o
-0]
-1[
-1e!
-1"!
-1A!
-1?!
-0=!
-12!
-0(!
-0h!
-0b!
-1X!
-1R!
-0P!
-0@!
-1>!
-1<!
-0!!
-0Z
-1P
-0E
-0K
-0Q
-0H
-0A!
-04!
-0;!
-0.
-05
-01
-0+
-14
-0f!
-1d!
-1B!
-1@!
-0>!
-03!
-08!
-0N
-1G
-0I
-1)!
-14!
-01!
-02!
-0/
-1-
-06
-0B!
-15!
-0)!
-1*!
-05!
-13!
-0*!
-#200000
-0#
-0R
-0S
-#220000
-1#
-1R
-1S
-1Y!
-0Q!
-0[
-0"!
+1V
+1W
 1[!
 0X!
-1Q
-15
+1|!
 1f!
-0d!
-0G
-1I
-1/
-0-
+0!"
+0y!
+1]!
+1@!
+0Z!
+1T
+0F
+0L
+0U
+0I
+01
+08
+04
+0.
+17
+0}!
+1{!
+1H
+0J
+02
+10
+#200000
+0#
+0V
+0W
+#220000
+1#
+1V
+1W
+1^!
+0[!
+0f!
+1d!
+0]!
+1U
+18
+1}!
+0{!
+0H
+1J
+12
+00
 #240000
 0#
-0R
-0S
+0V
+0W
 #260000
 1#
-1R
+1V
+1W
+1e!
+0^!
+1f!
+0D!
+0|!
+1B!
+0~!
+1y!
+0d!
+0@!
+0T
+1F
+0K
+1I
 1S
-1\!
-0Y!
-0_!
-0S!
-1"!
-0e!
-1]!
-0g!
-1b!
-0[!
-0R!
-0P
-1E
-0J
-1H
-0Q
-1O
+0U
 1`!
-0U!
-1T!
-13
-05
-1.
-00
-1+
-04
-1U!
-0V!
-0D
-0L
 0a!
-1W!
+1S!
+08
+16
+11
+03
+1.
+07
+1a!
+0b!
+0E
+0M
+0x!
+1\!
 0$
 0)
-1V!
-0]!
-1D
-1L
-1?
-1a!
-0W!
+1b!
+0B!
+1E
+1M
+1@
+1x!
+0\!
 1*
 1$
 1)
-1X!
 1]!
-0?
+1B!
+0@
 0*
-0X!
+0]!
 #280000
 0#
-0R
-0S
+0V
+0W
 #300000
 1#
-1R
-1S
-1^!
-0\!
-0"!
-1Q
-1e!
-0T!
-15
-1c!
-0b!
-10!
-1,!
-1C
-1M
-0E
-1F
-0H
-0U!
-11!
+1V
+1W
+0e!
+1C!
+0f!
+1U
+1|!
+0`!
+18
+1z!
+0y!
+1o!
+1A!
+1D
+1N
+0F
+1G
+0I
+0a!
+1p!
+0l!
+01
+1/
 0.
-1,
-0+
-12
+15
 1(
-0V!
-0D
-0L
+0b!
+0m!
+0E
+0M
 0$
 0)
 #320000
 0#
-0R
-0S
+0V
+0W
 #340000
 1#
-1R
-1S
-1r!
-0s!
+1V
+1W
+0("
+0n!
+1+"
+0,"
+1k!
+1q!
+0O!
+0M!
+18!
 0o!
-0F!
-0D!
-12!
-0E!
-1C!
-1!!
-1F!
-1G!
-1E!
-03!
-0G!
+0N!
+1L!
+0N
+0g!
+1O!
+0p!
+05
+1r!
+1P!
+1N!
+1i!
+1h!
+0P!
+1j!
 #340001
-0;"
-0i!
-0@
-0`!
-1S!
+0R"
+0""
+0A
+0S!
 0%
-0a!
-00!
-0,!
-0C
-0M
-1?
-01!
-1Z!
+0x!
+0A!
+0D
+1@
+1c!
 1*
-02
 0(
-0]!
-1[!
+0B!
+1d!
 #360000
 0#
-0R
-0S
+0V
+0W
 #380000
 1#
-1R
-1S
-0^!
-1\!
-0Z!
-1W!
-1"!
-0Q
-0e!
-1T!
-05
-0[!
-1X!
+1V
+1W
+1e!
+0C!
+1f!
 0c!
-1b!
-1E
-0F
-1H
+1\!
+0U
+0|!
+1`!
+08
+0z!
+1y!
+0d!
+1]!
+1F
+0G
+1I
+11
+0/
 1.
-0,
-1+
 #400000
 0#
-0R
-0S
+0V
+0W
 #420000
 1#
-1R
-1S
-0\!
-1Y!
-1_!
-0W!
-0S!
-0"!
-1e!
-0T!
-1O!
-1g!
+1V
+1W
+0e!
+1^!
 0f!
-1c!
-1R!
-1P
-1F
+0\!
+1D!
+1|!
+0`!
+1Y!
+1~!
+0}!
+1z!
+1@!
+1T
+1G
+0J
+1K
 0I
-1J
-0H
-1Q
-0O
-03
-15
-0.
-10
-0/
-1,
-14
-1f!
-0c!
-0b!
-0X!
-1P!
-0E
-0F
-1I
+0S
+1U
+18
+06
+01
+13
+02
 1/
-0,
-0+
+17
+1}!
+0z!
+0y!
+0]!
+1Z!
+0F
+0G
+1J
+12
+0/
+0.
 #440000
 0#
-0R
-0S
+0V
+0W
 #460000
 1#
-1R
-1S
+1V
+1W
+0^!
+1[!
 0Y!
-1Q!
-0O!
-1L!
-1"!
-0Q
-05
-0P!
-1M!
-0f!
-1d!
-1G
-0I
-0/
-1-
+1f!
+1V!
+0U
+08
+0Z!
+0}!
+1{!
+1W!
+1H
+0J
+02
+10
 #480000
 0#
-0R
-0S
+0V
+0W
 #500000
 1#
-1R
-1S
-0Q!
-1N!
-1T!
-0"!
-1h!
-0d!
-0R!
-0P
-0G
-1K
-1Q
-1U!
-0e!
-0T!
+1V
+1W
+0[!
+1X!
+0f!
 1`!
-15
-11
-0-
-04
-1f!
-1b!
-1E
-1I
-1H
-0U!
-1a!
-1.
-1/
-1+
-1V!
-10!
-1,!
-1C
-1M
-1D
+1!"
+0{!
+0@!
+0T
+0H
 1L
-0?
-11!
+1U
+0|!
+0`!
+1a!
+1S!
+18
+14
+00
+07
+1}!
+1y!
+1F
+1J
+1I
+0a!
+1x!
+11
+12
+1.
+1b!
+1A!
+1D
+1E
+1M
+0@
 0*
 1$
 1)
-12
 1(
-0V!
-0D
-0L
+0b!
+0E
+0M
 0$
 0)
 #520000
 0#
-0R
-0S
+0V
+0W
 #540000
 1#
-1R
-1S
-1s!
-0n!
-1o!
-1D!
-04!
-0+!
-02!
-0C!
-13!
-0!!
-0F!
-1)!
-0-!
-14!
-0E!
-15!
-03!
-0)!
-1G!
-1*!
-0.!
-05!
-0*!
-#540001
-1<"
-1j!
-1A
-0`!
-1&
-1V!
-1D
-1L
-1$
-1)
-00!
-0,!
-0C
-0M
-01!
-0L!
-1-!
-02
-0(
-1P!
-0M!
-1.!
+1V
+1W
 #560000
 0#
-0R
-0S
+0V
+0W
 #580000
 1#
-1R
-1S
-1Q!
-0N!
-1e!
-1"!
-0h!
-0b!
-1X!
-1R!
-0P!
-1P
-0E
-0K
-0Q
-0H
-1T!
-1`!
-0.
-05
-01
-0+
-14
-0f!
-1d!
-0V!
-0D
-0L
-1G
-0I
-1U!
-0a!
-1L!
-0/
-1-
-0$
-0)
-0X!
-1?
-1*
-1V!
-1M!
-1D
-1L
-1a!
-0L!
-1$
-1)
-1X!
-0?
-0*
-0M!
+1V
+1W
 #600000
 0#
-0R
-0S
+0V
+0W
 #620000
 1#
-1R
-1S
-1Y!
-0Q!
-0"!
-1[!
-0X!
-1Q
-0T!
-15
-1f!
-0d!
-10!
-1,!
-1C
-1M
-0G
-1I
-0U!
-11!
-1W!
-0-!
-1/
-0-
-12
-1(
-0[!
-0V!
-1X!
-0.!
-0D
-0L
-0$
-0)
+1V
+1W
 #640000
 0#
-0R
-0S
+0V
+0W
 #660000
 1#
-1R
-1S
-1q!
-0r!
-0s!
-0o!
-0/!
-1H!
-1F!
-0D!
-1+!
-12!
-0G!
-1E!
-1C!
-1!!
-00!
-0M
-0H!
-04!
-01!
-02
-1I!
-1G!
-0E!
-13!
-1)!
-0I!
-15!
-1*!
-#660001
-0="
-0k!
-0B
-0a!
-0'
-0,!
-0C
-1?
-0W!
-1O!
-1*
-0(
-0X!
-1P!
+1V
+1W
 #680000
 0#
-0R
-0S
+0V
+0W
 #700000
 1#
-1R
-1S
-0Y!
-1Q!
-0O!
-1L!
-1"!
-0Q
-1a!
-1T!
-05
-0P!
-1M!
-0f!
-1d!
-1,!
-1C
-1G
-0I
-0?
-1O!
-0L!
-0*
-0/
-1-
-1(
-1P!
-0M!
+1V
+1W
 #720000
 0#
-0R
-0S
+0V
+0W
 #740000
 1#
-1R
-1S
+1V
+1W
 #760000
 0#
-0R
-0S
+0V
+0W
 #780000
 1#
-1R
-1S
+1V
+1W
 #800000
 0#
-0R
-0S
+0V
+0W
 #820000
 1#
-1R
-1S
+1V
+1W
 #840000
 0#
-0R
-0S
+0V
+0W
 #860000
 1#
-1R
-1S
+1V
+1W
 #880000
 0#
-0R
-0S
+0V
+0W
 #900000
 1#
-1R
-1S
+1V
+1W
 #920000
 0#
-0R
-0S
+0V
+0W
 #940000
 1#
-1R
-1S
+1V
+1W
 #960000
 0#
-0R
-0S
+0V
+0W
 #980000
 1#
-1R
-1S
+1V
+1W
 #1000000

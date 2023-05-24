@@ -9,13 +9,13 @@ z2
 cModel Technology
 dC:/Quartus (Project Test V2)/Versões da Beta/Elevador_BetaV3/simulation/qsim
 vElevadorBetaV3
-Z0 !s110 1684892968
+Z0 !s110 1684896199
 !i10b 1
-!s100 k7AH^AU?dn;O8REM>H>UP1
-IdAYRc5Fee2F`oaM<=j:[61
+!s100 m0ZM[4>lobT`QB^W_Uio_0
+I`U69^=2SgX?6di4[o2La83
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV3/simulation/qsim
-Z3 w1684892967
+Z3 w1684896198
 Z4 8ElevadorBetaV3.vo
 Z5 FElevadorBetaV3.vo
 L0 31
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1684892968.000000
+Z7 !s108 1684896199.000000
 Z8 !s107 ElevadorBetaV3.vo|
 Z9 !s90 -work|work|ElevadorBetaV3.vo|
 !i113 1
@@ -33,11 +33,11 @@ n@elevador@beta@v3
 vElevadorBetaV3_vlg_vec_tst
 R0
 !i10b 1
-!s100 `3T9WbRP4k16jo;J38?K?0
-I^KVMbFHETe<YSQF=]Mofz2
+!s100 6d[J72i751iEHM1AD@ocj3
+I1EJ0iXRJfTK?IMBQH0^nE0
 R1
 R2
-w1684892966
+w1684896197
 8Waveform1.vwf.vt
 FWaveform1.vwf.vt
 L0 29
@@ -55,14 +55,14 @@ n@elevador@beta@v3_vlg_vec_tst
 vhard_block
 R0
 !i10b 1
-!s100 I[9k^?9zcGTaZjIz;i0O;0
-IYggOaSd35bK?]ilVV9=jz0
+!s100 07kgBzz3CeNLI6UO@67e73
+IS0II?3>_CdL8oN<TKDLQU1
 R1
 R2
 R3
 R4
 R5
-L0 2715
+L0 3086
 R6
 r1
 !s85 0
