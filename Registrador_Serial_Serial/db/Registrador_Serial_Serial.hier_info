@@ -1,0 +1,15 @@
+|Registrador_Serial_Serial
+FF1 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+IS => inst2.IN0
+IS => inst8.IN1
+CLK => inst8.CLK
+CLK => inst3.CLK
+CLK => inst4[2].CLK
+CLK => inst4[1].CLK
+CLK => inst4[0].CLK
+FF2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+SS[0] <= inst4[0].DB_MAX_OUTPUT_PORT_TYPE
+SS[1] <= inst4[1].DB_MAX_OUTPUT_PORT_TYPE
+SS[2] <= inst4[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

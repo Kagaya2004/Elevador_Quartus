@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'BC0'
+Slack : -0.340
+TNS   : -0.340
+
+Type  : Slow 1100mV 85C Model Setup 'BE0'
+Slack : -0.201
+TNS   : -0.201
+
+Type  : Slow 1100mV 85C Model Hold 'BE0'
+Slack : -3.623
+TNS   : -10.189
+
+Type  : Slow 1100mV 85C Model Hold 'BC0'
+Slack : -3.523
+TNS   : -9.933
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'BE0'
+Slack : -2.058
+TNS   : -27.360
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'BC0'
+Slack : -2.049
+TNS   : -28.875
+
+Type  : Slow 1100mV 0C Model Setup 'BC0'
+Slack : -0.604
+TNS   : -0.604
+
+Type  : Slow 1100mV 0C Model Setup 'BE0'
+Slack : -0.450
+TNS   : -0.450
+
+Type  : Slow 1100mV 0C Model Hold 'BE0'
+Slack : -3.588
+TNS   : -10.147
+
+Type  : Slow 1100mV 0C Model Hold 'BC0'
+Slack : -3.534
+TNS   : -10.032
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'BC0'
+Slack : -2.109
+TNS   : -29.786
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'BE0'
+Slack : -2.050
+TNS   : -27.384
+
+Type  : Fast 1100mV 85C Model Setup 'BC0'
+Slack : -0.561
+TNS   : -0.732
+
+Type  : Fast 1100mV 85C Model Setup 'BE0'
+Slack : -0.546
+TNS   : -0.664
+
+Type  : Fast 1100mV 85C Model Hold 'BE0'
+Slack : -1.608
+TNS   : -4.521
+
+Type  : Fast 1100mV 85C Model Hold 'BC0'
+Slack : -1.559
+TNS   : -4.405
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'BC0'
+Slack : -0.958
+TNS   : -6.668
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'BE0'
+Slack : -0.909
+TNS   : -6.599
+
+Type  : Fast 1100mV 0C Model Setup 'BC0'
+Slack : -0.533
+TNS   : -0.715
+
+Type  : Fast 1100mV 0C Model Setup 'BE0'
+Slack : -0.509
+TNS   : -0.660
+
+Type  : Fast 1100mV 0C Model Hold 'BE0'
+Slack : -1.452
+TNS   : -4.086
+
+Type  : Fast 1100mV 0C Model Hold 'BC0'
+Slack : -1.416
+TNS   : -4.007
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'BC0'
+Slack : -0.903
+TNS   : -6.207
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'BE0'
+Slack : -0.843
+TNS   : -5.962
+
+------------------------------------------------------------

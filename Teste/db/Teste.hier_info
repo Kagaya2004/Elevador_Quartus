@@ -1,0 +1,31 @@
+|Teste
+SA[0] <= Sensor_MovimentoV2:inst.SA0
+SA[1] <= Sensor_MovimentoV2:inst.SA1
+SA[2] <= Sensor_MovimentoV2:inst.SA2
+CLK => Sensor_MovimentoV2:inst.clock
+ACT => Sensor_MovimentoV2:inst.ACT
+EN => Sensor_MovimentoV2:inst.EN
+
+
+|Teste|Sensor_MovimentoV2:inst
+reset => reg_fstate.B.OUTPUTSELECT
+reset => reg_fstate.T.OUTPUTSELECT
+reset => reg_fstate.A1.OUTPUTSELECT
+reset => reg_fstate.A2.OUTPUTSELECT
+reset => reg_fstate.A3.OUTPUTSELECT
+reset => reg_fstate.A4.OUTPUTSELECT
+reset => SA0.OUTPUTSELECT
+reset => SA1.OUTPUTSELECT
+reset => SA2.OUTPUTSELECT
+clock => fstate~1.DATAIN
+ACT => always1.IN0
+ACT => always1.IN0
+EN => always1.IN1
+EN => always1.IN1
+EN => Selector0.IN4
+EN => reg_fstate.DATAB
+SA0 <= SA0.DB_MAX_OUTPUT_PORT_TYPE
+SA1 <= SA1.DB_MAX_OUTPUT_PORT_TYPE
+SA2 <= SA2.DB_MAX_OUTPUT_PORT_TYPE
+
+

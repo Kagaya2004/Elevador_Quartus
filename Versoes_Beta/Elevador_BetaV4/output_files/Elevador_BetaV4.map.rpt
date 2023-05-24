@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Elevador_BetaV4
-Tue May 23 22:22:15 2023
+Tue May 23 22:57:36 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 23 22:22:15 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 23 22:57:36 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Elevador_BetaV4                             ;
 ; Top-level Entity Name              ; Elevador_BetaV4                             ;
@@ -440,7 +440,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -450,7 +450,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 23 22:21:55 2023
+    Info: Processing started: Tue May 23 22:57:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Elevador_BetaV4 -c Elevador_BetaV4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -536,7 +536,7 @@ Info (12131): Elaborated megafunction instantiation "Controlador_Prioridade:inst
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_9rc.tdf
     Info (12023): Found entity 1: mux_9rc File: C:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/db/mux_9rc.tdf Line: 22
 Info (12128): Elaborating entity "mux_9rc" for hierarchy "Controlador_Prioridade:inst6|Multiplexador_Elevador:inst6|BUSMUX:inst|lpm_mux:$00000|mux_9rc:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
-Info (12128): Elaborating entity "Preferencia_Elevador" for hierarchy "Controlador_Prioridade:inst6|Preferencia_Elevador:inst13"
+Info (12128): Elaborating entity "Preferencia_Elevador" for hierarchy "Controlador_Prioridade:inst6|Preferencia_Elevador:inst3"
 Info (12128): Elaborating entity "Circuito_Combinacional_5_3bit" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4"
 Info (12128): Elaborating entity "Andares_Elevador_S2" for hierarchy "Controlador_Prioridade:inst6|Circuito_Combinacional_5_3bit:inst4|Andares_Elevador_S2:inst5"
 Warning (275008): Primitive "NOT" of instance "inst4" not used
@@ -563,9 +563,9 @@ Info (21057): Implemented 101 device resources after synthesis - the final resou
     Info (21061): Implemented 74 logic cells
     Info (21064): Implemented 3 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Tue May 23 22:22:15 2023
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 4771 megabytes
+    Info: Processing ended: Tue May 23 22:57:36 2023
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:37
 
 

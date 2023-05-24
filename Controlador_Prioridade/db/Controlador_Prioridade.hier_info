@@ -87,12 +87,12 @@ sel[0] => result_node[0].IN0
 sel[0] => _.IN0
 
 
-|Controlador_Prioridade|Preferencia_Elevador:inst13
+|Controlador_Prioridade|Preferencia_Elevador:inst3
 ~SP <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-SP <> inst
 BP1 => inst.IN0
 BP2 => inst.IN1
 BP0 => inst.IN2
+SP <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Controlador_Prioridade|Circuito_Combinacional_5_3bit:inst4

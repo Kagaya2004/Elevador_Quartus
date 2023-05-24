@@ -260,42 +260,6 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 552 720 648 816)
-	(text "Preferencia_Elevador" (rect 5 0 131 19)(font "Intel Clear" (font_size 8)))
-	(text "inst13" (rect 8 75 36 92)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "BP0" (rect 0 0 24 19)(font "Intel Clear" (font_size 8)))
-		(text "BP0" (rect 21 27 45 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "BP1" (rect 0 0 24 19)(font "Intel Clear" (font_size 8)))
-		(text "BP1" (rect 21 43 45 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "BP2" (rect 0 0 24 19)(font "Intel Clear" (font_size 8)))
-		(text "BP2" (rect 21 59 45 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 96 32)
-		(bidir)
-		(text "SP" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "SP" (rect 59 27 75 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 96 32)(pt 80 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 80 80))
-	)
-)
-(symbol
 	(rect 1128 584 1264 680)
 	(text "Valor_Serial_Paralelo" (rect 5 0 132 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
@@ -577,6 +541,49 @@ refer to the applicable agreement for further details.
 		(arc (pt 25 35)(pt 49 24)(rect -6 -27 57 36))
 	)
 )
+(symbol
+	(rect 552 712 648 808)
+	(text "Preferencia_Elevador" (rect 5 0 131 19)(font "Intel Clear" (font_size 8)))
+	(text "inst3" (rect 8 75 30 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "BP0" (rect 0 0 24 19)(font "Intel Clear" (font_size 8)))
+		(text "BP0" (rect 21 27 45 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "BP1" (rect 0 0 24 19)(font "Intel Clear" (font_size 8)))
+		(text "BP1" (rect 21 43 45 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "BP2" (rect 0 0 24 19)(font "Intel Clear" (font_size 8)))
+		(text "BP2" (rect 21 59 45 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 96 32)
+		(output)
+		(text "SP" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "SP" (rect 59 27 75 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 96 32)(pt 80 32))
+	)
+	(port
+		(pt 96 48)
+		(output)
+		(text "~SP" (rect 0 0 24 19)(font "Intel Clear" (font_size 8)))
+		(text "~SP" (rect 51 43 75 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 96 48)(pt 80 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 80))
+	)
+)
 (connector
 	(pt 360 328)
 	(pt 360 344)
@@ -642,40 +649,8 @@ refer to the applicable agreement for further details.
 	(pt 640 648)
 )
 (connector
-	(pt 480 752)
-	(pt 552 752)
-)
-(connector
-	(pt 496 768)
-	(pt 552 768)
-)
-(connector
-	(pt 512 784)
-	(pt 552 784)
-)
-(connector
-	(pt 648 752)
-	(pt 840 752)
-)
-(connector
-	(pt 840 752)
-	(pt 840 712)
-)
-(connector
 	(pt 856 712)
 	(pt 840 712)
-)
-(connector
-	(pt 496 680)
-	(pt 496 768)
-)
-(connector
-	(pt 480 664)
-	(pt 480 752)
-)
-(connector
-	(pt 512 784)
-	(pt 512 696)
 )
 (connector
 	(pt 608 344)
@@ -748,30 +723,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 272 768)
 	(pt 296 768)
-)
-(connector
-	(pt 432 664)
-	(pt 480 664)
-)
-(connector
-	(pt 480 664)
-	(pt 856 664)
-)
-(connector
-	(pt 432 680)
-	(pt 496 680)
-)
-(connector
-	(pt 496 680)
-	(pt 856 680)
-)
-(connector
-	(pt 432 696)
-	(pt 512 696)
-)
-(connector
-	(pt 512 696)
-	(pt 856 696)
 )
 (connector
 	(pt 280 672)
@@ -856,6 +807,62 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 1304 648)
 	(pt 1440 648)
+)
+(connector
+	(pt 480 744)
+	(pt 552 744)
+)
+(connector
+	(pt 496 760)
+	(pt 552 760)
+)
+(connector
+	(pt 512 776)
+	(pt 552 776)
+)
+(connector
+	(pt 840 744)
+	(pt 648 744)
+)
+(connector
+	(pt 840 712)
+	(pt 840 744)
+)
+(connector
+	(pt 496 680)
+	(pt 496 760)
+)
+(connector
+	(pt 480 664)
+	(pt 480 744)
+)
+(connector
+	(pt 512 696)
+	(pt 512 776)
+)
+(connector
+	(pt 432 680)
+	(pt 496 680)
+)
+(connector
+	(pt 496 680)
+	(pt 856 680)
+)
+(connector
+	(pt 432 664)
+	(pt 480 664)
+)
+(connector
+	(pt 480 664)
+	(pt 856 664)
+)
+(connector
+	(pt 432 696)
+	(pt 512 696)
+)
+(connector
+	(pt 512 696)
+	(pt 856 696)
 )
 (junction (pt 496 680))
 (junction (pt 480 664))

@@ -1,0 +1,328 @@
+$comment
+	File created using the following command:
+		vcd file Comparador.msim.vcd -direction
+$end
+$date
+	Sat Apr 22 20:55:08 2023
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module Comparador_vlg_vec_tst $end
+$var reg 1 ! BC0 $end
+$var reg 1 " BC1 $end
+$var reg 1 # BC2 $end
+$var reg 1 $ BC3 $end
+$var reg 1 % BC4 $end
+$var reg 1 & BE0 $end
+$var reg 1 ' BE1 $end
+$var reg 1 ( BE2 $end
+$var reg 1 ) BE3 $end
+$var reg 1 * BE4 $end
+$var reg 1 + SA0 $end
+$var reg 1 , SA1 $end
+$var reg 1 - SA2 $end
+$var reg 1 . SA3 $end
+$var reg 1 / SA4 $end
+$var wire 1 0 Igual $end
+$var wire 1 1 Igual2 $end
+$var wire 1 2 Maior $end
+$var wire 1 3 Maior2 $end
+$var wire 1 4 Menor $end
+$var wire 1 5 Menor2 $end
+
+$scope module i1 $end
+$var wire 1 6 gnd $end
+$var wire 1 7 vcc $end
+$var wire 1 8 unknown $end
+$var tri1 1 9 devclrn $end
+$var tri1 1 : devpor $end
+$var tri1 1 ; devoe $end
+$var wire 1 < ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 = SA4~input_o $end
+$var wire 1 > SA0~input_o $end
+$var wire 1 ? SA3~input_o $end
+$var wire 1 @ SA1~input_o $end
+$var wire 1 A SA2~input_o $end
+$var wire 1 B inst2|inst|inst11~0_combout $end
+$var wire 1 C inst2|inst2|inst15~0_combout $end
+$var wire 1 D BC3~input_o $end
+$var wire 1 E BC4~input_o $end
+$var wire 1 F BC1~input_o $end
+$var wire 1 G inst1|inst2|inst15~5_combout $end
+$var wire 1 H BC0~input_o $end
+$var wire 1 I inst1|inst2|inst15~1_combout $end
+$var wire 1 J inst1|inst2|inst15~6_combout $end
+$var wire 1 K BC2~input_o $end
+$var wire 1 L inst1|inst2|inst15~4_combout $end
+$var wire 1 M inst1|inst2|inst15~3_combout $end
+$var wire 1 N inst1|inst2|inst15~2_combout $end
+$var wire 1 O inst1|inst2|inst15~0_combout $end
+$var wire 1 P inst1|inst1|inst15~3_combout $end
+$var wire 1 Q inst1|inst1|inst15~4_combout $end
+$var wire 1 R inst1|inst1|inst15~2_combout $end
+$var wire 1 S inst1|inst1|inst15~5_combout $end
+$var wire 1 T inst1|inst1|inst15~1_combout $end
+$var wire 1 U inst1|inst1|inst15~0_combout $end
+$var wire 1 V inst1|inst|inst11~3_combout $end
+$var wire 1 W inst1|inst|inst11~2_combout $end
+$var wire 1 X inst1|inst|inst11~1_combout $end
+$var wire 1 Y inst1|inst|inst11~0_combout $end
+$var wire 1 Z inst14~combout $end
+$var wire 1 [ inst7|inst8~q $end
+$var wire 1 \ inst7|inst14~q $end
+$var wire 1 ] inst7|inst13~q $end
+$var wire 1 ^ inst2|inst1|inst15~0_combout $end
+$var wire 1 _ inst|sub|84~combout $end
+$var wire 1 ` inst|sub|109~combout $end
+$var wire 1 a inst|sub|85~combout $end
+$var wire 1 b BE2~input_o $end
+$var wire 1 c BE3~input_o $end
+$var wire 1 d BE4~input_o $end
+$var wire 1 e BE1~input_o $end
+$var wire 1 f inst4|inst2|inst15~5_combout $end
+$var wire 1 g BE0~input_o $end
+$var wire 1 h inst4|inst2|inst15~1_combout $end
+$var wire 1 i inst4|inst2|inst15~6_combout $end
+$var wire 1 j inst4|inst2|inst15~4_combout $end
+$var wire 1 k inst4|inst2|inst15~3_combout $end
+$var wire 1 l inst4|inst2|inst15~2_combout $end
+$var wire 1 m inst4|inst2|inst15~0_combout $end
+$var wire 1 n inst4|inst|inst11~2_combout $end
+$var wire 1 o inst4|inst|inst11~1_combout $end
+$var wire 1 p inst4|inst|inst11~3_combout $end
+$var wire 1 q inst4|inst|inst11~0_combout $end
+$var wire 1 r inst4|inst1|inst15~4_combout $end
+$var wire 1 s inst4|inst1|inst15~3_combout $end
+$var wire 1 t inst4|inst1|inst15~2_combout $end
+$var wire 1 u inst4|inst1|inst15~5_combout $end
+$var wire 1 v inst4|inst1|inst15~1_combout $end
+$var wire 1 w inst4|inst1|inst15~0_combout $end
+$var wire 1 x inst10~combout $end
+$var wire 1 y inst9|inst13~q $end
+$var wire 1 z inst9|inst8~q $end
+$var wire 1 { inst9|inst14~q $end
+$var wire 1 | inst5|sub|84~combout $end
+$var wire 1 } inst5|sub|109~combout $end
+$var wire 1 ~ inst5|sub|85~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+1/
+x0
+x1
+x2
+x3
+x4
+x5
+06
+17
+x8
+19
+1:
+1;
+0<
+1=
+0>
+0?
+0@
+0A
+0B
+1C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+1N
+0O
+0P
+0Q
+1R
+0S
+1T
+0U
+0V
+1W
+1X
+0Y
+0Z
+x[
+x\
+x]
+0^
+x_
+x`
+xa
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+1l
+0m
+1n
+1o
+0p
+0q
+0r
+0s
+1t
+0u
+1v
+0w
+0x
+xy
+xz
+x{
+x|
+x}
+x~
+$end
+#10000
+1!
+1H
+1Y
+1Z
+0]
+1\
+0[
+1`
+1_
+12
+00
+1a
+04
+#20000
+0/
+1.
+0!
+0=
+1?
+0H
+1B
+0Y
+0Z
+#30000
+1-
+0.
+1A
+0?
+1^
+0C
+0B
+#40000
+1,
+0-
+1@
+0A
+1B
+#50000
+1+
+0,
+1>
+0@
+0^
+0B
+0`
+0_
+02
+10
+#90000
+1)
+1c
+1r
+1p
+1k
+0l
+1m
+1x
+0{
+1z
+0y
+1}
+0|
+03
+01
+0~
+15
+#100000
+0+
+1,
+0)
+0>
+1@
+0c
+0r
+0p
+0k
+1^
+1B
+1`
+1l
+1_
+12
+00
+0m
+0x
+#110000
+1-
+0,
+1A
+0@
+0B
+#120000
+1.
+0-
+1?
+0A
+0^
+1C
+1B
+0}
+11
+1~
+05
+#180000
+0.
+0?
+0C
+1}
+0_
+02
+01
+0~
+0a
+14
+15
+#1000000

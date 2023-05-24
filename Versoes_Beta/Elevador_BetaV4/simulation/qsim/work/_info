@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Quartus (Project Test V2)/Versoes_Beta/Elevador_BetaV4/simulation/qsim
 vElevador_BetaV4
-Z1 !s110 1684891554
+Z1 !s110 1684893596
 !i10b 1
 !s100 `g46=>bHZCOQ?COTbhf=f2
 I9m8V?^cmCR>]AdhifjLm92
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1684891552
+Z3 w1684893595
 Z4 8Elevador_BetaV4.vo
 Z5 FElevador_BetaV4.vo
 L0 31
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1684891554.000000
+Z7 !s108 1684893596.000000
 Z8 !s107 Elevador_BetaV4.vo|
 Z9 !s90 -work|work|Elevador_BetaV4.vo|
 !i113 1
@@ -37,7 +37,7 @@ R1
 ISSCJ:aUk68c1BY4mGWVnQ0
 R2
 R0
-w1684891551
+w1684893594
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29

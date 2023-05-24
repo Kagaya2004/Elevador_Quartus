@@ -45,18 +45,18 @@ refer to the applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
+		(pt 96 32)
+		(output)
+		(text "SP" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "SP" (rect 59 27 75 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 96 32)(pt 80 32))
+	)
+	(port
 		(pt 96 48)
 		(output)
 		(text "~SP" (rect 0 0 24 19)(font "Intel Clear" (font_size 8)))
 		(text "~SP" (rect 51 43 75 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 96 48)(pt 80 48))
-	)
-	(port
-		(pt 96 32)
-		(bidir)
-		(text "SP" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
-		(text "SP" (rect 59 27 75 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 96 32)(pt 80 32))
 	)
 	(drawing
 		(rectangle (rect 16 16 80 80))

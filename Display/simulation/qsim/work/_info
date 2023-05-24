@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus (Project Test)/Display/simulation/qsim
+vDisplay
+Z1 !s110 1680398970
+!i10b 1
+!s100 kc5j^N3[<_CT0KL4:7?:<3
+IJ[9nCii0?GkgPCg^Z0NhS1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1680398968
+Z4 8Display.vo
+Z5 FDisplay.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1680398969.000000
+Z8 !s107 Display.vo|
+Z9 !s90 -work|work|Display.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@display
+vDisplay_vlg_vec_tst
+R1
+!i10b 1
+!s100 48Rj^zZ=Nbck]Y5[cAXaC3
+IG3hAHe]a0]4IcnkR_AQ5[1
+R2
+R0
+w1680398967
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+!s108 1680398970.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@display_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 39KDW^9mLmT?5N]8TOAQJ3
+IL>f4bzV`jLEk9Hbn06F;Y3
+R2
+R0
+R3
+R4
+R5
+L0 1469
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

@@ -1,0 +1,10 @@
+|Register_Serial_Paralelo
+VP0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+MR => inst5.IN0
+CP => inst4.IN0
+DS => inst6.IN0
+DS => inst6.IN1
+VP1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+VP2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

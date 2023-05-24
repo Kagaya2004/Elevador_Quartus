@@ -3,7 +3,7 @@ $comment
 		vcd file Elevador_BetaV4.msim.vcd -direction
 $end
 $date
-	Tue May 23 22:25:55 2023
+	Tue May 23 22:59:57 2023
 $end
 $version
 	ModelSim Version 10.5b

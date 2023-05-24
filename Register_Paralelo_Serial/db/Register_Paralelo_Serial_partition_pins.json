@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "VS",
+					"strict" : false
+				},
+				{
+					"name" : "SHLD",
+					"strict" : false
+				},
+				{
+					"name" : "VP2",
+					"strict" : false
+				},
+				{
+					"name" : "VP1",
+					"strict" : false
+				},
+				{
+					"name" : "CLKINH",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "VP0",
+					"strict" : false
+				},
+				{
+					"name" : "DS",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

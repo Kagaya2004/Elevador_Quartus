@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Quartus (Project Test)/Registrador_Serial_Serial/simulation/qsim
+vhard_block
+Z1 !s110 1682556281
+!i10b 1
+!s100 j4=BV7oNkH6GaOMT9RAAC0
+Iga@<;58ZHB9REkM[=jEQo1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1682556280
+Z4 8Registrador_Serial_Serial.vo
+Z5 FRegistrador_Serial_Serial.vo
+L0 359
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1682556281.000000
+Z8 !s107 Registrador_Serial_Serial.vo|
+Z9 !s90 -work|work|Registrador_Serial_Serial.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vRegistrador_Serial_Serial
+R1
+!i10b 1
+!s100 @]h;<T1GNYPQVHFUVaUSB0
+IS^eYDT18U35:`flI=6f`M0
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@registrador_@serial_@serial
+vRegistrador_Serial_Serial_vlg_vec_tst
+R1
+!i10b 1
+!s100 AP0NW][VnSdMV3;MN[Sgk3
+I<of_DF_d9;Dz:h0CbmO^63
+R2
+R0
+w1682556279
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@registrador_@serial_@serial_vlg_vec_tst

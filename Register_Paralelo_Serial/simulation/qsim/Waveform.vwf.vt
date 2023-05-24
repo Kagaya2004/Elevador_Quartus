@@ -1,0 +1,109 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "04/25/2023 21:33:38"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          Register_Paralelo_Serial
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Register_Paralelo_Serial_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg CLKINH;
+reg DS;
+reg SHLD;
+reg VP0;
+reg VP1;
+reg VP2;
+// wires                                               
+wire VS;
+
+// assign statements (if any)                          
+Register_Paralelo_Serial i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.CLKINH(CLKINH),
+	.DS(DS),
+	.SHLD(SHLD),
+	.VP0(VP0),
+	.VP1(VP1),
+	.VP2(VP2),
+	.VS(VS)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #10000 1'b1;
+	#10000;
+end 
+
+// CLKINH
+initial
+begin
+	CLKINH = 1'b0;
+end 
+
+// DS
+initial
+begin
+	DS = 1'b0;
+end 
+
+// SHLD
+initial
+begin
+	SHLD = 1'b0;
+	SHLD = #40000 1'b1;
+	SHLD = #120000 1'b0;
+end 
+
+// VP2
+initial
+begin
+	VP2 = 1'b0;
+end 
+
+// VP1
+initial
+begin
+	VP1 = 1'b0;
+	VP1 = #30000 1'b1;
+	VP1 = #10000 1'b0;
+end 
+
+// VP0
+initial
+begin
+	VP0 = 1'b0;
+	VP0 = #20000 1'b1;
+	VP0 = #10000 1'b0;
+end 
+endmodule
+
